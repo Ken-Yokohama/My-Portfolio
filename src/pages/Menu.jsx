@@ -4,6 +4,10 @@ import { Box } from "@mui/system";
 import { NavLink } from "react-router-dom";
 
 function Menu({ setShowMenu, showMenu }) {
+    const handleCloseMenu = () => {
+        setShowMenu(false);
+    };
+
     return (
         <motion.div
             initial={{ y: "-100vh" }}
@@ -56,27 +60,120 @@ function Menu({ setShowMenu, showMenu }) {
                         className={({ isActive }) =>
                             isActive ? "nav-menu-item-active" : "nav-menu-item"
                         }
+                        onClick={handleCloseMenu}
                     >
-                        <h1>Home</h1>
+                        <motion.h1
+                            initial={{ x: "-40px", opacity: 0 }}
+                            animate={
+                                showMenu
+                                    ? { x: "0", opacity: 1 }
+                                    : { x: "-40px", opacity: 0 }
+                            }
+                            transition={
+                                showMenu
+                                    ? {
+                                          x: { delay: 0.2 },
+                                          opacity: { delay: 0.2 },
+                                      }
+                                    : {
+                                          opacity: { delay: 0 },
+                                          x: { delay: 0.3 },
+                                      }
+                            }
+                        >
+                            Home
+                        </motion.h1>
                     </NavLink>
                     <NavLink
                         to="/about"
                         className={({ isActive }) =>
                             isActive ? "nav-menu-item-active" : "nav-menu-item"
                         }
+                        onClick={handleCloseMenu}
                     >
-                        <h1>About Me</h1>
+                        <motion.h1
+                            initial={{ x: "-40px", opacity: 0 }}
+                            animate={
+                                showMenu
+                                    ? { x: "0", opacity: 1 }
+                                    : { x: "-40px", opacity: 0 }
+                            }
+                            transition={
+                                showMenu
+                                    ? {
+                                          x: { delay: 0.3 },
+                                          opacity: { delay: 0.3 },
+                                      }
+                                    : {
+                                          opacity: { delay: 0 },
+                                          x: { delay: 0.3 },
+                                      }
+                            }
+                        >
+                            About Me
+                        </motion.h1>
                     </NavLink>
                     <NavLink
                         to="/contact"
                         className={({ isActive }) =>
                             isActive ? "nav-menu-item-active" : "nav-menu-item"
                         }
+                        onClick={handleCloseMenu}
                     >
-                        <h1>Contact Me</h1>
+                        <motion.h1
+                            initial={{ x: "-40px", opacity: 0 }}
+                            animate={
+                                showMenu
+                                    ? { x: "0", opacity: 1 }
+                                    : { x: "-40px", opacity: 0 }
+                            }
+                            transition={
+                                showMenu
+                                    ? {
+                                          x: { delay: 0.4 },
+                                          opacity: { delay: 0.4 },
+                                      }
+                                    : {
+                                          opacity: { delay: 0 },
+                                          x: { delay: 0.3 },
+                                      }
+                            }
+                        >
+                            Contact Me
+                        </motion.h1>
                     </NavLink>
-                    <h1 className="nav-menu-item">Github</h1>
-                    <h1 className="nav-menu-item">Resume</h1>
+                    <motion.h1
+                        initial={{ x: "-40px", opacity: 0 }}
+                        animate={
+                            showMenu
+                                ? { x: "0", opacity: 1 }
+                                : { x: "-40px", opacity: 0 }
+                        }
+                        transition={
+                            showMenu
+                                ? { x: { delay: 0.5 }, opacity: { delay: 0.5 } }
+                                : { opacity: { delay: 0 }, x: { delay: 0.3 } }
+                        }
+                        className="nav-menu-item"
+                    >
+                        Github
+                    </motion.h1>
+                    <motion.h1
+                        initial={{ x: "-40px", opacity: 0 }}
+                        animate={
+                            showMenu
+                                ? { x: "0", opacity: 1 }
+                                : { x: "-40px", opacity: 0 }
+                        }
+                        transition={
+                            showMenu
+                                ? { x: { delay: 0.6 }, opacity: { delay: 0.6 } }
+                                : { opacity: { delay: 0 }, x: { delay: 0.3 } }
+                        }
+                        className="nav-menu-item"
+                    >
+                        Resume
+                    </motion.h1>
                 </Box>
                 <Box
                     sx={{
@@ -89,13 +186,39 @@ function Menu({ setShowMenu, showMenu }) {
                         },
                     }}
                 >
-                    <h3>Our Promise</h3>
-                    <p>
+                    <motion.h3
+                        initial={{ y: "40px", opacity: 0 }}
+                        animate={
+                            showMenu
+                                ? { y: "0", opacity: 1 }
+                                : { y: "40px", opacity: 0 }
+                        }
+                        transition={
+                            showMenu
+                                ? { y: { delay: 1 }, opacity: { delay: 1 } }
+                                : { opacity: { delay: 0 }, y: { delay: 0.3 } }
+                        }
+                    >
+                        My Portfolio
+                    </motion.h3>
+                    <motion.p
+                        initial={{ y: "40px", opacity: 0 }}
+                        animate={
+                            showMenu
+                                ? { y: "0", opacity: 1 }
+                                : { y: "40px", opacity: 0 }
+                        }
+                        transition={
+                            showMenu
+                                ? { y: { delay: 1 }, opacity: { delay: 1 } }
+                                : { opacity: { delay: 0 }, y: { delay: 0.3 } }
+                        }
+                    >
                         The passage experienced a surge in popularity during the
                         1960s when Letraset used it on their dry-transfer
                         sheets, and again during the 90s as desktop publishers
                         bundled the text with their software.
-                    </p>
+                    </motion.p>
                 </Box>
             </Box>
             <Box
@@ -112,7 +235,21 @@ function Menu({ setShowMenu, showMenu }) {
                     },
                 }}
             >
-                <h3>Quick Links:</h3>
+                <motion.h3
+                    initial={{ y: "40px", opacity: 0 }}
+                    animate={
+                        showMenu
+                            ? { y: "0", opacity: 1 }
+                            : { y: "40px", opacity: 0 }
+                    }
+                    transition={
+                        showMenu
+                            ? { y: { delay: 0.7 }, opacity: { delay: 0.7 } }
+                            : { opacity: { delay: 0 }, y: { delay: 0.3 } }
+                    }
+                >
+                    Quick Links:
+                </motion.h3>
                 <Box
                     sx={{
                         display: "flex",
@@ -125,18 +262,42 @@ function Menu({ setShowMenu, showMenu }) {
                         },
                     }}
                 >
-                    <div>
+                    <motion.div
+                        initial={{ y: "40px", opacity: 0 }}
+                        animate={
+                            showMenu
+                                ? { y: "0", opacity: 1 }
+                                : { y: "40px", opacity: 0 }
+                        }
+                        transition={
+                            showMenu
+                                ? { y: { delay: 0.8 }, opacity: { delay: 0.8 } }
+                                : { opacity: { delay: 0 }, y: { delay: 0.3 } }
+                        }
+                    >
                         <p>Email:</p>
                         <p>
                             <b>kenlopezyokohama@gmail.com</b>
                         </p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div
+                        initial={{ y: "40px", opacity: 0 }}
+                        animate={
+                            showMenu
+                                ? { y: "0", opacity: 1 }
+                                : { y: "40px", opacity: 0 }
+                        }
+                        transition={
+                            showMenu
+                                ? { y: { delay: 0.9 }, opacity: { delay: 0.9 } }
+                                : { opacity: { delay: 0 }, y: { delay: 0.3 } }
+                        }
+                    >
                         <p>Contact No:</p>
                         <p style={{ fontFamily: "arial" }}>
                             <b>+63 917 578 7991</b>
                         </p>
-                    </div>
+                    </motion.div>
                 </Box>
             </Box>
         </motion.div>
