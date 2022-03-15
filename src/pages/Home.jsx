@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function Home(props) {
     return (
-        <div>
+        <div className="page-container">
             Home
             <h1>Test</h1>
             <h1>Test</h1>
