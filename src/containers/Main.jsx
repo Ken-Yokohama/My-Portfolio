@@ -4,7 +4,7 @@ import { Navbar } from "../components";
 import { About, Contact, Home, Menu } from "../pages";
 
 function Main(props) {
-    const [showMenu, setShowMenu] = useState("false");
+    const [showMenu, setShowMenu] = useState(false);
 
     const toggleShowMenu = () => {
         setShowMenu((prevValue) => !prevValue);
@@ -12,8 +12,8 @@ function Main(props) {
 
     return (
         <div>
-            <Navbar />
-            <Menu />
+            <Navbar setShowMenu={setShowMenu} toggleShowMenu={toggleShowMenu} />
+            <Menu setShowMenu={setShowMenu} showMenu={showMenu} />
             <div>
                 <Routes>
                     <Route path="/" element={<Home />} />

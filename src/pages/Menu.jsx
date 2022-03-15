@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Box } from "@mui/system";
 
-function Menu(props) {
+function Menu({ setShowMenu, showMenu }) {
     return (
-        <div
+        <motion.div
+            initial={{ y: "-100vh" }}
+            // animate={{ y: showMenu ? "0" : ["-100vh"] }}
+            animate={{
+                y: showMenu ? ["100vh", "0vh"] : [null, "-100vh"],
+            }}
+            transition={{ duration: 0.3 }}
             style={{
                 position: "fixed",
                 display: "flex",
@@ -111,7 +117,7 @@ function Menu(props) {
                     </div>
                 </Box>
             </Box>
-        </div>
+        </motion.div>
     );
 }
 

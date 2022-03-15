@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
 
-function Navbar(props) {
+function Navbar({ setShowMenu, toggleShowMenu }) {
     return (
         <div
             style={{
@@ -21,7 +21,7 @@ function Navbar(props) {
                 }}
             >
                 <h3>Ken Yokohama</h3>
-                <h3>Menu</h3>
+                <h3 onClick={toggleShowMenu}>Menu</h3>
             </Box>
         </div>
     );
