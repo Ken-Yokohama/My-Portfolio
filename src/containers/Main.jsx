@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Navbar } from "../components";
@@ -18,13 +19,20 @@ function Main(props) {
                 toggleShowMenu={toggleShowMenu}
             />
             <Menu setShowMenu={setShowMenu} showMenu={showMenu} />
-            <div>
+            <Box
+                sx={{
+                    paddingTop: "3.6rem",
+                    "@media(min-width: 700px)": {
+                        paddingTop: "5.6rem",
+                    },
+                }}
+            >
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
-            </div>
+            </Box>
         </div>
     );
 }

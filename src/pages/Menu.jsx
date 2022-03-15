@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Box } from "@mui/system";
+import { NavLink } from "react-router-dom";
 
 function Menu({ setShowMenu, showMenu }) {
     return (
@@ -50,11 +51,17 @@ function Menu({ setShowMenu, showMenu }) {
                         // },
                     }}
                 >
-                    <h1>Home</h1>
-                    <h1>About Me</h1>
-                    <h1>Contact Me</h1>
-                    <h1>Github</h1>
-                    <h1>Resume</h1>
+                    <NavLink to="/" className="nav-menu-item">
+                        <h1>Home</h1>
+                    </NavLink>
+                    <NavLink to="/about" className="nav-menu-item">
+                        <h1>About Me</h1>
+                    </NavLink>
+                    <NavLink to="/contact" className="nav-menu-item">
+                        <h1>Contact Me</h1>
+                    </NavLink>
+                    <h1 className="nav-menu-item">Github</h1>
+                    <h1 className="nav-menu-item">Resume</h1>
                 </Box>
                 <Box
                     sx={{
