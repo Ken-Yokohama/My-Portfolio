@@ -12,7 +12,11 @@ function Main(props) {
 
     return (
         <div>
-            <Navbar setShowMenu={setShowMenu} toggleShowMenu={toggleShowMenu} />
+            <Navbar
+                showMenu={showMenu}
+                setShowMenu={setShowMenu}
+                toggleShowMenu={toggleShowMenu}
+            />
             <Menu setShowMenu={setShowMenu} showMenu={showMenu} />
             <div>
                 <Routes>
