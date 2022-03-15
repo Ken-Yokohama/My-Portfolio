@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Box } from "@mui/system";
 import { NavLink } from "react-router-dom";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 function Menu({ setShowMenu, showMenu }) {
     const handleCloseMenu = () => {
@@ -276,9 +277,15 @@ function Menu({ setShowMenu, showMenu }) {
                         }
                     >
                         <p>Email:</p>
-                        <p>
-                            <b>kenlopezyokohama@gmail.com</b>
-                        </p>
+                        <CopyToClipboard text="kenlopezyokohama@gmail.com">
+                            <motion.p
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                style={{ cursor: "pointer" }}
+                            >
+                                <b>kenlopezyokohama@gmail.com</b>
+                            </motion.p>
+                        </CopyToClipboard>
                     </motion.div>
                     <motion.div
                         initial={{ y: "40px", opacity: 0 }}
@@ -294,9 +301,18 @@ function Menu({ setShowMenu, showMenu }) {
                         }
                     >
                         <p>Contact No:</p>
-                        <p style={{ fontFamily: "arial" }}>
-                            <b>+63 917 578 7991</b>
-                        </p>
+                        <CopyToClipboard text="+639175787991">
+                            <motion.p
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                style={{
+                                    fontFamily: "arial",
+                                    cursor: "pointer",
+                                }}
+                            >
+                                <b>+63 917 578 7991</b>
+                            </motion.p>
+                        </CopyToClipboard>
                     </motion.div>
                 </Box>
             </Box>
