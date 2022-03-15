@@ -10,6 +10,29 @@ body {
 
 /* Animation try */
 
+ {
+    /* Scroll Animation, Use Later on for Known Technologies */
+}
+ {
+    /* <div className="scroll" style={{ display: "flex" }}>
+                    <h3 style={{ fontSize: "2rem" }}>
+                        - Email: <span>kenlopezyokohama@gmail.com</span> -
+                        Contact:{" "}
+                        <span style={{ fontFamily: "arial" }}>
+                            +63 917 578 7991{" "}
+                        </span>
+                    </h3>
+                    
+                    <h3 style={{ fontSize: "2rem" }}>
+                        - Email: <span>kenlopezyokohama@gmail.com</span> -
+                        Contact:{" "}
+                        <span style={{ fontFamily: "arial" }}>
+                            +63 917 578 7991{" "}
+                        </span>
+                    </h3>
+                </div> */
+}
+
 .scroll h3 {
     white-space: nowrap;
     animation: animate 40s linear infinite;
