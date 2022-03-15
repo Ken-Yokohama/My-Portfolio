@@ -8,6 +8,11 @@ body {
     font-family: "Raleway";
 }
 
+.nav-menu-item-active {
+    color: white;
+    text-decoration: underline;
+}
+
 .nav-menu-item {
     color: black;
     text-decoration: none;

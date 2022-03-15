@@ -51,13 +51,28 @@ function Menu({ setShowMenu, showMenu }) {
                         // },
                     }}
                 >
-                    <NavLink to="/" className="nav-menu-item">
+                    <NavLink
+                        to="/"
+                        className={({ isActive }) =>
+                            isActive ? "nav-menu-item-active" : "nav-menu-item"
+                        }
+                    >
                         <h1>Home</h1>
                     </NavLink>
-                    <NavLink to="/about" className="nav-menu-item">
+                    <NavLink
+                        to="/about"
+                        className={({ isActive }) =>
+                            isActive ? "nav-menu-item-active" : "nav-menu-item"
+                        }
+                    >
                         <h1>About Me</h1>
                     </NavLink>
-                    <NavLink to="/contact" className="nav-menu-item">
+                    <NavLink
+                        to="/contact"
+                        className={({ isActive }) =>
+                            isActive ? "nav-menu-item-active" : "nav-menu-item"
+                        }
+                    >
                         <h1>Contact Me</h1>
                     </NavLink>
                     <h1 className="nav-menu-item">Github</h1>
