@@ -9,6 +9,7 @@ function Navbar(props) {
                 opacity: "0.5",
                 position: "fixed",
                 width: "100%",
+                zIndex: "1",
             }}
         >
             <Box
