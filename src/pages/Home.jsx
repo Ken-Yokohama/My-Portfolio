@@ -5,6 +5,8 @@ import Project from "../components/Project";
 function Home(props) {
     return (
         <div className="page-container">
+            {/* -------------------------Title----------------------- */}
+
             <Box
                 sx={{
                     display: "flex",
@@ -110,12 +112,28 @@ function Home(props) {
                     />
                 </Box>
             </Box>
+
+            {/* -------------------------Projects----------------------- */}
+
             <h5>PROJECTS AND SHOWCASE</h5>
             <h1>Selected Projects</h1>
-            <Project />
-            <Project />
-            <Project />
-            <Project />
+            <Box
+                sx={{
+                    display: "grid",
+                    gridTemplateColumns: "1fr",
+                    gap: "2rem",
+                    "@media(min-width: 650px)": {
+                        gridTemplateColumns: "1fr 1fr",
+                    },
+                    "@media(min-width: 1300px)": {
+                        gap: "4rem",
+                    },
+                }}
+            >
+                <Project />
+                <Project />
+                <Project />
+            </Box>
         </div>
     );
 }
