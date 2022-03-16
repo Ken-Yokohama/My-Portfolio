@@ -10,13 +10,35 @@ function Home(props) {
                     display: "flex",
                     alignItems: " center",
                     justifyContent: "center",
-                    height: "80vh",
+                    minHeight: "80vh",
                     padding: "1rem",
+                    flexDirection: "row",
+                    "@media (max-width: 900px)": {
+                        minHeight: "100%",
+                        padding: "3rem",
+                        justifyContent: "space-between",
+                        padding: "0rem",
+                        gap: "1rem",
+                    },
+                    "@media (max-width: 650px)": {
+                        flexDirection: "column-reverse",
+                        minHeight: "100%",
+                        padding: "0rem",
+                    },
                 }}
             >
-                <Box sx={{ zIndex: "1" }}>
+                <Box
+                    className="title"
+                    sx={{
+                        zIndex: "1",
+                        "@media (max-width: 650px)": {
+                            marginTop: "-100px",
+                            // transform: "translate(0, -100px)",
+                        },
+                    }}
+                >
                     <h5>KEN YOKOHAMA</h5>
-                    <h1>FULL STACK DEVLOPER</h1>
+                    <h1>FULL STACK DEVELOPER</h1>
                     <h3>
                         Hello! I'm a <b>Web Developer</b> and licensed Civil
                         Engineer with a passion for solving problems, learning
@@ -24,15 +46,18 @@ function Home(props) {
                         of code.
                     </h3>
                 </Box>
-                <Box sx={{ width: "600px" }}>
+                <Box
+                    sx={{
+                        width: "600px",
+                        "@media(max-width: 900px)": {
+                            width: "100%",
+                        },
+                    }}
+                >
                     <img
                         src="/images/profile-img.jpg"
                         alt=""
-                        style={{
-                            width: "100%",
-                            aspectRatio: "1.05/1",
-                            transform: "scale(1.5) translate(-100px,0)",
-                        }}
+                        className="profile-img"
                     />
                 </Box>
             </Box>
