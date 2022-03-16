@@ -216,10 +216,11 @@ function Menu({ setShowMenu, showMenu }) {
                                 : { opacity: { delay: 0 }, y: { delay: 0.3 } }
                         }
                     >
-                        The passage experienced a surge in popularity during the
-                        1960s when Letraset used it on their dry-transfer
-                        sheets, and again during the 90s as desktop publishers
-                        bundled the text with their software.
+                        Thank you for viewing my portfolio. If you'd like to
+                        know more details on how I built this project or if you
+                        are just curious to see my source code, feel free to
+                        check out my GitHub.
+                        {/* This project was built using react and tools from the react-ecosystem namely material-ui, react-router-dom, framer-motion & axios. */}
                     </motion.p>
                 </Box>
             </Box>
