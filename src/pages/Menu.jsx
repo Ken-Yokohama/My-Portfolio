@@ -49,7 +49,6 @@ function Menu({ setShowMenu, showMenu }) {
                         flexDirection: "column",
                         gap: "0.5rem",
                         padding: "1rem 1rem 1rem 0",
-                        fontSize: "1.5rem",
                         // "@media (min-width: 600px)": {
                         //     marginLeft: "6rem",
                         //     marginRight: "6rem",
