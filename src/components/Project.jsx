@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import LanguageIcon from "@mui/icons-material/Language";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { motion } from "framer-motion";
 
 function Project(props) {
     return (
@@ -47,7 +48,10 @@ function Project(props) {
             </div>
             {/* Button Option 1 */}
             <Box sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-                <div>
+                <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
                     <Button
                         sx={{
                             backgroundColor: "#FFA500",
@@ -60,9 +64,12 @@ function Project(props) {
                     >
                         Live Site
                     </Button>
-                </div>{" "}
+                </motion.div>{" "}
                 <h5>or</h5>{" "}
-                <div>
+                <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
                     <Button
                         sx={{
                             color: "#FFA500",
@@ -77,7 +84,7 @@ function Project(props) {
                     >
                         Github Repo
                     </Button>
-                </div>
+                </motion.div>
             </Box>
         </div>
     );
