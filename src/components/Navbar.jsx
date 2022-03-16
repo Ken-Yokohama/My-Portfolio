@@ -11,7 +11,7 @@ function Navbar({ showMenu, setShowMenu, toggleShowMenu }) {
                 background: showMenu ? "none" : "white",
                 position: "fixed",
                 width: "100%",
-                zIndex: "1",
+                zIndex: "10",
                 transition: "background 1s",
                 "@media(min-width: 800px)": {
                     background: "none",

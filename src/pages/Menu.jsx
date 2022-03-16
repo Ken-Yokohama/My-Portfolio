@@ -27,6 +27,7 @@ function Menu({ setShowMenu, showMenu }) {
                 height: "100vh",
                 width: "100vw",
                 gap: "3rem",
+                zIndex: "3",
             }}
         >
             <Box
