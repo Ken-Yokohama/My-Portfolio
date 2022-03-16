@@ -59,14 +59,14 @@ h6 {
 .profile-img {
     width: 100%;
     aspect-ratio: 1.05/1;
-    transform: scale(1.5) translate(-100px, 0);
+    transform: scale(1.5) translate(0, 0);
 }
 
 @media (max-width: 900px) {
     .profile-img {
         transform: scale(1) translate(0, 0);
-        height: 276px;
-        width: 290px;
+        min-height: 276px;
+        min-width: 290px;
     }
 
     .title h1 {
@@ -79,6 +79,20 @@ h6 {
         transform: scale(1) translate(0, 0);
         height: 100%;
         width: 100%;
+    }
+}
+
+/* Rensovie Mobile Font */
+
+@media (max-width: 510px) {
+    .title h1 {
+        font-size: clamp(1rem, 6vw, 2rem);
+    }
+    .title h5 {
+        font-size: clamp(0.4rem, 2vw, 0.75rem);
+    }
+    .title h3 {
+        font-size: 4vw;
     }
 }
 
