@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
+import Project from "../components/Project";
 
 function Home(props) {
     return (
@@ -9,13 +10,15 @@ function Home(props) {
                     display: "flex",
                     alignItems: " center",
                     justifyContent: "center",
-                    minHeight: "80vh",
+                    height: "100vh",
                     padding: "1rem",
                     flexDirection: "row",
                     "@media (max-width: 900px)": {
                         minHeight: "100%",
                         padding: "0",
                         gap: "1rem",
+                        // Padding for Nav
+                        // paddingTop: "5.6rem",
                     },
                     "@media (max-width: 650px)": {
                         flexDirection: "column-reverse",
@@ -31,12 +34,13 @@ function Home(props) {
                         backgroundColor: "rgba(255, 255, 255, 0.8)",
                         padding: "1rem",
                         "@media (max-width: 900px)": {
-                            padding: "0rem",
+                            width: "900px",
+                            marginRight: "-100px",
                         },
                         "@media (max-width: 650px)": {
                             width: "auto",
                             marginTop: "-100px",
-                            padding: "1rem",
+                            marginRight: "0",
                         },
                         display: "flex",
                         flexDirection: "column",
@@ -51,7 +55,17 @@ function Home(props) {
                         learning new things and turning ideas into reality with
                         the use of code.
                     </h3>
-                    <h4 style={{ marginTop: "1rem", fontWeight: "100" }}>
+                    <Box
+                        component="h4"
+                        sx={{
+                            marginTop: "1rem",
+                            fontWeight: "100",
+                            "@media(max-width: 510px)": {
+                                marginTop: "0.5rem",
+                                fontSize: "clamp(0.5rem, 3vw, 1rem)",
+                            },
+                        }}
+                    >
                         <Box
                             component="strong"
                             sx={{
@@ -79,7 +93,7 @@ function Home(props) {
                         >
                             About Me
                         </Box>
-                    </h4>
+                    </Box>
                 </Box>
                 <Box
                     sx={{
@@ -96,45 +110,12 @@ function Home(props) {
                     />
                 </Box>
             </Box>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
+            <h5>PROJECTS AND SHOWCASE</h5>
+            <h1>Selected Projects</h1>
+            <Project />
+            <Project />
+            <Project />
+            <Project />
         </div>
     );
 }
