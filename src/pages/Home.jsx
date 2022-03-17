@@ -106,8 +106,8 @@ function Home(props) {
                     }}
                 >
                     <img
-                        src="/images/profile-img2.jpg"
-                        alt=""
+                        src="/images/home-page/profile-img2.jpg"
+                        alt="profile-image"
                         className="profile-img"
                     />
                 </Box>
