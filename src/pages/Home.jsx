@@ -106,7 +106,7 @@ function Home(props) {
                     }}
                 >
                     <img
-                        src="/images/profile-img.jpg"
+                        src="/images/profile-img2.jpg"
                         alt=""
                         className="profile-img"
                     />
