@@ -30,6 +30,31 @@ h6 {
 }
 
 /* Left and Right Container Controls */
+.page-container {
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+@media (min-width: 2000px) {
+    .page-container {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}
+
+@media (min-width: 3000px) {
+    .page-container {
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+}
+@media (min-width: 4000px) {
+    .page-container {
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+}
+
 .page-container h1 {
     font-size: 3.5rem;
     font-weight: 900;
@@ -64,11 +89,6 @@ h6 {
 
 .nav-menu-item:hover {
     color: white;
-}
-
-.page-container {
-    padding-left: 4vw;
-    padding-right: 4vw;
 }
 
 /* Home Profile Image CSS */

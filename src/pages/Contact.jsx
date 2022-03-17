@@ -19,7 +19,6 @@ function Contact(props) {
                     gridTemplateColumns: "1fr 1fr",
                     "@media(max-width: 650px)": {
                         gridTemplateColumns: "1fr",
-                        gridTemplateRows: "1fr 1fr",
                     },
                 }}
             >

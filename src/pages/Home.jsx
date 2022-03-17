@@ -109,6 +109,7 @@ function Home(props) {
                         src="/images/home-page/profile-img2.jpg"
                         alt="profile-image"
                         className="profile-img"
+                        style={{ filter: "grayscale(100%)" }}
                     />
                 </Box>
             </Box>
