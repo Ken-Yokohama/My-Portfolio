@@ -87,12 +87,24 @@ function About(props) {
                         sx={{
                             display: "grid",
                             gridTemplateColumns: "1fr 1fr 1fr 1fr",
+                            gridTemplateRows: "1fr 1fr 1fr 1fr 1fr",
                         }}
                     >
                         {technologiesImgSrc.map((img, index) => (
-                            <div key={index}>
+                            <div
+                                key={index}
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    aspectRatio: "2/1",
+                                }}
+                            >
                                 <img
-                                    style={{ maxWidth: "100%" }}
+                                    style={{
+                                        maxWidth: "80%",
+                                        maxHeight: "80%",
+                                    }}
                                     src={
                                         "/images/about-page/technologies/" + img
                                     }
