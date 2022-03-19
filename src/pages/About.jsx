@@ -7,9 +7,9 @@ function About(props) {
         "css.png",
         "javascript.png",
         "react1.png",
-        "Firebase1.png",
         "nodejs1.png",
-        "expressjs1.png",
+        "expressjs3.png",
+        "Firebase1.png",
         "mongodb1.jpg",
         "materialui2.png",
         "framermotion1.png",
@@ -22,7 +22,7 @@ function About(props) {
         "jquery1.png",
         "npm1.png",
         "autoit1.png",
-        "stackoverflow1.png",
+        "github2.png",
     ];
 
     return (
