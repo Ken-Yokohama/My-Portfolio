@@ -80,14 +80,27 @@ function About(props) {
                     }}
                 >
                     <h5>LANGUAGES</h5>
-                    <h2 style={{ textAlign: "center" }}>
+                    <Box
+                        component="h2"
+                        sx={{
+                            textAlign: "center",
+                            marginBottom: "3rem",
+                            marginTop: "1rem",
+                        }}
+                    >
                         Some Technologies I'm fluent with
-                    </h2>
+                    </Box>
+
                     <Box
                         sx={{
                             display: "grid",
                             gridTemplateColumns: "1fr 1fr 1fr 1fr",
-                            gridTemplateRows: "1fr 1fr 1fr 1fr 1fr",
+                            "@media (max-width: 900px)": {
+                                gridTemplateColumns: "1fr 1fr 1fr",
+                            },
+                            "@media (max-width: 550px)": {
+                                gridTemplateColumns: "1fr 1fr ",
+                            },
                         }}
                     >
                         {technologiesImgSrc.map((img, index) => (
@@ -124,9 +137,16 @@ function About(props) {
                     }}
                 >
                     <h5>SOFTWARE</h5>
-                    <h2 style={{ textAlign: "center" }}>
+                    <Box
+                        component="h2"
+                        sx={{
+                            textAlign: "center",
+                            marginBottom: "3rem",
+                            marginTop: "1rem",
+                        }}
+                    >
                         Engineering & Design
-                    </h2>
+                    </Box>
                 </div>
 
                 {/* ---------------------REFACTORING------------------------ */}
