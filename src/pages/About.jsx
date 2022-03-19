@@ -151,32 +151,6 @@ function About(props) {
 
                 {/* ---------------------REFACTORING------------------------ */}
                 <div>
-                    <h1>Technical Skills</h1>
-                    {/*  */}
-                    <h2>Programming Technologies</h2>
-                    {/*  */}
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JAVASCRIPT</li>
-                    <li>REACT</li>
-                    <li>FIREBASE</li>
-                    <li>NODE JS</li>
-                    <li>EXPRESSJS</li>
-                    <li>MONGO DB</li>
-                    <li>MATERIAL UI</li>
-                    <li>FRAMER MOTION</li>
-                    <li>REACT ROUTER DOM</li>
-                    <li>GIT</li>
-                    <li>GITHUB</li>
-                    <li>Heroku</li>
-                    <li>Netlify</li>
-                    <li>BOOTSTRAP</li>
-                    <li>TAILWIND CSS</li>
-                    <li>JQUERY</li>
-                    <li>NPM</li>
-                    <li>AUTOIT</li>
-                    <li>STACK OVERFLOW</li>
-                    {/*  */}
                     <h2>Engineering & Design</h2>
                     {/*  */}
                     <li>AUTOCAD</li>
@@ -190,6 +164,31 @@ function About(props) {
                 </div>
                 <div>
                     <h1>Education</h1>
+                    <h2 style={{ fontWeight: "100" }}>
+                        Graduated from <strong>De La Salle University </strong>{" "}
+                        on "INSERT DATE HERE"
+                    </h2>
+                    <p>
+                        Maybe Make it a Carousell, Also MAbe MAke it black and
+                        white
+                    </p>
+                    <img src="" alt="Insert Batch Photo Here" />
+                </div>
+                <div>
+                    <h1>Awards & Certifications</h1>
+                    <h2 style={{ fontWeight: "100" }}>
+                        The Complete 2022 Web Development Bootcamp
+                    </h2>
+                    <button>Link to Course</button>
+                    <button>Link to Certification</button>
+                    <h2 style={{ fontWeight: "100" }}>Golden Thesis Awardee</h2>
+                    <button>Link to Photo</button>
+                    <button>Link to Certification</button>
+                    <h2 style={{ fontWeight: "100" }}>
+                        Geomate Tokyo Best Paper Award
+                    </h2>
+                    <button>Link to Photo</button>
+                    <button>Link to Certification</button>
                 </div>
             </Box>
         </div>
