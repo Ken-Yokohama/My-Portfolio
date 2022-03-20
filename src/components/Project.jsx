@@ -5,7 +5,16 @@ import LanguageIcon from "@mui/icons-material/Language";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { motion } from "framer-motion";
 
-function Project({ backgroundImg }) {
+function Project({
+    year,
+    month,
+    name,
+    description,
+    technologies,
+    liveSiteLink,
+    githubRepoLink,
+    backgroundImg,
+}) {
     const [mouseHovering, setMouseHovering] = useState(false);
 
     return (
@@ -14,7 +23,7 @@ function Project({ backgroundImg }) {
                 setMouseHovering(true);
             }}
             onMouseLeave={() => {
-                setMouseHovering(false);
+                setMouseHovering(true);
             }}
             style={{
                 // handle Background Image
@@ -22,8 +31,9 @@ function Project({ backgroundImg }) {
                 backgroundSize: "cover",
             }}
         >
-            <div
-                style={{
+            <Box
+                className="project-cards"
+                sx={{
                     backgroundColor: mouseHovering
                         ? "rgba(35,44,48,0.95)"
                         : "rgba(35,44,48,0)",
@@ -49,7 +59,7 @@ function Project({ backgroundImg }) {
                             : { opacity: { delay: 0 }, y: { delay: 0.0 } }
                     }
                 >
-                    2021 - Aug
+                    {year} - {month}
                 </motion.h5>
                 {/* Title & Desc */}
                 <motion.div
@@ -65,13 +75,8 @@ function Project({ backgroundImg }) {
                             : { opacity: { delay: 0 }, y: { delay: 0.0 } }
                     }
                 >
-                    <h1>Project Name 1</h1>
-                    <p>
-                        A simple site that uses... Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. A, ipsam consectetur
-                        ratione numquam ipsum praesentium aliquam deserunt
-                        perferendis illo officia!
-                    </p>
+                    <h1>{name}</h1>
+                    <p>{description}</p>
                 </motion.div>
                 {/* Technologies */}
                 <motion.div
@@ -88,19 +93,24 @@ function Project({ backgroundImg }) {
                     }
                 >
                     <h2>Technologies Used</h2>
-                    <h3
+                    <div
                         style={{
                             fontWeight: "100",
                             display: "grid",
                             gridTemplateColumns: "1fr 1fr",
                         }}
                     >
-                        <li>React</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JAVASCRIPT</li>
-                        <li>FIREBASE</li>
-                    </h3>
+                        {technologies.map((technologies, index) => (
+                            <div
+                                className="technologies"
+                                key={index}
+                                style={{ display: "flex" }}
+                            >
+                                <h5>-</h5>
+                                <h5> {technologies}</h5>
+                            </div>
+                        ))}
+                    </div>
                 </motion.div>
                 {/* Button Option 1 */}
                 <motion.div
@@ -115,51 +125,64 @@ function Project({ backgroundImg }) {
                             ? { y: { delay: 0.3 }, opacity: { delay: 0.3 } }
                             : { opacity: { delay: 0 }, y: { delay: 0.0 } }
                     }
-                    style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "1rem",
-                    }}
                 >
-                    <motion.div
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
+                    <Box
+                        sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "1rem",
+                            "@media (max-width: 935px)": {
+                                flexDirection: "column",
+                            },
+                            "@media (max-width: 650px)": {
+                                flexDirection: "row",
+                            },
+                            "@media (max-width: 370px)": {
+                                flexDirection: "column",
+                            },
+                        }}
                     >
-                        <Button
-                            sx={{
-                                backgroundColor: "#FFA500",
-                                ":hover": {
-                                    backgroundColor: "#e39505",
-                                },
-                            }}
-                            variant="contained"
-                            startIcon={<LanguageIcon />}
+                        <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
                         >
-                            Live Site
-                        </Button>
-                    </motion.div>{" "}
-                    <h5>or</h5>{" "}
-                    <motion.div
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                    >
-                        <Button
-                            sx={{
-                                color: "#FFA500",
-                                borderColor: "#FFA500",
-                                ":hover": {
-                                    borderColor: "#e39505",
-                                    color: "#e39505",
-                                },
-                            }}
-                            variant="outlined"
-                            endIcon={<GitHubIcon />}
+                            <Button
+                                sx={{
+                                    backgroundColor: "#FFA500",
+                                    ":hover": {
+                                        backgroundColor: "#e39505",
+                                    },
+                                }}
+                                fullWidth
+                                variant="contained"
+                                startIcon={<LanguageIcon />}
+                            >
+                                Live Site
+                            </Button>
+                        </motion.div>{" "}
+                        <h5>or</h5> {/* Button Option 2 */}
+                        <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
                         >
-                            Github Repo
-                        </Button>
-                    </motion.div>
+                            <Button
+                                sx={{
+                                    color: "#FFA500",
+                                    borderColor: "#FFA500",
+                                    ":hover": {
+                                        borderColor: "#e39505",
+                                        color: "#e39505",
+                                    },
+                                }}
+                                variant="outlined"
+                                endIcon={<GitHubIcon />}
+                            >
+                                Github Repo
+                            </Button>
+                        </motion.div>
+                    </Box>
                 </motion.div>
-            </div>
+            </Box>
         </div>
     );
 }

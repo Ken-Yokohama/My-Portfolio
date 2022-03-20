@@ -13,6 +13,63 @@ function Home(props) {
         });
     };
 
+    const projects = [
+        {
+            year: "2022",
+            month: "MAR",
+            name: "Twitter Clone",
+            description:
+                "Twitter Clone is a full-stack social media web application similar to the popular website Twitter created using React in the FrontEnd and Firebase to handle the Database, Authentication & Security.",
+            technologies: [
+                "REACT",
+                "FIREBASE",
+                "MATERIAL UI",
+                "REACT ROUTER",
+                "BAD WORDS",
+            ],
+            liveSiteLink: "https://ken-yokohama.github.io/Twitter-Clone",
+            githubRepoLink: "https://github.com/Ken-Yokohama/Twitter-Clone",
+            backgroundImgUrl:
+                "https://images.unsplash.com/photo-1605496036006-fa36378ca4ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+        },
+        {
+            year: "2022",
+            month: "FEB",
+            name: "Kenterest",
+            description:
+                "Kenterest is a full-stack social media photo sharing web application similar to the popular website Pinterest created using React in the Frontend and Sanity.io as the CMS.",
+            technologies: [
+                "REACT",
+                "SANITY.IO",
+                "MATERIAL UI",
+                "REACT ROUTER",
+                "UUID",
+            ],
+            liveSiteLink: "https://kenterest.netlify.app/",
+            githubRepoLink: "https://github.com/Ken-Yokohama/Kenterest",
+            backgroundImgUrl:
+                "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80",
+        },
+        {
+            year: "2022",
+            month: "FEB",
+            name: "Kenterest",
+            description:
+                "Kenterest is a full-stack social media photo sharing web application similar to the popular website Pinterest created using React in the Frontend and Sanity.io as the CMS.",
+            technologies: [
+                "REACT",
+                "SANITY.IO",
+                "MATERIAL UI",
+                "REACT ROUTER",
+                "UUID",
+            ],
+            liveSiteLink: "https://kenterest.netlify.app/",
+            githubRepoLink: "https://github.com/Ken-Yokohama/Kenterest",
+            backgroundImgUrl:
+                "https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
+        },
+    ];
+
     return (
         <>
             <div className="page-container">
@@ -159,9 +216,19 @@ function Home(props) {
                                 },
                             }}
                         >
-                            <Project backgroundImg="https://images.unsplash.com/photo-1605496036006-fa36378ca4ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" />
-                            <Project backgroundImg="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" />
-                            <Project backgroundImg="https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80" />
+                            {projects.map((project, index) => (
+                                <Project
+                                    key={index}
+                                    year={project.year}
+                                    month={project.month}
+                                    name={project.name}
+                                    description={project.description}
+                                    technologies={project.technologies}
+                                    liveSiteLink={project.liveSiteLink}
+                                    githubRepoLink={project.githubRepoLink}
+                                    backgroundImg={project.backgroundImgUrl}
+                                />
+                            ))}
                         </Box>
                     </div>
                     {/* ------------------------- Engineering Projects LOW PRIORITY----------------------- */}

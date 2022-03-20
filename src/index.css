@@ -160,6 +160,33 @@ h6 {
     }
 }
 
+/* Responsive Project Card Font */
+.project-cards h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.project-cards p {
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.project-cards h2 {
+    font-size: clamp(1.3rem, 2.6vw, 2rem);
+}
+
+@media (max-width: 650px) {
+    .project-cards h1 {
+        font-size: clamp(2rem, 8.5vw, 3.5rem);
+    }
+
+    .project-cards p {
+        font-size: clamp(0.75rem, 2.5vw, 1rem);
+    }
+
+    .project-cards h2 {
+        font-size: clamp(1.3rem, 5vw, 2rem);
+    }
+}
+
 /* Title CSS */
 
 /* Animation try */
