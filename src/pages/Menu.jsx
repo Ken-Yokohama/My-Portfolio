@@ -8,6 +8,8 @@ import Tooltip from "@mui/material/Tooltip";
 function Menu({ setShowMenu, showMenu }) {
     const handleCloseMenu = () => {
         setShowMenu(false);
+        // window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); SMOOTH SCROLL
+        window.scrollTo(0, 0);
     };
 
     return (
