@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
-import CallToAction from "../components/CallToAction";
+import { CallToAction } from "../components";
 
 function About(props) {
     const technologiesImgSrc = [

@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
-import CallToAction from "../components/CallToAction";
-import Project from "../components/Project";
+import { CallToAction, Project } from "../components";
 
 function Home(props) {
     const [clickViewProjects, setClickViewProjects] = useState(false);
