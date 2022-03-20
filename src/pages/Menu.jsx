@@ -218,10 +218,10 @@ function Menu({ setShowMenu, showMenu }) {
                                 : { opacity: { delay: 0 }, y: { delay: 0.3 } }
                         }
                     >
-                        Thank you for viewing my portfolio. If you'd like to
-                        know more details on how I built this project or if you
-                        are just curious to see my source code, feel free to
-                        check out my GitHub.
+                        Thank you for viewing my portfolio __ times. If you'd
+                        like to know more details on how I built this project or
+                        if you are just curious to see my source code, feel free
+                        to check out my GitHub.
                         {/* This project was built using react and tools from the react-ecosystem namely material-ui, react-router-dom, framer-motion & axios. */}
                     </motion.p>
                 </Box>

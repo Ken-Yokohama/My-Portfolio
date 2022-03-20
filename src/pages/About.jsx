@@ -37,7 +37,7 @@ function About(props) {
             <Box
                 sx={{
                     maxWidth: "1600px",
-                    paddingTop: "2rem",
+                    paddingTop: "8rem",
                     display: "flex",
                     flexDirection: "column",
                     gap: "10rem",
@@ -54,9 +54,9 @@ function About(props) {
                 >
                     <h5>About Me</h5>
                     <h1 style={{ textAlign: "center" }}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Animi obcaecati nemo officiis, autem placeat aut
-                        exercitationem laudantium atque quis fuga?
+                        My name is Ken Yokohama. I specialize in creating fast,
+                        user-friendly & secure websites following best
+                        practices.
                     </h1>
                     <h6
                         style={{
@@ -65,9 +65,8 @@ function About(props) {
                             maxWidth: "800px",
                         }}
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Fugiat corrupti cumque, voluptate laudantium rerum
-                        vero sunt tempore? Voluptates, doloribus totam.
+                        I make sure that systems and databases are secure as
+                        well as put a strong emphasis on UI/UX of the website
                     </h6>
                 </div>
                 {/* ---------------------LANGUAGES SECTION------------------------ */}
@@ -145,7 +144,7 @@ function About(props) {
                             marginTop: "1rem",
                         }}
                     >
-                        Engineering & Design
+                        Engineering & Design Tools I Use
                     </Box>
                 </div>
 

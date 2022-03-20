@@ -124,21 +124,47 @@ function Home(props) {
                     />
                 </Box>
             </Box>
-
-            {/* -------------------------Projects----------------------- */}
-
+            {/* Projects Container */}
             <div
                 style={{
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
+                    gap: "5rem",
                 }}
             >
+                {/* ------------------------- Web Projects----------------------- */}
                 <div style={{ maxWidth: "1600px" }} id="#something">
-                    <h5 className={clickViewProjects && "padding-for-nav"}>
+                    <h5 className={clickViewProjects ? "padding-for-nav" : ""}>
                         PROJECTS AND SHOWCASE
                     </h5>
-                    <h1>Selected Projects</h1>
+                    <Box component="h1" sx={{ paddingBottom: "2rem" }}>
+                        Selected Projects
+                    </Box>
+                    <Box
+                        sx={{
+                            display: "grid",
+                            gridTemplateColumns: "1fr",
+                            gap: "2rem",
+                            "@media(min-width: 650px)": {
+                                gridTemplateColumns: "1fr 1fr",
+                            },
+                            "@media(min-width: 1300px)": {
+                                gap: "4rem",
+                            },
+                        }}
+                    >
+                        <Project backgroundImg="https://images.unsplash.com/photo-1605496036006-fa36378ca4ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" />
+                        <Project backgroundImg="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" />
+                        <Project backgroundImg="https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80" />
+                    </Box>
+                </div>
+                {/* ------------------------- Web Projects----------------------- */}
+                <div style={{ maxWidth: "1600px" }}>
+                    <h5>3D Modelling</h5>
+                    <Box component="h1" sx={{ paddingBottom: "2rem" }}>
+                        Engineering Renders
+                    </Box>
                     <Box
                         sx={{
                             display: "grid",
