@@ -1,14 +1,29 @@
 import { Box } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
 
 function Navbar({ showMenu, setShowMenu, toggleShowMenu }) {
+    const [scrolledDown, setScrolledDown] = useState(false);
+
+    const handleScrolledDown = () => {
+        if (window.scrollY == 0) {
+            setScrolledDown(false);
+        } else {
+            setScrolledDown(true);
+        }
+    };
+
+    useEffect(() => {
+        const unsub = window.addEventListener("scroll", handleScrolledDown);
+        return unsub;
+    }, []);
+
     return (
         <Box
             sx={{
-                background: showMenu ? "none" : "white",
+                background: showMenu ? "none" : scrolledDown ? "white" : "none",
                 position: "fixed",
                 width: "100%",
                 zIndex: "10",

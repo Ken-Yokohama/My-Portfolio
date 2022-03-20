@@ -94,7 +94,8 @@ h6 {
 /* Home Profile Image CSS */
 .profile-img {
     width: 100%;
-    aspect-ratio: 1.05/1;
+    /* aspect-ratio: 1.05/1; */
+    /*^^ Default Original CSS */
     transform: scale(1.5) translate(0, 0);
 }
 
