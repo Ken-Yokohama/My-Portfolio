@@ -3,6 +3,16 @@ import React, { useState } from "react";
 import Project from "../components/Project";
 
 function Home(props) {
+    const [clickViewProjects, setClickViewProjects] = useState(false);
+
+    const handleViewProjects = () => {
+        setClickViewProjects(true);
+        document.getElementById("#something").scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    };
+
     return (
         <div className="page-container">
             {/* -------------------------Title----------------------- */}
@@ -78,6 +88,7 @@ function Home(props) {
                                     borderBottom: "2px solid",
                                 },
                             }}
+                            onClick={handleViewProjects}
                         >
                             View Projects
                         </Box>{" "}
@@ -123,8 +134,10 @@ function Home(props) {
                     alignItems: "center",
                 }}
             >
-                <div style={{ maxWidth: "1600px" }}>
-                    <h5>PROJECTS AND SHOWCASE</h5>
+                <div style={{ maxWidth: "1600px" }} id="#something">
+                    <h5 className={clickViewProjects && "padding-for-nav"}>
+                        PROJECTS AND SHOWCASE
+                    </h5>
                     <h1>Selected Projects</h1>
                     <Box
                         sx={{
