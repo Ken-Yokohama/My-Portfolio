@@ -152,6 +152,14 @@ h6 {
     }
 }
 
+/* Call To Action Responsiveness*/
+
+@media (max-width: 390px) {
+    #call-to-action-h1 {
+        font-size: clamp(2rem, 13vw, 3.5rem);
+    }
+}
+
 /* Title CSS */
 
 /* Animation try */

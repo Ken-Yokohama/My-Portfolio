@@ -23,6 +23,7 @@ function CallToAction(props) {
             >
                 <Box
                     component="h1"
+                    id="call-to-action-h1"
                     sx={{
                         transition: "color 0.5s ease",
                         cursor: "pointer",

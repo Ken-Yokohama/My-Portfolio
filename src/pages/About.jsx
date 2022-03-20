@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
+import CallToAction from "../components/CallToAction";
 
 function About(props) {
     const technologiesImgSrc = [
@@ -190,6 +191,7 @@ function About(props) {
                     <button>Link to Certification</button>
                 </div>
             </Box>
+            <CallToAction />
         </div>
     );
 }
