@@ -23,7 +23,7 @@ function Project({
                 setMouseHovering(true);
             }}
             onMouseLeave={() => {
-                setMouseHovering(true);
+                setMouseHovering(false);
             }}
             style={{
                 // handle Background Image
@@ -156,6 +156,9 @@ function Project({
                                 fullWidth
                                 variant="contained"
                                 startIcon={<LanguageIcon />}
+                                onClick={() => {
+                                    window.open(liveSiteLink, "_blank");
+                                }}
                             >
                                 Live Site
                             </Button>
@@ -176,6 +179,9 @@ function Project({
                                 }}
                                 variant="outlined"
                                 endIcon={<GitHubIcon />}
+                                onClick={() => {
+                                    window.open(githubRepoLink, "_blank");
+                                }}
                             >
                                 Github Repo
                             </Button>

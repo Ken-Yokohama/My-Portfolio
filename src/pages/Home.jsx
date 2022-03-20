@@ -201,7 +201,7 @@ function Home(props) {
                             PROJECTS AND SHOWCASE
                         </h5>
                         <Box component="h1" sx={{ paddingBottom: "2rem" }}>
-                            Selected Projects
+                            Featured Projects
                         </Box>
                         <Box
                             sx={{

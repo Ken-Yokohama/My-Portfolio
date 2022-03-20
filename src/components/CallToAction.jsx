@@ -13,12 +13,16 @@ function CallToAction(props) {
                 alignItems: "center",
             }}
         >
-            <div
-                style={{
+            <Box
+                sx={{
                     maxWidth: "1600px",
                     textAlign: "center",
                     paddingTop: "5rem",
                     paddingBottom: "5rem",
+                    "@media(min-width: 650px)": {
+                        paddingTop: "10rem",
+                        paddingBottom: "10rem",
+                    },
                 }}
             >
                 <Box
@@ -38,7 +42,7 @@ function CallToAction(props) {
                     Get In Touch
                 </Box>
                 <h5>Start Your Journey Towards an Awesome Website</h5>
-            </div>
+            </Box>
         </div>
     );
 }
