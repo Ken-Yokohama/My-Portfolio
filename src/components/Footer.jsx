@@ -83,8 +83,38 @@ function Footer(props) {
                     </Box>
                     <Box>
                         <h3>Social Links</h3>
-                        <p>LinkedIn</p>
-                        <p>Github</p>
+                        <Box
+                            sx={{
+                                cursor: "pointer",
+                                ":hover": {
+                                    color: "white",
+                                },
+                            }}
+                            onClick={() => {
+                                window.open(
+                                    "https://ph.linkedin.com/in/ken-yokohama-bba021179",
+                                    "_blank"
+                                );
+                            }}
+                        >
+                            <p>LinkedIn</p>
+                        </Box>
+                        <Box
+                            sx={{
+                                cursor: "pointer",
+                                ":hover": {
+                                    color: "white",
+                                },
+                            }}
+                            onClick={() => {
+                                window.open(
+                                    "https://github.com/Ken-Yokohama",
+                                    "_blank"
+                                );
+                            }}
+                        >
+                            <p>Github</p>
+                        </Box>
                     </Box>
                 </Box>
             </div>
