@@ -188,6 +188,33 @@ h6 {
     }
 }
 
+/* About Me Graduation Carousel Photos */
+/* square buttons */
+.rec.rec-arrow {
+    border-radius: 0;
+}
+/* round buttons on hover */
+.rec.rec-arrow-left:hover:enabled,
+.rec.rec-arrow-right:hover:enabled {
+    border-radius: 50%;
+    background-color: orange;
+}
+
+.rec.rec-arrow:focus:enabled {
+    background-color: orange;
+}
+/* hide disabled buttons */
+.rec.rec-arrow:disabled {
+    visibility: hidden;
+}
+
+button.rec-dot:hover,
+button.rec-dot_active,
+button.rec-dot:focus {
+    background-color: orange;
+    box-shadow: 0 0 1px 3px rgb(250, 194, 141);
+}
+
 /* Title CSS */
 
 /* Animation try */

@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
 import { CallToAction, Footer } from "../components";
+import Carousel from "react-elastic-carousel";
 
 function About(props) {
     const technologiesImgSrc = [
@@ -35,6 +36,13 @@ function About(props) {
         "premiere-pro.png",
         "photoshop.png",
         "after-effects.png",
+    ];
+
+    const images = [
+        "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+        "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80",
+        "https://media.istockphoto.com/photos/mountain-landscape-picture-id517188688?k=20&m=517188688&s=612x612&w=0&h=i38qBm2P-6V4vZVEaMy_TaTEaoCMkYhvLCysE7yJQ5Q=",
+        "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80",
     ];
 
     return (
@@ -202,14 +210,40 @@ function About(props) {
                         <h1>Education</h1>
                         <h2 style={{ fontWeight: "100" }}>
                             Graduated from{" "}
-                            <strong>De La Salle University </strong> on "INSERT
-                            DATE HERE"
+                            <strong>De La Salle University </strong> batch
+                            2014-2019
                         </h2>
                         <p>
                             Maybe Make it a Carousell, Also MAbe MAke it black
                             and white
                         </p>
-                        <img src="" alt="Insert Batch Photo Here" />
+                        <div
+                            style={{
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                            }}
+                        >
+                            <Carousel>
+                                {images.map((img, index) => (
+                                    <Box
+                                        sx={{
+                                            padding: "3rem",
+                                            width: "100%",
+                                        }}
+                                        key={index}
+                                    >
+                                        <img
+                                            style={{
+                                                width: "100%",
+                                                aspectRatio: "1.75/1",
+                                            }}
+                                            src={img}
+                                        />
+                                    </Box>
+                                ))}
+                            </Carousel>
+                        </div>
                     </div>
                     <div>
                         <h1>Awards & Certifications</h1>
