@@ -38,6 +38,14 @@ function About(props) {
         "after-effects.png",
     ];
 
+    const educationImgSrc = [
+        "graduation1.jpg",
+        "graduation2.jpg",
+        "golden1.png",
+        "golden2.png",
+        "golden3.png",
+    ];
+
     const images = [
         "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
         "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80",
@@ -225,11 +233,17 @@ function About(props) {
                             }}
                         >
                             <Carousel>
-                                {images.map((img, index) => (
+                                {educationImgSrc.map((img, index) => (
                                     <Box
                                         sx={{
-                                            padding: "3rem",
+                                            padding: "3rem 3rem 0rem 3rem",
                                             width: "100%",
+                                            "@media (max-width: 1000px)": {
+                                                padding: "1rem 1rem 0rem 1rem",
+                                            },
+                                            "@media (max-width: 800px)": {
+                                                padding: "1rem 0rem 0rem 0rem",
+                                            },
                                         }}
                                         key={index}
                                     >
@@ -238,7 +252,10 @@ function About(props) {
                                                 width: "100%",
                                                 aspectRatio: "1.75/1",
                                             }}
-                                            src={img}
+                                            src={
+                                                "/images/about-page/education/" +
+                                                img
+                                            }
                                         />
                                     </Box>
                                 ))}
