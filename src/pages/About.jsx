@@ -26,6 +26,17 @@ function About(props) {
         "github2.png",
     ];
 
+    const designImgSrc = [
+        "autocad.jpg",
+        "sketchup.png",
+        "layout.png",
+        "planswift.png",
+        "bluebeam.jpg",
+        "premiere-pro.png",
+        "photoshop.png",
+        "after-effects.png",
+    ];
+
     return (
         <>
             <div
@@ -150,21 +161,43 @@ function About(props) {
                         >
                             Engineering & Design Tools I Use
                         </Box>
+
+                        <Box
+                            sx={{
+                                display: "grid",
+                                gridTemplateColumns: "1fr 1fr 1fr 1fr",
+                                "@media (max-width: 900px)": {
+                                    gridTemplateColumns: "1fr 1fr 1fr",
+                                },
+                                "@media (max-width: 550px)": {
+                                    gridTemplateColumns: "1fr 1fr ",
+                                },
+                            }}
+                        >
+                            {designImgSrc.map((img, index) => (
+                                <div
+                                    key={index}
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        aspectRatio: "2/1",
+                                    }}
+                                >
+                                    <img
+                                        style={{
+                                            maxWidth: "80%",
+                                            maxHeight: "80%",
+                                        }}
+                                        src={"/images/about-page/design/" + img}
+                                        alt={img}
+                                    />
+                                </div>
+                            ))}
+                        </Box>
                     </div>
 
                     {/* ---------------------REFACTORING------------------------ */}
-                    <div>
-                        <h2>Engineering & Design</h2>
-                        {/*  */}
-                        <li>AUTOCAD</li>
-                        <li>SKETCHUP</li>
-                        <li>LAYOUT</li>
-                        <li>PLANSWIFT</li>
-                        <li>BLUEBEAM</li>
-                        <li>ADOBE PREMEIRE PRO</li>
-                        <li>ADOBE PHOTOSHOP</li>
-                        <li>ADOBE AFTER EFFECTS</li>
-                    </div>
                     <div>
                         <h1>Education</h1>
                         <h2 style={{ fontWeight: "100" }}>
