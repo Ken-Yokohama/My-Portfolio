@@ -4,6 +4,7 @@ import { CallToAction, Footer } from "../components";
 import Carousel from "react-elastic-carousel";
 import Button from "@mui/material/Button";
 import { motion } from "framer-motion";
+import Modal from "@mui/material/Modal";
 
 function About(props) {
     const technologiesImgSrc = [
@@ -47,6 +48,12 @@ function About(props) {
         "golden2.png",
         "golden3.png",
     ];
+
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const [modalImgSrc, setModalImgSrc] = useState("");
 
     return (
         <>
@@ -279,7 +286,7 @@ function About(props) {
                         >
                             <div>
                                 <h2 style={{ fontWeight: "100" }}>
-                                    The Complete 2022 Web Development Bootcamp
+                                    The Complete 2021 Web Development Bootcamp
                                 </h2>
                                 <Box
                                     sx={{
@@ -304,7 +311,12 @@ function About(props) {
                                             fullWidth
                                             variant="contained"
                                             // startIcon={<LanguageIcon />}
-                                            onClick={() => {}}
+                                            onClick={() => {
+                                                window.open(
+                                                    "https://www.udemy.com/course/the-complete-web-development-bootcamp/",
+                                                    "_blank"
+                                                );
+                                            }}
                                         >
                                             Course
                                         </Button>
@@ -324,7 +336,12 @@ function About(props) {
                                             }}
                                             variant="outlined"
                                             // endIcon={<GitHubIcon />}
-                                            onClick={() => {}}
+                                            onClick={() => {
+                                                setModalImgSrc(
+                                                    "/images/about-page/education/bootcamp-cert.jpg"
+                                                );
+                                                handleOpen();
+                                            }}
                                         >
                                             Certification
                                         </Button>
@@ -358,7 +375,12 @@ function About(props) {
                                             fullWidth
                                             variant="contained"
                                             // startIcon={<LanguageIcon />}
-                                            onClick={() => {}}
+                                            onClick={() => {
+                                                setModalImgSrc(
+                                                    "/images/about-page/education/golden1.jpg"
+                                                );
+                                                handleOpen();
+                                            }}
                                         >
                                             Photo
                                         </Button>
@@ -378,7 +400,12 @@ function About(props) {
                                             }}
                                             variant="outlined"
                                             // endIcon={<GitHubIcon />}
-                                            onClick={() => {}}
+                                            onClick={() => {
+                                                setModalImgSrc(
+                                                    "/images/about-page/education/golden4.png"
+                                                );
+                                                handleOpen();
+                                            }}
                                         >
                                             Certification
                                         </Button>
@@ -412,7 +439,12 @@ function About(props) {
                                             fullWidth
                                             variant="contained"
                                             // startIcon={<LanguageIcon />}
-                                            onClick={() => {}}
+                                            onClick={() => {
+                                                setModalImgSrc(
+                                                    "/images/about-page/education/geomate-group.jpg"
+                                                );
+                                                handleOpen();
+                                            }}
                                         >
                                             Photo
                                         </Button>
@@ -432,7 +464,12 @@ function About(props) {
                                             }}
                                             variant="outlined"
                                             // endIcon={<GitHubIcon />}
-                                            onClick={() => {}}
+                                            onClick={() => {
+                                                setModalImgSrc(
+                                                    "/images/about-page/education/golden3.jpg"
+                                                );
+                                                handleOpen();
+                                            }}
                                         >
                                             Certification
                                         </Button>
@@ -442,6 +479,38 @@ function About(props) {
                         </Box>
                     </div>
                 </Box>
+                {/* -------------Awards and Cert Modal------------------ */}
+                <Modal
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                >
+                    <Box
+                        sx={{
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                            transform: "translate(-50%, -50%)",
+                            bgcolor: "background.paper",
+                            border: "2px solid #000",
+                            boxShadow: 24,
+                            p: 0.5,
+                            width: "70vw",
+                            maxWidth: "800px",
+                        }}
+                    >
+                        <img
+                            style={{
+                                width: "100%",
+                                maxHeight: "90vh",
+                                objectFit: "cover",
+                            }}
+                            src={modalImgSrc}
+                            alt="modal-image"
+                        />
+                    </Box>
+                </Modal>
                 <CallToAction />
             </div>
             <Footer />
