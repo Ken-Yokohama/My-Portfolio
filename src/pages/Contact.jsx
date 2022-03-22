@@ -1,8 +1,16 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import Button from "@mui/material/Button";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import Tooltip from "@mui/material/Tooltip";
 
 function Contact(props) {
-    // className="padding-for-nav"
+    const [email, setEmail] = useState("kenlopezyokohama@gmail.com");
+    const [contactNo, setContactNo] = useState("+63 917 578 7991");
+
     return (
         <Box
             sx={{
@@ -60,13 +68,150 @@ function Contact(props) {
                 >
                     <div>
                         <h1>Socials</h1>
-                        <button>Linked In</button>
-                        <button>Github</button>
+                        <Box
+                            sx={{
+                                display: "flex",
+                                alignItems: "center",
+                                gap: "1rem",
+                            }}
+                        >
+                            <motion.div
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                                <Button
+                                    sx={{
+                                        backgroundColor: "#FFA500",
+                                        ":hover": {
+                                            backgroundColor: "#e39505",
+                                        },
+                                    }}
+                                    fullWidth
+                                    variant="contained"
+                                    startIcon={<LinkedInIcon />}
+                                    onClick={() => {
+                                        window.open(
+                                            "https://ph.linkedin.com/in/ken-yokohama-bba021179",
+                                            "_blank"
+                                        );
+                                    }}
+                                >
+                                    LinkedIn
+                                </Button>
+                            </motion.div>{" "}
+                            <motion.div
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                                <Button
+                                    sx={{
+                                        color: "#FFA500",
+                                        borderColor: "#FFA500",
+                                        ":hover": {
+                                            borderColor: "#e39505",
+                                            color: "#e39505",
+                                        },
+                                    }}
+                                    variant="outlined"
+                                    endIcon={<GitHubIcon />}
+                                    onClick={() => {
+                                        window.open(
+                                            "https://github.com/Ken-Yokohama",
+                                            "_blank"
+                                        );
+                                    }}
+                                >
+                                    Github
+                                </Button>
+                            </motion.div>
+                        </Box>
                     </div>
                     <div>
                         <h1>Get In Touch</h1>
-                        <button>Email</button>
-                        <button>Contact</button>
+                        <Box
+                            sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: "0.5rem",
+                                "@media(min-width: 1020px)": {
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    gap: "2rem",
+                                },
+                            }}
+                        >
+                            <div>
+                                <p>Email:</p>
+                                <CopyToClipboard text="kenlopezyokohama@gmail.com">
+                                    <Tooltip title="Copy Email to Clipboard">
+                                        <motion.p
+                                            whileTap={{
+                                                scale:
+                                                    email ==
+                                                    "Copied to Clipboard!"
+                                                        ? 1
+                                                        : 0.9,
+                                            }}
+                                            style={{
+                                                cursor:
+                                                    email ==
+                                                    "Copied to Clipboard!"
+                                                        ? "auto"
+                                                        : "pointer",
+                                            }}
+                                            onClick={() => {
+                                                setEmail(
+                                                    "Copied to Clipboard!"
+                                                );
+                                                setTimeout(() => {
+                                                    setEmail(
+                                                        "kenlopezyokohama@gmail.com"
+                                                    );
+                                                }, 3000);
+                                            }}
+                                        >
+                                            <b>{email}</b>
+                                        </motion.p>
+                                    </Tooltip>
+                                </CopyToClipboard>
+                            </div>
+                            <div>
+                                <p>Contact No:</p>
+                                <CopyToClipboard text="+639175787991">
+                                    <Tooltip title="Copy Phone Number to Clipboard">
+                                        <motion.p
+                                            whileTap={{
+                                                scale:
+                                                    contactNo ==
+                                                    "Copied to Clipboard!"
+                                                        ? 1
+                                                        : 0.9,
+                                            }}
+                                            style={{
+                                                fontFamily: "arial",
+                                                cursor:
+                                                    contactNo ==
+                                                    "Copied to Clipboard!"
+                                                        ? "auto"
+                                                        : "pointer",
+                                            }}
+                                            onClick={() => {
+                                                setContactNo(
+                                                    "Copied to Clipboard!"
+                                                );
+                                                setTimeout(() => {
+                                                    setContactNo(
+                                                        "+63 917 578 7991"
+                                                    );
+                                                }, 3000);
+                                            }}
+                                        >
+                                            <b>{contactNo}</b>
+                                        </motion.p>
+                                    </Tooltip>
+                                </CopyToClipboard>
+                            </div>
+                        </Box>
                     </div>
                     <div>
                         <h1>Contact Form</h1>
