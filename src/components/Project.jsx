@@ -1,8 +1,8 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import LanguageIcon from "@mui/icons-material/Language";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import Button from "@mui/material/Button";
 import { motion } from "framer-motion";
 
 function Project({

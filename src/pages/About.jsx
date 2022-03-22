@@ -2,6 +2,8 @@ import { Box } from "@mui/material";
 import React, { useState } from "react";
 import { CallToAction, Footer } from "../components";
 import Carousel from "react-elastic-carousel";
+import Button from "@mui/material/Button";
+import { motion } from "framer-motion";
 
 function About(props) {
     const technologiesImgSrc = [
@@ -209,11 +211,14 @@ function About(props) {
                     {/* ---------------------EDUCATION------------------------ */}
                     <div>
                         <h1>Education</h1>
-                        <h2 style={{ fontWeight: "100" }}>
+                        <h2 style={{ fontWeight: "100", paddingTop: "1rem" }}>
                             Graduated from{" "}
                             <strong>De La Salle University </strong> batch
                             2014-2019
                         </h2>
+                        <h5 style={{ paddingLeft: "2.5px" }}>
+                            Bachelor of Science in Civil Engineering
+                        </h5>
 
                         <div
                             style={{
@@ -256,21 +261,177 @@ function About(props) {
 
                     <div>
                         <h1>Awards & Certifications</h1>
-                        <h2 style={{ fontWeight: "100" }}>
-                            The Complete 2022 Web Development Bootcamp
-                        </h2>
-                        <button>Link to Course</button>
-                        <button>Link to Certification</button>
-                        <h2 style={{ fontWeight: "100" }}>
-                            Golden Thesis Awardee
-                        </h2>
-                        <button>Link to Photo</button>
-                        <button>Link to Certification</button>
-                        <h2 style={{ fontWeight: "100" }}>
-                            Geomate Tokyo Best Paper Award
-                        </h2>
-                        <button>Link to Photo</button>
-                        <button>Link to Certification</button>
+                        <Box
+                            sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: "1rem",
+                                paddingTop: "1rem",
+                            }}
+                        >
+                            <div>
+                                <h2 style={{ fontWeight: "100" }}>
+                                    The Complete 2022 Web Development Bootcamp
+                                </h2>
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: "1rem",
+                                        paddingTop: "0.5rem",
+                                    }}
+                                >
+                                    <motion.div
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                    >
+                                        <Button
+                                            sx={{
+                                                backgroundColor: "#FFA500",
+                                                ":hover": {
+                                                    backgroundColor: "#e39505",
+                                                },
+                                                width: "100px",
+                                            }}
+                                            fullWidth
+                                            variant="contained"
+                                            // startIcon={<LanguageIcon />}
+                                            onClick={() => {}}
+                                        >
+                                            Course
+                                        </Button>
+                                    </motion.div>{" "}
+                                    <motion.div
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                    >
+                                        <Button
+                                            sx={{
+                                                color: "#FFA500",
+                                                borderColor: "#FFA500",
+                                                ":hover": {
+                                                    borderColor: "#e39505",
+                                                    color: "#e39505",
+                                                },
+                                            }}
+                                            variant="outlined"
+                                            // endIcon={<GitHubIcon />}
+                                            onClick={() => {}}
+                                        >
+                                            Certification
+                                        </Button>
+                                    </motion.div>
+                                </Box>
+                            </div>
+                            <div>
+                                <h2 style={{ fontWeight: "100" }}>
+                                    Golden Thesis Awardee
+                                </h2>
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: "1rem",
+                                        paddingTop: "0.5rem",
+                                    }}
+                                >
+                                    <motion.div
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                    >
+                                        <Button
+                                            sx={{
+                                                backgroundColor: "#FFA500",
+                                                ":hover": {
+                                                    backgroundColor: "#e39505",
+                                                },
+                                                width: "100px",
+                                            }}
+                                            fullWidth
+                                            variant="contained"
+                                            // startIcon={<LanguageIcon />}
+                                            onClick={() => {}}
+                                        >
+                                            Photo
+                                        </Button>
+                                    </motion.div>{" "}
+                                    <motion.div
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                    >
+                                        <Button
+                                            sx={{
+                                                color: "#FFA500",
+                                                borderColor: "#FFA500",
+                                                ":hover": {
+                                                    borderColor: "#e39505",
+                                                    color: "#e39505",
+                                                },
+                                            }}
+                                            variant="outlined"
+                                            // endIcon={<GitHubIcon />}
+                                            onClick={() => {}}
+                                        >
+                                            Certification
+                                        </Button>
+                                    </motion.div>
+                                </Box>
+                            </div>
+                            <div>
+                                <h2 style={{ fontWeight: "100" }}>
+                                    Geomate Tokyo Best Paper Award
+                                </h2>
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: "1rem",
+                                        paddingTop: "0.5rem",
+                                    }}
+                                >
+                                    <motion.div
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                    >
+                                        <Button
+                                            sx={{
+                                                backgroundColor: "#FFA500",
+                                                ":hover": {
+                                                    backgroundColor: "#e39505",
+                                                },
+                                                width: "100px",
+                                            }}
+                                            fullWidth
+                                            variant="contained"
+                                            // startIcon={<LanguageIcon />}
+                                            onClick={() => {}}
+                                        >
+                                            Photo
+                                        </Button>
+                                    </motion.div>{" "}
+                                    <motion.div
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                    >
+                                        <Button
+                                            sx={{
+                                                color: "#FFA500",
+                                                borderColor: "#FFA500",
+                                                ":hover": {
+                                                    borderColor: "#e39505",
+                                                    color: "#e39505",
+                                                },
+                                            }}
+                                            variant="outlined"
+                                            // endIcon={<GitHubIcon />}
+                                            onClick={() => {}}
+                                        >
+                                            Certification
+                                        </Button>
+                                    </motion.div>
+                                </Box>
+                            </div>
+                        </Box>
                     </div>
                 </Box>
                 <CallToAction />
