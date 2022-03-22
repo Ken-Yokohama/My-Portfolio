@@ -5,6 +5,9 @@ import Carousel from "react-elastic-carousel";
 import Button from "@mui/material/Button";
 import { motion } from "framer-motion";
 import Modal from "@mui/material/Modal";
+import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
+import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
+import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 
 function About(props) {
     const technologiesImgSrc = [
@@ -315,11 +318,11 @@ function About(props) {
                                                 ":hover": {
                                                     backgroundColor: "#e39505",
                                                 },
-                                                width: "100px",
+                                                width: "120px",
                                             }}
                                             fullWidth
                                             variant="contained"
-                                            // startIcon={<LanguageIcon />}
+                                            startIcon={<HistoryEduIcon />}
                                             onClick={() => {
                                                 window.open(
                                                     "https://www.udemy.com/course/the-complete-web-development-bootcamp/",
@@ -344,7 +347,7 @@ function About(props) {
                                                 },
                                             }}
                                             variant="outlined"
-                                            // endIcon={<GitHubIcon />}
+                                            endIcon={<WorkspacePremiumIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
                                                     "/images/about-page/education/bootcamp-cert.jpg"
@@ -379,11 +382,11 @@ function About(props) {
                                                 ":hover": {
                                                     backgroundColor: "#e39505",
                                                 },
-                                                width: "100px",
+                                                width: "120px",
                                             }}
                                             fullWidth
                                             variant="contained"
-                                            // startIcon={<LanguageIcon />}
+                                            startIcon={<PhotoCameraIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
                                                     "/images/about-page/education/golden1.jpg"
@@ -408,7 +411,7 @@ function About(props) {
                                                 },
                                             }}
                                             variant="outlined"
-                                            // endIcon={<GitHubIcon />}
+                                            endIcon={<WorkspacePremiumIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
                                                     "/images/about-page/education/golden4.png"
@@ -443,11 +446,11 @@ function About(props) {
                                                 ":hover": {
                                                     backgroundColor: "#e39505",
                                                 },
-                                                width: "100px",
+                                                width: "120px",
                                             }}
                                             fullWidth
                                             variant="contained"
-                                            // startIcon={<LanguageIcon />}
+                                            startIcon={<PhotoCameraIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
                                                     "/images/about-page/education/geomate-group.jpg"
@@ -472,7 +475,7 @@ function About(props) {
                                                 },
                                             }}
                                             variant="outlined"
-                                            // endIcon={<GitHubIcon />}
+                                            endIcon={<WorkspacePremiumIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
                                                     "/images/about-page/education/golden3.jpg"
