@@ -45,7 +45,24 @@ function Contact(props) {
                             },
                         }}
                     >
-                        <img
+                        <Box
+                            component="img"
+                            src="/images/contact-page/contact-img1.jpg"
+                            alt="contact-page-img"
+                            sx={{
+                                maxHeight: "calc(100vh - 5.6rem)",
+                                maxWidth: "1800px",
+                                width: "100%",
+                                aspectRatio: "1/1",
+                                objectFit: "cover",
+                                "@media (max-width: 650px)": {
+                                    aspectRatio: "auto",
+                                    height: "100vh",
+                                },
+                            }}
+                        />
+
+                        {/* <img
                             src="/images/contact-page/contact-img1.jpg"
                             alt="contact-page-img"
                             style={{
@@ -55,15 +72,20 @@ function Contact(props) {
                                 aspectRatio: "1/1",
                                 objectFit: "cover",
                             }}
-                        />
+                        /> */}
                     </Box>
                 </Box>
+                {/* Contact Forms */}
                 <Box
                     sx={{
                         padding: "3rem",
                         display: "flex",
                         flexDirection: "column",
                         gap: "2rem",
+                        backgroundColor: "rgba(255, 255, 255, 0.8)",
+                        "@media (max-width: 650px)": {
+                            marginTop: "calc(-100vh + 4rem)",
+                        },
                     }}
                 >
                     <div>
