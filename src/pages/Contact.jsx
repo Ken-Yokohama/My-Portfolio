@@ -6,6 +6,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Tooltip from "@mui/material/Tooltip";
+import TextField from "@mui/material/TextField";
+import SendIcon from "@mui/icons-material/Send";
 
 function Contact(props) {
     const [email, setEmail] = useState("kenlopezyokohama@gmail.com");
@@ -236,34 +238,75 @@ function Contact(props) {
                             </div>
                         </Box>
                     </div>
-                    <div>
+                    <div style={{ maxWidth: "550px" }}>
                         <h1>Contact Form</h1>
                         <form
                             action="https://formspree.io/f/xgedzljj"
                             method="POST"
+                            style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: "1rem",
+                            }}
                         >
-                            <input
-                                type="text"
-                                name="Name"
-                                placeholder="Full Name"
-                                required
-                            />
-                            <br />
-                            <input
-                                type="email"
-                                name="Email"
-                                placeholder="Email"
-                                required
-                            />
-                            <br />
-                            <textarea
+                            <Box
+                                style={{
+                                    display: "flex",
+                                    gap: "1rem",
+                                }}
+                            >
+                                <TextField
+                                    id="outlined-basic"
+                                    label="Full Name"
+                                    variant="outlined"
+                                    type="text"
+                                    name="Name"
+                                    size="small"
+                                    required
+                                    fullWidth
+                                />
+                                <TextField
+                                    id="outlined-basic"
+                                    label="Email"
+                                    variant="outlined"
+                                    type="email"
+                                    name="Email"
+                                    size="small"
+                                    required
+                                    fullWidth
+                                />
+                            </Box>
+                            <TextField
+                                id="outlined-basic"
+                                label="Message"
+                                variant="outlined"
                                 type="text"
                                 name="Message"
-                                placeholder="Message"
+                                size="small"
                                 required
+                                fullWidth
+                                multiline
                             />
-                            <br />
-                            <button type="submit">Submit</button>
+
+                            <motion.div
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                                <Button
+                                    type="submit"
+                                    sx={{
+                                        backgroundColor: "#FFA500",
+                                        ":hover": {
+                                            backgroundColor: "#e39505",
+                                        },
+                                    }}
+                                    fullWidth
+                                    variant="contained"
+                                    endIcon={<SendIcon />}
+                                >
+                                    Submit
+                                </Button>
+                            </motion.div>
                         </form>
                     </div>
                 </Box>
