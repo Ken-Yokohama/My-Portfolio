@@ -231,9 +231,16 @@ function About(props) {
                             <strong>De La Salle University </strong> batch
                             2014-2019
                         </h2>
-                        <h5 style={{ paddingLeft: "2.5px" }}>
+                        <Box
+                            component="h5"
+                            sx={{
+                                paddingLeft: "2.5px",
+                                paddingTop: "1rem",
+                                "@media (min-width: 700px)": {},
+                            }}
+                        >
                             Bachelor of Science in Civil Engineering
-                        </h5>
+                        </Box>
 
                         <div
                             style={{
@@ -275,7 +282,9 @@ function About(props) {
                     {/* ---------------------Awards & Certifications------------------------ */}
 
                     <div>
-                        <h1>Awards & Certifications</h1>
+                        <h1 style={{ fontSize: "clamp(1rem,14vw,3.5rem)" }}>
+                            Awards & Certifications
+                        </h1>
                         <Box
                             sx={{
                                 display: "flex",
