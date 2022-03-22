@@ -15,7 +15,7 @@ function CallToAction(props) {
         >
             <Box
                 sx={{
-                    maxWidth: "1600px",
+                    maxWidth: "1500px",
                     textAlign: "center",
                     paddingTop: "5rem",
                     paddingBottom: "5rem",

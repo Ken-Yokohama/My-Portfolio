@@ -15,7 +15,7 @@ function Footer(props) {
         >
             <div
                 style={{
-                    maxWidth: "1600px",
+                    maxWidth: "1500px",
                     width: "100%",
                 }}
             >

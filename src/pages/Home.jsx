@@ -192,7 +192,7 @@ function Home(props) {
                     }}
                 >
                     {/* ------------------------- Web Projects----------------------- */}
-                    <div style={{ maxWidth: "1600px" }} id="#something">
+                    <div style={{ maxWidth: "1500px" }} id="#something">
                         <h5
                             className={
                                 clickViewProjects ? "padding-for-nav" : ""
@@ -232,7 +232,7 @@ function Home(props) {
                         </Box>
                     </div>
                     {/* ------------------------- Engineering Projects LOW PRIORITY----------------------- */}
-                    {/* <div style={{ maxWidth: "1600px" }}>
+                    {/* <div style={{ maxWidth: "1500px" }}>
                     <h5>3D Modelling</h5>
                     <Box component="h1" sx={{ paddingBottom: "2rem" }}>
                         Engineering Renders

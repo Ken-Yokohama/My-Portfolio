@@ -58,7 +58,7 @@ function About(props) {
             >
                 <Box
                     sx={{
-                        maxWidth: "1600px",
+                        maxWidth: "1500px",
                         paddingTop: "8rem",
                         display: "flex",
                         flexDirection: "column",
@@ -206,7 +206,7 @@ function About(props) {
                         </Box>
                     </div>
 
-                    {/* ---------------------REFACTORING------------------------ */}
+                    {/* ---------------------EDUCATION------------------------ */}
                     <div>
                         <h1>Education</h1>
                         <h2 style={{ fontWeight: "100" }}>
@@ -214,10 +214,7 @@ function About(props) {
                             <strong>De La Salle University </strong> batch
                             2014-2019
                         </h2>
-                        <p>
-                            Maybe Make it a Carousell, Also MAbe MAke it black
-                            and white
-                        </p>
+
                         <div
                             style={{
                                 display: "flex",
@@ -255,6 +252,8 @@ function About(props) {
                             </Carousel>
                         </div>
                     </div>
+                    {/* ---------------------Awards & Certifications------------------------ */}
+
                     <div>
                         <h1>Awards & Certifications</h1>
                         <h2 style={{ fontWeight: "100" }}>
