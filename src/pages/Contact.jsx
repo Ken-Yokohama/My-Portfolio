@@ -77,6 +77,7 @@ function Contact(props) {
                 </Box>
                 {/* Contact Forms */}
                 <Box
+                    className="contact-me-page"
                     sx={{
                         padding: "3rem",
                         display: "flex",
