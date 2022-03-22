@@ -65,10 +65,19 @@ function About(props) {
                         display: "flex",
                         flexDirection: "column",
                         gap: "10rem",
+                        "@media (max-width: 900px)": {
+                            paddingTop: "4rem",
+                            gap: "6rem",
+                        },
+                        "@media (max-width: 600px)": {
+                            paddingTop: "2rem",
+                            gap: "2rem",
+                        },
                     }}
                 >
                     {/* ---------------------About Me Header------------------------ */}
                     <div
+                        className="about-title"
                         style={{
                             display: "flex",
                             flexDirection: "column",
@@ -77,14 +86,13 @@ function About(props) {
                         }}
                     >
                         <h5>About Me</h5>
-                        <h1 style={{ textAlign: "center" }}>
+                        <h1>
                             My name is Ken Yokohama. I specialize in creating
                             fast, user-friendly & secure websites following best
                             practices.
                         </h1>
                         <h6
                             style={{
-                                textAlign: "center",
                                 fontWeight: "100",
                                 maxWidth: "800px",
                             }}

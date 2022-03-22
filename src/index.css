@@ -222,57 +222,27 @@ button.rec-dot:focus {
     }
 }
 
-/* Title CSS */
+/* Responsive font for About me Title */
 
-/* Animation try */
-
- {
-    /* Scroll Animation, Use Later on for Known Technologies */
-}
- {
-    /* <div className="scroll" style={{ display: "flex" }}>
-                    <h3 style={{ fontSize: "2rem" }}>
-                        - Email: <span>kenlopezyokohama@gmail.com</span> -
-                        Contact:{" "}
-                        <span style={{ fontFamily: "arial" }}>
-                            +63 917 578 7991{" "}
-                        </span>
-                    </h3>
-                    
-                    <h3 style={{ fontSize: "2rem" }}>
-                        - Email: <span>kenlopezyokohama@gmail.com</span> -
-                        Contact:{" "}
-                        <span style={{ fontFamily: "arial" }}>
-                            +63 917 578 7991{" "}
-                        </span>
-                    </h3>
-                </div> */
+.about-title h1 {
+    font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+    text-align: center;
+    max-width: 1200px;
 }
 
-.scroll h3 {
-    white-space: nowrap;
-    animation: animate 40s linear infinite;
-    animation-delay: -20s;
+.about-title h6 {
+    font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+    text-align: center;
+    width: 70vw;
 }
 
-.scroll h3:nth-child(2) {
-    animation: animate2 40s -40s linear infinite;
-}
-
-@keyframes animate {
-    0% {
-        transform: translateX(100%);
+@media (max-width: 600px) {
+    .about-title h1 {
+        text-align: start;
     }
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
-@keyframes animate2 {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-200%);
+    .about-title h6 {
+        text-align: start;
+        width: 100%;
     }
 }
