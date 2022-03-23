@@ -57,18 +57,6 @@ function Contact(props) {
                                 },
                             }}
                         />
-
-                        {/* <img
-                            src="/images/contact-page/contact-img1.jpg"
-                            alt="contact-page-img"
-                            style={{
-                                maxHeight: "calc(100vh - 5.6rem)",
-                                maxWidth: "1800px",
-                                width: "100%",
-                                aspectRatio: "1/1",
-                                objectFit: "cover",
-                            }}
-                        /> */}
                     </Box>
                 </Box>
                 {/* Contact Forms */}

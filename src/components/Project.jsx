@@ -29,6 +29,7 @@ function Project({
                 // handle Background Image
                 backgroundImage: `url(${backgroundImg})`,
                 backgroundSize: "cover",
+                backgroundPosition: "center",
             }}
         >
             <Box

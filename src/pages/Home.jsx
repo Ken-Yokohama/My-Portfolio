@@ -30,7 +30,7 @@ function Home(props) {
             liveSiteLink: "https://ken-yokohama.github.io/Twitter-Clone",
             githubRepoLink: "https://github.com/Ken-Yokohama/Twitter-Clone",
             backgroundImgUrl:
-                "https://images.unsplash.com/photo-1605496036006-fa36378ca4ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+                "/images/home-page/project-backgrounds/twitter-clone.jpg",
         },
         {
             year: "2022",
