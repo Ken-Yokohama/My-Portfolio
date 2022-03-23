@@ -1,7 +1,13 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
 
-function ProjectList(props) {
+function ProjectList({
+    title,
+    technologies,
+    description,
+    liveSite,
+    githubRepo,
+}) {
     return (
         <Box sx={{ border: "2px solid" }}>
             <Box
@@ -11,16 +17,26 @@ function ProjectList(props) {
                     justifyContent: "space-between",
                     borderBottom: "2px solid",
                     padding: "0.5rem",
+                    "@media (max-width: 900px)": {
+                        flexDirection: "column",
+                        textAlign: "center",
+                    },
                 }}
             >
                 <Box>
-                    <h2>Project Title</h2>
+                    <h2>{title}</h2>
                 </Box>
-                <Box sx={{ display: "flex", gap: "1rem" }}>
-                    <h5>HTML</h5>
-                    <h5>CSS</h5>
-                    <h5>JAVASCRIPT</h5>
-                    <h5>REACT</h5>
+                <Box
+                    sx={{
+                        display: "flex",
+                        gap: "1rem",
+                        flexWrap: "wrap",
+                        justifyContent: "center",
+                    }}
+                >
+                    {technologies.map((tech, index) => (
+                        <h5 key={index}>{tech}</h5>
+                    ))}
                 </Box>
             </Box>
             <Box
@@ -32,11 +48,7 @@ function ProjectList(props) {
                 }}
             >
                 <h3>Description</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Repellendus voluptatibus nostrum dignissimos aspernatur
-                    sequi? Excepturi consequuntur expedita numquam tempora vel.
-                </p>
+                <p>{description}</p>
                 <Box
                     sx={{
                         display: "flex",
@@ -44,11 +56,11 @@ function ProjectList(props) {
                         gap: "1rem",
                     }}
                 >
-                    <a href="https://www.google.com/" target="_blank">
-                        <strong>Link to Live Website</strong>
+                    <a href={liveSite} target="_blank">
+                        <i>Link to Live Website</i>
                     </a>
-                    <a href="https://www.google.com/" target="_blank">
-                        <strong>Link to Github Repository</strong>
+                    <a href={githubRepo} target="_blank">
+                        <i>Link to Github Repository</i>
                     </a>
                 </Box>
             </Box>

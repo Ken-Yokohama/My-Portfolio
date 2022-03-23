@@ -70,6 +70,43 @@ function Home(props) {
         },
     ];
 
+    const projects = [
+        {
+            title: "MailChimp API Newsletter Sign Up Page",
+            technologies: ["nodeJS", "expressJS", "mailChimp API"],
+            description:
+                "This is a web application that uses the MailChimp API to subscribe users to my personal mailing list. In the Mailchimp database, we are able to organize each user and filter which content we want to send for individual users. Additionally, using the MailChimp api allows us to sync all data (subscriber, customers, orders, products) and enables marketing automation with email campaigns, automations, ads, postcards and more.",
+            liveSite: "https://still-garden-96667.herokuapp.com/",
+            githubRepo:
+                "https://github.com/Ken-Yokohama/Node-Express-JS-Training-Files#mailchimp-api-newsletter-signup",
+        },
+        {
+            title: "EJS Express To Do List App",
+            technologies: ["nodeJS", "expressJS", "Mongo DB", "EJS"],
+            description:
+                "This is a simple web application that uses MongoDB as the database and EJS for templating as well as partials for components. The frontend displays the current date & month at the top. Input feilds allows users to input any tasks they have for the given day. Users can also crossout any tasks that have been completed.",
+            liveSite: "https://to-do-list-using-mongodb-atlas.herokuapp.com/",
+            githubRepo:
+                "https://github.com/Ken-Yokohama/Node-Express-JS-Training-Files#ejstodoist-v1",
+        },
+        {
+            title: "PSBSI",
+            technologies: ["HTML", "CSS", "JS", "JQUERY", "BOOTSTRAP"],
+            description:
+                "This is the landing page for the company Pioneer Specialty Building Systems Inc. The website displays all completed & upcoming projects done by the company as well as details on its building systems such as Waterproofing, Eifs & Sips.",
+            liveSite: "https://ken-yokohama.github.io/psbsi/",
+            githubRepo: "https://github.com/Ken-Yokohama/psbsi",
+        },
+        {
+            title: "Tindog",
+            technologies: ["HTML", "CSS", "JS", "BOOTSTRAP"],
+            description:
+                "This is a simple static webpage used as a parody of Tinder... But for Dogs! This project was mainly used to learn basic CSS design patterns as well as responsive design using the Bootstrap grid system.",
+            liveSite: "https://ken-yokohama.github.io/TinDog/",
+            githubRepo: "https://github.com/Ken-Yokohama/TinDog",
+        },
+    ];
+
     return (
         <>
             <div className="page-container">
@@ -244,9 +281,16 @@ function Home(props) {
                                 gap: "1rem",
                             }}
                         >
-                            <ProjectList />
-                            <ProjectList />
-                            <ProjectList />
+                            {projects.map((projects, index) => (
+                                <ProjectList
+                                    title={projects.title}
+                                    technologies={projects.technologies}
+                                    description={projects.description}
+                                    liveSite={projects.liveSite}
+                                    githubRepo={projects.githubRepo}
+                                    key={index}
+                                />
+                            ))}
                         </Box>
                     </div>
 
