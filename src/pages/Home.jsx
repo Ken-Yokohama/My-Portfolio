@@ -1,19 +1,19 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
-import { CallToAction, Footer, Project } from "../components";
+import { CallToAction, Footer, Project, ProjectList } from "../components";
 
 function Home(props) {
     const [clickViewProjects, setClickViewProjects] = useState(false);
 
     const handleViewProjects = () => {
         setClickViewProjects(true);
-        document.getElementById("#something").scrollIntoView({
+        document.getElementById("#featured-proj").scrollIntoView({
             behavior: "smooth",
             block: "start",
         });
     };
 
-    const projects = [
+    const featuredProjects = [
         {
             year: "2022",
             month: "MAR",
@@ -48,7 +48,7 @@ function Home(props) {
             liveSiteLink: "https://kenterest.netlify.app/",
             githubRepoLink: "https://github.com/Ken-Yokohama/Kenterest",
             backgroundImgUrl:
-                "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80",
+                "/images/home-page/project-backgrounds/kenterest.jpg",
         },
         {
             year: "2022",
@@ -192,7 +192,7 @@ function Home(props) {
                     }}
                 >
                     {/* ------------------------- Web Projects----------------------- */}
-                    <div style={{ maxWidth: "1500px" }} id="#something">
+                    <div style={{ maxWidth: "1500px" }} id="#featured-proj">
                         <h5
                             className={
                                 clickViewProjects ? "padding-for-nav" : ""
@@ -216,7 +216,7 @@ function Home(props) {
                                 },
                             }}
                         >
-                            {projects.map((project, index) => (
+                            {featuredProjects.map((project, index) => (
                                 <Project
                                     key={index}
                                     year={project.year}
@@ -231,6 +231,25 @@ function Home(props) {
                             ))}
                         </Box>
                     </div>
+                    {/* ------------------------- Projects ----------------------- */}
+                    <div style={{ maxWidth: "1500px" }}>
+                        <h5>Completed Works</h5>
+                        <Box component="h1" sx={{ paddingBottom: "2rem" }}>
+                            Projects List
+                        </Box>
+                        <Box
+                            sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: "1rem",
+                            }}
+                        >
+                            <ProjectList />
+                            <ProjectList />
+                            <ProjectList />
+                        </Box>
+                    </div>
+
                     {/* ------------------------- Engineering Projects LOW PRIORITY----------------------- */}
                     {/* <div style={{ maxWidth: "1500px" }}>
                     <h5>3D Modelling</h5>
