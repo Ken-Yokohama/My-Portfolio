@@ -40,13 +40,7 @@ function Contact(props) {
                         justifyContent: "center",
                     }}
                 >
-                    <Box
-                        sx={{
-                            "@media(min-width: 1300px)": {
-                                width: "400px",
-                            },
-                        }}
-                    >
+                    <Box>
                         <Box
                             component="img"
                             src="/images/contact-page/contact-img1.jpg"
