@@ -74,10 +74,74 @@ function Footer(props) {
                                 gridTemplateColumns: "1fr 1fr",
                             }}
                         >
-                            <p>Temp</p>
-                            <p>Temp</p>
-                            <p>Temp</p>
-                            <p>Temp</p>
+                            {/* Project 1 */}
+                            <Box
+                                sx={{
+                                    cursor: "pointer",
+                                    ":hover": {
+                                        color: "white",
+                                    },
+                                }}
+                                onClick={() => {
+                                    window.open(
+                                        "https://ken-yokohama.github.io/Twitter-Clone/",
+                                        "_blank"
+                                    );
+                                }}
+                            >
+                                <p>Twitter Clone</p>
+                            </Box>
+                            {/* Project 2 */}
+                            <Box
+                                sx={{
+                                    cursor: "pointer",
+                                    ":hover": {
+                                        color: "white",
+                                    },
+                                }}
+                                onClick={() => {
+                                    window.open(
+                                        "https://kenterest.netlify.app/",
+                                        "_blank"
+                                    );
+                                }}
+                            >
+                                <p>Kenterest</p>
+                            </Box>
+                            {/* Project 3 */}
+                            <Box
+                                sx={{
+                                    cursor: "pointer",
+                                    ":hover": {
+                                        color: "white",
+                                    },
+                                }}
+                                onClick={() => {
+                                    window.open(
+                                        "https://still-garden-96667.herokuapp.com/",
+                                        "_blank"
+                                    );
+                                }}
+                            >
+                                <p>MailChimp API</p>
+                            </Box>
+                            {/* Project 4 */}
+                            <Box
+                                sx={{
+                                    cursor: "pointer",
+                                    ":hover": {
+                                        color: "white",
+                                    },
+                                }}
+                                onClick={() => {
+                                    window.open(
+                                        "https://to-do-list-using-mongodb-atlas.herokuapp.com/",
+                                        "_blank"
+                                    );
+                                }}
+                            >
+                                <p>MongoDB To Do List</p>
+                            </Box>
                         </Box>
                         {/* Projects.map function */}
                     </Box>

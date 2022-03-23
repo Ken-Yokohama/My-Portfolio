@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Tooltip from "@mui/material/Tooltip";
 
-function Menu({ setShowMenu, showMenu }) {
+function Menu({ setShowMenu, showMenu, pageVisits }) {
     const handleCloseMenu = () => {
         setShowMenu(false);
         // window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); SMOOTH SCROLL
@@ -159,6 +159,12 @@ function Menu({ setShowMenu, showMenu }) {
                                 : { opacity: { delay: 0 }, x: { delay: 0.3 } }
                         }
                         className="nav-menu-item"
+                        onClick={() => {
+                            window.open(
+                                "https://github.com/Ken-Yokohama",
+                                "_blank"
+                            );
+                        }}
                     >
                         Github
                     </motion.h1>
@@ -218,10 +224,13 @@ function Menu({ setShowMenu, showMenu }) {
                                 : { opacity: { delay: 0 }, y: { delay: 0.3 } }
                         }
                     >
-                        Thank you for viewing my portfolio __ times. If you'd
-                        like to know more details on how I built this project or
-                        if you are just curious to see my source code, feel free
-                        to check out my GitHub.
+                        Thank you for viewing my portfolio{" "}
+                        <strong style={{ fontFamily: "arial" }}>
+                            {pageVisits}
+                        </strong>{" "}
+                        times. If you'd like to know more details on how I built
+                        this project or if you are just curious to see my source
+                        code, feel free to check out my GitHub.
                         {/* This project was built using react and tools from the react-ecosystem namely material-ui, react-router-dom, framer-motion & axios. */}
                     </motion.p>
                 </Box>
