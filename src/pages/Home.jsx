@@ -1,8 +1,11 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
 import { CallToAction, Footer, Project, ProjectList } from "../components";
+import { useNavigate } from "react-router-dom";
 
 function Home(props) {
+    const navigate = useNavigate();
+
     const [clickViewProjects, setClickViewProjects] = useState(false);
 
     const handleViewProjects = () => {
@@ -197,6 +200,10 @@ function Home(props) {
                                     ":hover": {
                                         borderBottom: "2px solid",
                                     },
+                                }}
+                                onClick={() => {
+                                    navigate("/about");
+                                    window.scrollTo(0, 0);
                                 }}
                             >
                                 About Me
