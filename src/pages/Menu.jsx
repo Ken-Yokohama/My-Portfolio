@@ -4,6 +4,7 @@ import { Box } from "@mui/system";
 import { NavLink } from "react-router-dom";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Tooltip from "@mui/material/Tooltip";
+import resumeFile from "../pdf-files/ken_yokohama_resume.pdf";
 
 function Menu({ setShowMenu, showMenu, pageVisits }) {
     const handleCloseMenu = () => {
@@ -168,22 +169,34 @@ function Menu({ setShowMenu, showMenu, pageVisits }) {
                     >
                         Github
                     </motion.h1>
-                    <motion.h1
-                        initial={{ x: "-40px", opacity: 0 }}
-                        animate={
-                            showMenu
-                                ? { x: "0", opacity: 1 }
-                                : { x: "-40px", opacity: 0 }
-                        }
-                        transition={
-                            showMenu
-                                ? { x: { delay: 0.6 }, opacity: { delay: 0.6 } }
-                                : { opacity: { delay: 0 }, x: { delay: 0.3 } }
-                        }
-                        className="nav-menu-item"
+                    <a
+                        href={resumeFile}
+                        style={{ textDecoration: "none" }}
+                        download="ken_yokohama_resume"
                     >
-                        Resume
-                    </motion.h1>
+                        <motion.h1
+                            initial={{ x: "-40px", opacity: 0 }}
+                            animate={
+                                showMenu
+                                    ? { x: "0", opacity: 1 }
+                                    : { x: "-40px", opacity: 0 }
+                            }
+                            transition={
+                                showMenu
+                                    ? {
+                                          x: { delay: 0.6 },
+                                          opacity: { delay: 0.6 },
+                                      }
+                                    : {
+                                          opacity: { delay: 0 },
+                                          x: { delay: 0.3 },
+                                      }
+                            }
+                            className="nav-menu-item"
+                        >
+                            Resume
+                        </motion.h1>
+                    </a>
                 </Box>
                 <Box
                     sx={{
