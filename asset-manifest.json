@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/My-Portfolio/static/css/main.413957bd.css",
-    "main.js": "/My-Portfolio/static/js/main.73655941.js",
+    "main.js": "/My-Portfolio/static/js/main.7f72404f.js",
     "static/media/ken_yokohama_resume.pdf": "/My-Portfolio/static/media/ken_yokohama_resume.182b259ad21331c63518.pdf",
     "index.html": "/My-Portfolio/index.html",
     "main.413957bd.css.map": "/My-Portfolio/static/css/main.413957bd.css.map",
-    "main.73655941.js.map": "/My-Portfolio/static/js/main.73655941.js.map"
+    "main.7f72404f.js.map": "/My-Portfolio/static/js/main.7f72404f.js.map"
   },
   "entrypoints": [
     "static/css/main.413957bd.css",
-    "static/js/main.73655941.js"
+    "static/js/main.7f72404f.js"
   ]
 }
