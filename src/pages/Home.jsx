@@ -44,7 +44,7 @@ function Home(props) {
             technologies: [
                 "REACT",
                 "SANITY.IO",
-                "MATERIAL UI",
+                "TAILWIND CSS",
                 "REACT ROUTER",
                 "UUID",
             ],
@@ -62,7 +62,7 @@ function Home(props) {
             technologies: [
                 "REACT",
                 "SANITY.IO",
-                "MATERIAL UI",
+                "TAILWIND CSS",
                 "REACT ROUTER",
                 "UUID",
             ],
