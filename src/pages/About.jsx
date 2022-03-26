@@ -392,7 +392,7 @@ function About(props) {
                                             startIcon={<PhotoCameraIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/My-Portfolio/images/about-page/education/golden1.jpg"
+                                                    "/My-Portfolio/images/about-page/education/golden1.JPG"
                                                 );
                                                 handleOpen();
                                             }}
@@ -481,7 +481,7 @@ function About(props) {
                                             endIcon={<WorkspacePremiumIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/My-Portfolio/images/about-page/education/golden3.jpg"
+                                                    "/My-Portfolio/images/about-page/education/golden3.JPG"
                                                 );
                                                 handleOpen();
                                             }}
