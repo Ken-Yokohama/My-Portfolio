@@ -161,7 +161,7 @@ function About(props) {
                                             maxHeight: "80%",
                                         }}
                                         src={
-                                            "/images/about-page/technologies/" +
+                                            "/My-Portfolio/images/about-page/technologies/" +
                                             img
                                         }
                                         alt={img}
@@ -218,7 +218,10 @@ function About(props) {
                                             maxWidth: "80%",
                                             maxHeight: "80%",
                                         }}
-                                        src={"/images/about-page/design/" + img}
+                                        src={
+                                            "/My-Portfolio/images/about-page/design/" +
+                                            img
+                                        }
                                         alt={img}
                                     />
                                 </div>
@@ -273,7 +276,7 @@ function About(props) {
                                                 aspectRatio: "1.75/1",
                                             }}
                                             src={
-                                                "/images/about-page/education/" +
+                                                "/My-Portfolio/images/about-page/education/" +
                                                 img
                                             }
                                         />
@@ -350,7 +353,7 @@ function About(props) {
                                             endIcon={<WorkspacePremiumIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/images/about-page/education/bootcamp-cert.jpg"
+                                                    "/My-Portfolio/images/about-page/education/bootcamp-cert.jpg"
                                                 );
                                                 handleOpen();
                                             }}
@@ -389,7 +392,7 @@ function About(props) {
                                             startIcon={<PhotoCameraIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/images/about-page/education/golden1.jpg"
+                                                    "/My-Portfolio/images/about-page/education/golden1.jpg"
                                                 );
                                                 handleOpen();
                                             }}
@@ -414,7 +417,7 @@ function About(props) {
                                             endIcon={<WorkspacePremiumIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/images/about-page/education/golden4.png"
+                                                    "/My-Portfolio/images/about-page/education/golden4.png"
                                                 );
                                                 handleOpen();
                                             }}
@@ -453,7 +456,7 @@ function About(props) {
                                             startIcon={<PhotoCameraIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/images/about-page/education/geomate-group.jpg"
+                                                    "/My-Portfolio/images/about-page/education/geomate-group.jpg"
                                                 );
                                                 handleOpen();
                                             }}
@@ -478,7 +481,7 @@ function About(props) {
                                             endIcon={<WorkspacePremiumIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/images/about-page/education/golden3.jpg"
+                                                    "/My-Portfolio/images/about-page/education/golden3.jpg"
                                                 );
                                                 handleOpen();
                                             }}

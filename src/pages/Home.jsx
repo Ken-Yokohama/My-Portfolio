@@ -33,7 +33,7 @@ function Home(props) {
             liveSiteLink: "https://ken-yokohama.github.io/Twitter-Clone",
             githubRepoLink: "https://github.com/Ken-Yokohama/Twitter-Clone",
             backgroundImgUrl:
-                "/images/home-page/project-backgrounds/twitter-clone.jpg",
+                "/My-Portfolio/images/home-page/project-backgrounds/twitter-clone.jpg",
         },
         {
             year: "2022",
@@ -51,7 +51,7 @@ function Home(props) {
             liveSiteLink: "https://kenterest.netlify.app/",
             githubRepoLink: "https://github.com/Ken-Yokohama/Kenterest",
             backgroundImgUrl:
-                "/images/home-page/project-backgrounds/kenterest.jpg",
+                "/My-Portfolio/images/home-page/project-backgrounds/kenterest.jpg",
         },
         {
             year: "2022",
@@ -219,7 +219,7 @@ function Home(props) {
                         }}
                     >
                         <img
-                            src="/images/home-page/profile-img2.jpg"
+                            src="/My-Portfolio/images/home-page/profile-img2.jpg"
                             alt="profile-image"
                             className="profile-img"
                             style={{ filter: "grayscale(100%)" }}

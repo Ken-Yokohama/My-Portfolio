@@ -43,7 +43,7 @@ function Contact(props) {
                     <Box>
                         <Box
                             component="img"
-                            src="/images/contact-page/contact-img1.jpg"
+                            src="/My-Portfolio/images/contact-page/contact-img1.jpg"
                             alt="contact-page-img"
                             sx={{
                                 maxHeight: "calc(100vh - 5.6rem)",
