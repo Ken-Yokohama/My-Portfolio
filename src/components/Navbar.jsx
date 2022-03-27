@@ -3,8 +3,11 @@ import React, { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function Navbar({ showMenu, setShowMenu, toggleShowMenu }) {
+    const navigate = useNavigate();
+
     const [scrolledDown, setScrolledDown] = useState(false);
 
     const handleScrolledDown = () => {
@@ -49,6 +52,7 @@ function Navbar({ showMenu, setShowMenu, toggleShowMenu }) {
                     initial={{ color: "#000000" }}
                     transition={{ color: { duration: 0.3 } }}
                     onClick={() => {
+                        navigate("/");
                         setShowMenu(false);
                     }}
                     style={{
