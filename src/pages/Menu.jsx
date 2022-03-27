@@ -167,7 +167,15 @@ function Menu({ setShowMenu, showMenu, pageVisits }) {
                             );
                         }}
                     >
-                        Github
+                        <Box
+                            sx={{
+                                "@media(max-height: 500px)": {
+                                    display: "none",
+                                },
+                            }}
+                        >
+                            Github
+                        </Box>
                     </motion.h1>
                     <a
                         href={resumeFile}
@@ -194,7 +202,15 @@ function Menu({ setShowMenu, showMenu, pageVisits }) {
                             }
                             className="nav-menu-item"
                         >
-                            Resume
+                            <Box
+                                sx={{
+                                    "@media(max-height: 500px)": {
+                                        display: "none",
+                                    },
+                                }}
+                            >
+                                Resume
+                            </Box>
                         </motion.h1>
                     </a>
                 </Box>
@@ -259,6 +275,9 @@ function Menu({ setShowMenu, showMenu, pageVisits }) {
                         display: "flex",
                         flexDirection: "row",
                         gap: "2rem",
+                    },
+                    "@media(max-height: 600px)": {
+                        display: "none",
                     },
                 }}
             >
