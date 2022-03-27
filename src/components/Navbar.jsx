@@ -54,6 +54,7 @@ function Navbar({ showMenu, setShowMenu, toggleShowMenu }) {
                     onClick={() => {
                         navigate("/");
                         setShowMenu(false);
+                        window.scrollTo(0, 0);
                     }}
                     style={{
                         cursor: "pointer",
