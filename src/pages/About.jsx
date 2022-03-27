@@ -95,7 +95,16 @@ function About(props) {
                             gap: "2rem",
                         }}
                     >
-                        <h5>About Me</h5>
+                        <motion.h5
+                            initial={{ y: "40px", opacity: 0 }}
+                            animate={{ y: "0", opacity: 1 }}
+                            transition={{
+                                y: { delay: 0.3 },
+                                opacity: { delay: 0.3 },
+                            }}
+                        >
+                            About Me
+                        </motion.h5>
                         <h1>
                             My name is Ken Yokohama. I specialize in creating
                             fast, user-friendly & secure websites following best
@@ -114,7 +123,13 @@ function About(props) {
                     </div>
                     {/* ---------------------LANGUAGES SECTION------------------------ */}
 
-                    <div
+                    <motion.div
+                        // initial={{ y: "40px", opacity: 0 }}
+                        // animate={{ y: "0", opacity: 1 }}
+                        // transition={{
+                        //     y: { delay: 1.0 },
+                        //     opacity: { delay: 1.0 },
+                        // }}
                         style={{
                             display: "flex",
                             flexDirection: "column",
@@ -136,6 +151,7 @@ function About(props) {
                         <Box
                             sx={{
                                 display: "grid",
+                                width: "100%",
                                 gridTemplateColumns: "1fr 1fr 1fr 1fr",
                                 "@media (max-width: 900px)": {
                                     gridTemplateColumns: "1fr 1fr 1fr",
@@ -169,7 +185,7 @@ function About(props) {
                                 </div>
                             ))}
                         </Box>
-                    </div>
+                    </motion.div>
                     {/* ---------------------ENGINEERING & DESIGN SECTION------------------------ */}
 
                     <div
@@ -194,6 +210,7 @@ function About(props) {
                         <Box
                             sx={{
                                 display: "grid",
+                                width: "100%",
                                 gridTemplateColumns: "1fr 1fr 1fr 1fr",
                                 "@media (max-width: 900px)": {
                                     gridTemplateColumns: "1fr 1fr 1fr",
