@@ -10,9 +10,6 @@ import TextField from "@mui/material/TextField";
 import SendIcon from "@mui/icons-material/Send";
 
 function Contact(props) {
-    const [email, setEmail] = useState("kenlopezyokohama@gmail.com");
-    const [contactNo, setContactNo] = useState("+63 917 578 7991");
-
     return (
         <Box
             sx={{
@@ -153,31 +150,13 @@ function Contact(props) {
                                     <Tooltip title="Copy Email to Clipboard">
                                         <motion.p
                                             whileTap={{
-                                                scale:
-                                                    email ==
-                                                    "Copied to Clipboard!"
-                                                        ? 1
-                                                        : 0.9,
+                                                scale: 0.9,
                                             }}
                                             style={{
-                                                cursor:
-                                                    email ==
-                                                    "Copied to Clipboard!"
-                                                        ? "auto"
-                                                        : "pointer",
-                                            }}
-                                            onClick={() => {
-                                                setEmail(
-                                                    "Copied to Clipboard!"
-                                                );
-                                                setTimeout(() => {
-                                                    setEmail(
-                                                        "kenlopezyokohama@gmail.com"
-                                                    );
-                                                }, 3000);
+                                                cursor: "pointer",
                                             }}
                                         >
-                                            <b>{email}</b>
+                                            <b>kenlopezyokohama@gmail.com</b>
                                         </motion.p>
                                     </Tooltip>
                                 </CopyToClipboard>
@@ -188,32 +167,14 @@ function Contact(props) {
                                     <Tooltip title="Copy Phone Number to Clipboard">
                                         <motion.p
                                             whileTap={{
-                                                scale:
-                                                    contactNo ==
-                                                    "Copied to Clipboard!"
-                                                        ? 1
-                                                        : 0.9,
+                                                scale: 0.9,
                                             }}
                                             style={{
                                                 fontFamily: "arial",
-                                                cursor:
-                                                    contactNo ==
-                                                    "Copied to Clipboard!"
-                                                        ? "auto"
-                                                        : "pointer",
-                                            }}
-                                            onClick={() => {
-                                                setContactNo(
-                                                    "Copied to Clipboard!"
-                                                );
-                                                setTimeout(() => {
-                                                    setContactNo(
-                                                        "+63 917 578 7991"
-                                                    );
-                                                }, 3000);
+                                                cursor: "pointer",
                                             }}
                                         >
-                                            <b>{contactNo}</b>
+                                            <b>+63 917 578 7991</b>
                                         </motion.p>
                                     </Tooltip>
                                 </CopyToClipboard>
