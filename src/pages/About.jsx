@@ -169,52 +169,43 @@ function About(props) {
                             Some Technologies I'm fluent with
                         </motion.h2>
 
-                        <motion.div
-                            initial={{ y: "40px", opacity: 0 }}
-                            animate={{ y: "0", opacity: 1 }}
-                            transition={{
-                                y: { delay: 0.8 },
-                                opacity: { delay: 0.8 },
+                        <Box
+                            sx={{
+                                display: "grid",
+                                width: "100%",
+                                gridTemplateColumns: "1fr 1fr 1fr 1fr",
+                                "@media (max-width: 900px)": {
+                                    gridTemplateColumns: "1fr 1fr 1fr",
+                                },
+                                "@media (max-width: 550px)": {
+                                    gridTemplateColumns: "1fr 1fr ",
+                                },
                             }}
                         >
-                            <Box
-                                sx={{
-                                    display: "grid",
-                                    width: "100%",
-                                    gridTemplateColumns: "1fr 1fr 1fr 1fr",
-                                    "@media (max-width: 900px)": {
-                                        gridTemplateColumns: "1fr 1fr 1fr",
-                                    },
-                                    "@media (max-width: 550px)": {
-                                        gridTemplateColumns: "1fr 1fr ",
-                                    },
-                                }}
-                            >
-                                {technologiesImgSrc.map((img, index) => (
-                                    <div
-                                        key={index}
+                            {technologiesImgSrc.map((img, index) => (
+                                <div
+                                    key={index}
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        aspectRatio: "2/1",
+                                    }}
+                                >
+                                    <img
                                         style={{
-                                            display: "flex",
-                                            justifyContent: "center",
-                                            alignItems: "center",
-                                            aspectRatio: "2/1",
+                                            maxWidth: "80%",
+                                            maxHeight: "80%",
                                         }}
-                                    >
-                                        <img
-                                            style={{
-                                                maxWidth: "80%",
-                                                maxHeight: "80%",
-                                            }}
-                                            src={
-                                                "/images/about-page/technologies/" +
-                                                img
-                                            }
-                                            alt={img}
-                                        />
-                                    </div>
-                                ))}
-                            </Box>
-                        </motion.div>
+                                        src={
+                                            "/images/about-page/technologies/" +
+                                            img
+                                        }
+                                        alt={img}
+                                    />
+                                </div>
+                            ))}
+                        </Box>
                     </div>
                     {/* ---------------------ENGINEERING & DESIGN SECTION------------------------ */}
 
