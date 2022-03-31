@@ -105,12 +105,25 @@ function About(props) {
                         >
                             About Me
                         </motion.h5>
-                        <h1>
+                        <motion.h1
+                            initial={{ y: "40px", opacity: 0 }}
+                            animate={{ y: "0", opacity: 1 }}
+                            transition={{
+                                y: { delay: 0.5 },
+                                opacity: { delay: 0.5 },
+                            }}
+                        >
                             My name is Ken Yokohama. I specialize in creating
                             fast, user-friendly & secure websites following best
                             practices.
-                        </h1>
-                        <h6
+                        </motion.h1>
+                        <motion.h6
+                            initial={{ y: "40px", opacity: 0 }}
+                            animate={{ y: "0", opacity: 1 }}
+                            transition={{
+                                y: { delay: 0.7 },
+                                opacity: { delay: 0.7 },
+                            }}
                             style={{
                                 fontWeight: "100",
                                 maxWidth: "800px",
@@ -119,7 +132,7 @@ function About(props) {
                             I make sure that systems and databases are secure as
                             well as put a strong emphasis on UI/UX of the
                             website
-                        </h6>
+                        </motion.h6>
                     </div>
                     {/* ---------------------LANGUAGES SECTION------------------------ */}
 
@@ -177,7 +190,7 @@ function About(props) {
                                             maxHeight: "80%",
                                         }}
                                         src={
-                                            "/My-Portfolio/images/about-page/technologies/" +
+                                            "/images/about-page/technologies/" +
                                             img
                                         }
                                         alt={img}
@@ -235,10 +248,7 @@ function About(props) {
                                             maxWidth: "80%",
                                             maxHeight: "80%",
                                         }}
-                                        src={
-                                            "/My-Portfolio/images/about-page/design/" +
-                                            img
-                                        }
+                                        src={"/images/about-page/design/" + img}
                                         alt={img}
                                     />
                                 </div>
@@ -293,7 +303,7 @@ function About(props) {
                                                 aspectRatio: "1.75/1",
                                             }}
                                             src={
-                                                "/My-Portfolio/images/about-page/education/" +
+                                                "/images/about-page/education/" +
                                                 img
                                             }
                                         />
@@ -370,7 +380,7 @@ function About(props) {
                                             endIcon={<WorkspacePremiumIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/My-Portfolio/images/about-page/education/bootcamp-cert.jpg"
+                                                    "/images/about-page/education/bootcamp-cert.jpg"
                                                 );
                                                 handleOpen();
                                             }}
@@ -409,7 +419,7 @@ function About(props) {
                                             startIcon={<PhotoCameraIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/My-Portfolio/images/about-page/education/golden1.JPG"
+                                                    "/images/about-page/education/golden1.JPG"
                                                 );
                                                 handleOpen();
                                             }}
@@ -434,7 +444,7 @@ function About(props) {
                                             endIcon={<WorkspacePremiumIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/My-Portfolio/images/about-page/education/golden4.png"
+                                                    "/images/about-page/education/golden4.png"
                                                 );
                                                 handleOpen();
                                             }}
@@ -473,7 +483,7 @@ function About(props) {
                                             startIcon={<PhotoCameraIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/My-Portfolio/images/about-page/education/geomate-group.jpg"
+                                                    "/images/about-page/education/geomate-group.jpg"
                                                 );
                                                 handleOpen();
                                             }}
@@ -498,7 +508,7 @@ function About(props) {
                                             endIcon={<WorkspacePremiumIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/My-Portfolio/images/about-page/education/golden3.JPG"
+                                                    "/images/about-page/education/golden3.JPG"
                                                 );
                                                 handleOpen();
                                             }}

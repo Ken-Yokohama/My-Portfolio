@@ -33,7 +33,7 @@ function Home(props) {
             liveSiteLink: "https://ken-yokohama.github.io/Twitter-Clone",
             githubRepoLink: "https://github.com/Ken-Yokohama/Twitter-Clone",
             backgroundImgUrl:
-                "/My-Portfolio/images/home-page/project-backgrounds/twitter-clone.JPG",
+                "/images/home-page/project-backgrounds/twitter-clone.JPG",
         },
         {
             year: "2022",
@@ -51,7 +51,7 @@ function Home(props) {
             liveSiteLink: "https://kenterest.netlify.app/",
             githubRepoLink: "https://github.com/Ken-Yokohama/Kenterest",
             backgroundImgUrl:
-                "/My-Portfolio/images/home-page/project-backgrounds/kenterest.JPG",
+                "/images/home-page/project-backgrounds/kenterest.JPG",
         },
         {
             year: "2022",
@@ -63,7 +63,7 @@ function Home(props) {
             liveSiteLink: "https://ken-yokohama.github.io/Ka-Chat/",
             githubRepoLink: "https://github.com/Ken-Yokohama/Ka-Chat",
             backgroundImgUrl:
-                "/My-Portfolio/images/home-page/project-backgrounds/ka-chat.JPG",
+                "/images/home-page/project-backgrounds/ka-chat.JPG",
         },
     ];
 
@@ -213,7 +213,7 @@ function Home(props) {
                         }}
                     >
                         <img
-                            src="/My-Portfolio/images/home-page/profile-img2.JPG"
+                            src="/images/home-page/profile-img2.JPG"
                             alt="profile-image"
                             className="profile-img"
                             style={{ filter: "grayscale(100%)" }}
