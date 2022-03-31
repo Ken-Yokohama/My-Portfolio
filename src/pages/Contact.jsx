@@ -37,7 +37,7 @@ function Contact(props) {
                         justifyContent: "center",
                     }}
                 >
-                    <Box>
+                    <div>
                         <Box
                             component="img"
                             src="/images/contact-page/contact-img1.jpg"
@@ -54,7 +54,7 @@ function Contact(props) {
                                 },
                             }}
                         />
-                    </Box>
+                    </div>
                 </Box>
                 {/* Contact Forms */}
                 <Box
@@ -71,9 +71,24 @@ function Contact(props) {
                     }}
                 >
                     <div>
-                        <h1>Socials</h1>
-                        <Box
-                            sx={{
+                        <motion.h1
+                            initial={{ y: "40px", opacity: 0 }}
+                            animate={{ y: "0", opacity: 1 }}
+                            transition={{
+                                y: { delay: 0.3 },
+                                opacity: { delay: 0.3 },
+                            }}
+                        >
+                            Socials
+                        </motion.h1>
+                        <motion.div
+                            initial={{ y: "40px", opacity: 0 }}
+                            animate={{ y: "0", opacity: 1 }}
+                            transition={{
+                                y: { delay: 0.4 },
+                                opacity: { delay: 0.4 },
+                            }}
+                            style={{
                                 display: "flex",
                                 alignItems: "center",
                                 gap: "1rem",
@@ -128,10 +143,19 @@ function Contact(props) {
                                     Github
                                 </Button>
                             </motion.div>
-                        </Box>
+                        </motion.div>
                     </div>
                     <div>
-                        <h1>Get In Touch</h1>
+                        <motion.h1
+                            initial={{ y: "40px", opacity: 0 }}
+                            animate={{ y: "0", opacity: 1 }}
+                            transition={{
+                                y: { delay: 0.5 },
+                                opacity: { delay: 0.5 },
+                            }}
+                        >
+                            Get In Touch
+                        </motion.h1>
                         <Box
                             sx={{
                                 display: "flex",
@@ -144,7 +168,14 @@ function Contact(props) {
                                 },
                             }}
                         >
-                            <div>
+                            <motion.div
+                                initial={{ y: "40px", opacity: 0 }}
+                                animate={{ y: "0", opacity: 1 }}
+                                transition={{
+                                    y: { delay: 0.6 },
+                                    opacity: { delay: 0.6 },
+                                }}
+                            >
                                 <p>Email:</p>
                                 <CopyToClipboard text="kenlopezyokohama@gmail.com">
                                     <Tooltip title="Copy Email to Clipboard">
@@ -160,8 +191,15 @@ function Contact(props) {
                                         </motion.p>
                                     </Tooltip>
                                 </CopyToClipboard>
-                            </div>
-                            <div>
+                            </motion.div>
+                            <motion.div
+                                initial={{ y: "40px", opacity: 0 }}
+                                animate={{ y: "0", opacity: 1 }}
+                                transition={{
+                                    y: { delay: 0.7 },
+                                    opacity: { delay: 0.7 },
+                                }}
+                            >
                                 <p>Contact No:</p>
                                 <CopyToClipboard text="+639175787991">
                                     <Tooltip title="Copy Phone Number to Clipboard">
@@ -178,11 +216,20 @@ function Contact(props) {
                                         </motion.p>
                                     </Tooltip>
                                 </CopyToClipboard>
-                            </div>
+                            </motion.div>
                         </Box>
                     </div>
                     <div style={{ maxWidth: "550px" }}>
-                        <h1>Contact Form</h1>
+                        <motion.h1
+                            initial={{ y: "40px", opacity: 0 }}
+                            animate={{ y: "0", opacity: 1 }}
+                            transition={{
+                                y: { delay: 0.8 },
+                                opacity: { delay: 0.8 },
+                            }}
+                        >
+                            Contact Form
+                        </motion.h1>
                         <form
                             action="https://formspree.io/f/xgedzljj"
                             method="POST"
@@ -192,7 +239,13 @@ function Contact(props) {
                                 gap: "1rem",
                             }}
                         >
-                            <Box
+                            <motion.div
+                                initial={{ y: "40px", opacity: 0 }}
+                                animate={{ y: "0", opacity: 1 }}
+                                transition={{
+                                    y: { delay: 0.9 },
+                                    opacity: { delay: 0.9 },
+                                }}
                                 style={{
                                     display: "flex",
                                     gap: "1rem",
@@ -218,37 +271,55 @@ function Contact(props) {
                                     required
                                     fullWidth
                                 />
-                            </Box>
-                            <TextField
-                                id="outlined-basic"
-                                label="Message"
-                                variant="outlined"
-                                type="text"
-                                name="Message"
-                                size="small"
-                                required
-                                fullWidth
-                                multiline
-                            />
+                            </motion.div>
+                            <motion.div
+                                initial={{ y: "40px", opacity: 0 }}
+                                animate={{ y: "0", opacity: 1 }}
+                                transition={{
+                                    y: { delay: 1 },
+                                    opacity: { delay: 1 },
+                                }}
+                            >
+                                <TextField
+                                    id="outlined-basic"
+                                    label="Message"
+                                    variant="outlined"
+                                    type="text"
+                                    name="Message"
+                                    size="small"
+                                    required
+                                    fullWidth
+                                    multiline
+                                />
+                            </motion.div>
 
                             <motion.div
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}
+                                initial={{ y: "40px", opacity: 0 }}
+                                animate={{ y: "0", opacity: 1 }}
+                                transition={{
+                                    y: { delay: 1.1 },
+                                    opacity: { delay: 1.1 },
+                                }}
                             >
-                                <Button
-                                    type="submit"
-                                    sx={{
-                                        backgroundColor: "#FFA500",
-                                        ":hover": {
-                                            backgroundColor: "#e39505",
-                                        },
-                                    }}
-                                    fullWidth
-                                    variant="contained"
-                                    endIcon={<SendIcon />}
+                                <motion.div
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
                                 >
-                                    Submit
-                                </Button>
+                                    <Button
+                                        type="submit"
+                                        sx={{
+                                            backgroundColor: "#FFA500",
+                                            ":hover": {
+                                                backgroundColor: "#e39505",
+                                            },
+                                        }}
+                                        fullWidth
+                                        variant="contained"
+                                        endIcon={<SendIcon />}
+                                    >
+                                        Submit
+                                    </Button>
+                                </motion.div>
                             </motion.div>
                         </form>
                     </div>

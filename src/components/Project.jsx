@@ -4,6 +4,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Button from "@mui/material/Button";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function Project({
     year,
@@ -17,8 +18,18 @@ function Project({
 }) {
     const [mouseHovering, setMouseHovering] = useState(false);
 
+    // Intersection Observer Func
+    const [ref, inView] = useInView({ triggerOnce: true });
+
     return (
-        <div
+        <motion.div
+            initial={{ y: "40px", opacity: 0 }}
+            animate={{ y: inView ? "0" : "40px", opacity: inView ? 1 : 0 }}
+            transition={{
+                y: { delay: 0.3 },
+                opacity: { delay: 0.3 },
+            }}
+            ref={ref}
             onMouseEnter={() => {
                 setMouseHovering(true);
             }}
@@ -190,7 +201,7 @@ function Project({
                     </Box>
                 </motion.div>
             </Box>
-        </div>
+        </motion.div>
     );
 }
 

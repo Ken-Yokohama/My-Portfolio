@@ -109,8 +109,8 @@ function About(props) {
                             initial={{ y: "40px", opacity: 0 }}
                             animate={{ y: "0", opacity: 1 }}
                             transition={{
-                                y: { delay: 0.5 },
-                                opacity: { delay: 0.5 },
+                                y: { delay: 0.4 },
+                                opacity: { delay: 0.4 },
                             }}
                         >
                             My name is Ken Yokohama. I specialize in creating
@@ -121,8 +121,8 @@ function About(props) {
                             initial={{ y: "40px", opacity: 0 }}
                             animate={{ y: "0", opacity: 1 }}
                             transition={{
-                                y: { delay: 0.7 },
-                                opacity: { delay: 0.7 },
+                                y: { delay: 0.5 },
+                                opacity: { delay: 0.5 },
                             }}
                             style={{
                                 fontWeight: "100",
@@ -136,69 +136,86 @@ function About(props) {
                     </div>
                     {/* ---------------------LANGUAGES SECTION------------------------ */}
 
-                    <motion.div
-                        // initial={{ y: "40px", opacity: 0 }}
-                        // animate={{ y: "0", opacity: 1 }}
-                        // transition={{
-                        //     y: { delay: 1.0 },
-                        //     opacity: { delay: 1.0 },
-                        // }}
+                    <div
                         style={{
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
                         }}
                     >
-                        <h5>LANGUAGES</h5>
-                        <Box
-                            component="h2"
-                            sx={{
+                        <motion.h5
+                            initial={{ y: "40px", opacity: 0 }}
+                            animate={{ y: "0", opacity: 1 }}
+                            transition={{
+                                y: { delay: 0.6 },
+                                opacity: { delay: 0.6 },
+                            }}
+                        >
+                            LANGUAGES
+                        </motion.h5>
+                        <motion.h2
+                            initial={{ y: "40px", opacity: 0 }}
+                            animate={{ y: "0", opacity: 1 }}
+                            transition={{
+                                y: { delay: 0.7 },
+                                opacity: { delay: 0.7 },
+                            }}
+                            style={{
                                 textAlign: "center",
                                 marginBottom: "3rem",
                                 marginTop: "1rem",
                             }}
                         >
                             Some Technologies I'm fluent with
-                        </Box>
+                        </motion.h2>
 
-                        <Box
-                            sx={{
-                                display: "grid",
-                                width: "100%",
-                                gridTemplateColumns: "1fr 1fr 1fr 1fr",
-                                "@media (max-width: 900px)": {
-                                    gridTemplateColumns: "1fr 1fr 1fr",
-                                },
-                                "@media (max-width: 550px)": {
-                                    gridTemplateColumns: "1fr 1fr ",
-                                },
+                        <motion.div
+                            initial={{ y: "40px", opacity: 0 }}
+                            animate={{ y: "0", opacity: 1 }}
+                            transition={{
+                                y: { delay: 0.8 },
+                                opacity: { delay: 0.8 },
                             }}
                         >
-                            {technologiesImgSrc.map((img, index) => (
-                                <div
-                                    key={index}
-                                    style={{
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        aspectRatio: "2/1",
-                                    }}
-                                >
-                                    <img
+                            <Box
+                                sx={{
+                                    display: "grid",
+                                    width: "100%",
+                                    gridTemplateColumns: "1fr 1fr 1fr 1fr",
+                                    "@media (max-width: 900px)": {
+                                        gridTemplateColumns: "1fr 1fr 1fr",
+                                    },
+                                    "@media (max-width: 550px)": {
+                                        gridTemplateColumns: "1fr 1fr ",
+                                    },
+                                }}
+                            >
+                                {technologiesImgSrc.map((img, index) => (
+                                    <div
+                                        key={index}
                                         style={{
-                                            maxWidth: "80%",
-                                            maxHeight: "80%",
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                            aspectRatio: "2/1",
                                         }}
-                                        src={
-                                            "/images/about-page/technologies/" +
-                                            img
-                                        }
-                                        alt={img}
-                                    />
-                                </div>
-                            ))}
-                        </Box>
-                    </motion.div>
+                                    >
+                                        <img
+                                            style={{
+                                                maxWidth: "80%",
+                                                maxHeight: "80%",
+                                            }}
+                                            src={
+                                                "/images/about-page/technologies/" +
+                                                img
+                                            }
+                                            alt={img}
+                                        />
+                                    </div>
+                                ))}
+                            </Box>
+                        </motion.div>
+                    </div>
                     {/* ---------------------ENGINEERING & DESIGN SECTION------------------------ */}
 
                     <div

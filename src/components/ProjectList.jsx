@@ -1,5 +1,7 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function ProjectList({
     title,
@@ -8,8 +10,20 @@ function ProjectList({
     liveSite,
     githubRepo,
 }) {
+    // Intersection Observer Func
+    const [ref, inView] = useInView({ threshold: 0.7 });
+
     return (
-        <Box sx={{ border: "2px solid" }}>
+        <motion.div
+            ref={ref}
+            initial={{ x: "-100px", opacity: 0 }}
+            animate={{ x: inView ? "0" : "-100px", opacity: inView ? 1 : 0 }}
+            transition={{
+                x: { delay: 0.0 },
+                opacity: { delay: 0.0 },
+            }}
+            style={{ border: "2px solid" }}
+        >
             <Box
                 sx={{
                     display: "flex",
@@ -64,7 +78,7 @@ function ProjectList({
                     </a>
                 </Box>
             </Box>
-        </Box>
+        </motion.div>
     );
 }
 

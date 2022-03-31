@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import React, { useState } from "react";
 import { CallToAction, Footer, Project, ProjectList } from "../components";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Home(props) {
     const navigate = useNavigate();
@@ -151,74 +152,102 @@ function Home(props) {
                             gap: "0.25rem",
                         }}
                     >
-                        <h5>KEN YOKOHAMA</h5>
-                        <h1>FULL STACK DEVELOPER</h1>
-                        <h3 style={{ maxWidth: "600px" }}>
+                        <motion.h5
+                            initial={{ y: "40px", opacity: 0 }}
+                            animate={{ y: "0", opacity: 1 }}
+                            transition={{
+                                y: { delay: 0.3 },
+                                opacity: { delay: 0.3 },
+                            }}
+                        >
+                            KEN YOKOHAMA
+                        </motion.h5>
+                        <motion.h1
+                            initial={{ y: "40px", opacity: 0 }}
+                            animate={{ y: "0", opacity: 1 }}
+                            transition={{
+                                y: { delay: 0.4 },
+                                opacity: { delay: 0.4 },
+                            }}
+                        >
+                            FULL STACK DEVELOPER
+                        </motion.h1>
+                        <motion.h3
+                            initial={{ y: "40px", opacity: 0 }}
+                            animate={{ y: "0", opacity: 1 }}
+                            transition={{
+                                y: { delay: 0.5 },
+                                opacity: { delay: 0.5 },
+                            }}
+                            style={{ maxWidth: "600px" }}
+                        >
                             Hello! I'm a <strong>Web Developer</strong> and
                             licensed Civil Engineer with a passion for solving
                             problems, learning new things and turning ideas into
                             reality with the use of code.
-                        </h3>
-                        <Box
-                            component="h4"
-                            sx={{
-                                marginTop: "1rem",
-                                fontWeight: "100",
-                                "@media(max-width: 510px)": {
-                                    marginTop: "0.5rem",
-                                    fontSize: "clamp(0.5rem, 3vw, 1rem)",
-                                },
+                        </motion.h3>
+                        <motion.div
+                            initial={{ y: "40px", opacity: 0 }}
+                            animate={{ y: "0", opacity: 1 }}
+                            transition={{
+                                y: { delay: 0.6 },
+                                opacity: { delay: 0.6 },
                             }}
                         >
                             <Box
-                                component="strong"
+                                component="h4"
                                 sx={{
-                                    transition: "border 0.5s ease",
-                                    cursor: "pointer",
-                                    border: "2px solid transparent",
-                                    ":hover": {
-                                        borderBottom: "2px solid",
+                                    marginTop: "1rem",
+                                    fontWeight: "100",
+                                    "@media(max-width: 510px)": {
+                                        marginTop: "0.5rem",
+                                        fontSize: "clamp(0.5rem, 3vw, 1rem)",
                                     },
                                 }}
-                                onClick={handleViewProjects}
                             >
-                                View Projects
-                            </Box>{" "}
-                            or{" "}
-                            <Box
-                                component="strong"
-                                sx={{
-                                    transition: "border 0.5s ease",
-                                    cursor: "pointer",
-                                    border: "2px solid transparent",
-                                    ":hover": {
-                                        borderBottom: "2px solid",
-                                    },
-                                }}
-                                onClick={() => {
-                                    navigate("/about");
-                                    window.scrollTo(0, 0);
-                                }}
-                            >
-                                About Me
+                                <Box
+                                    component="strong"
+                                    sx={{
+                                        transition: "border 0.5s ease",
+                                        cursor: "pointer",
+                                        border: "2px solid transparent",
+                                        ":hover": {
+                                            borderBottom: "2px solid",
+                                        },
+                                    }}
+                                    onClick={handleViewProjects}
+                                >
+                                    View Projects
+                                </Box>{" "}
+                                or{" "}
+                                <Box
+                                    component="strong"
+                                    sx={{
+                                        transition: "border 0.5s ease",
+                                        cursor: "pointer",
+                                        border: "2px solid transparent",
+                                        ":hover": {
+                                            borderBottom: "2px solid",
+                                        },
+                                    }}
+                                    onClick={() => {
+                                        navigate("/about");
+                                        window.scrollTo(0, 0);
+                                    }}
+                                >
+                                    About Me
+                                </Box>
                             </Box>
-                        </Box>
+                        </motion.div>
                     </Box>
-                    <Box
-                        sx={{
-                            width: "300px",
-                            "@media(max-width: 900px)": {
-                                width: "100%",
-                            },
-                        }}
-                    >
+                    <div className="img-div">
                         <img
                             src="/images/home-page/profile-img2.JPG"
                             alt="profile-image"
                             className="profile-img"
                             style={{ filter: "grayscale(100%)" }}
                         />
-                    </Box>
+                    </div>
                 </Box>
                 {/* Projects Container */}
                 <div
