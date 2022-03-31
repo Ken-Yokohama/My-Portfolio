@@ -55,21 +55,15 @@ function Home(props) {
         },
         {
             year: "2022",
-            month: "FEB",
-            name: "Kenterest",
+            month: "MAR",
+            name: "Ka-Chat!",
             description:
-                "Kenterest is a full-stack social media photo sharing web application similar to the popular website Pinterest created using React in the Frontend and Sanity.io as the CMS.",
-            technologies: [
-                "REACT",
-                "SANITY.IO",
-                "TAILWIND CSS",
-                "REACT ROUTER",
-                "UUID",
-            ],
-            liveSiteLink: "https://kenterest.netlify.app/",
-            githubRepoLink: "https://github.com/Ken-Yokohama/Kenterest",
+                "Ka-Chat! is a full-stack realtime chat application created using React in the Frontend and Firebase as the CMS.",
+            technologies: ["REACT", "FIREBASE", "MATERIAL UI", "REACT ROUTER"],
+            liveSiteLink: "https://ken-yokohama.github.io/Ka-Chat/",
+            githubRepoLink: "https://github.com/Ken-Yokohama/Ka-Chat",
             backgroundImgUrl:
-                "https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
+                "/My-Portfolio/images/home-page/project-backgrounds/ka-chat.JPG",
         },
     ];
 
