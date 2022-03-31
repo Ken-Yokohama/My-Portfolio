@@ -11,7 +11,9 @@ function ProjectList({
     githubRepo,
 }) {
     // Intersection Observer Func
-    const [ref, inView] = useInView({ threshold: 0.7 });
+    const [ref, inView] = useInView({
+        rootMargin: "-120px",
+    });
 
     return (
         <motion.div
