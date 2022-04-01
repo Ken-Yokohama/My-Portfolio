@@ -10,8 +10,27 @@ My-Portfolio is a static landing page used to showcase all of my projects, techn
 - [Live Preview](https://KenYokohama.com/)
 
 ### Features:
+- Personalized User View Count using the IP Adress API and Count API
+- Email Verification and Forwarding using Formspree
+- Intersection Observer Animation Triggers
+- Route Animation Triggers
+- Copy to Clipboard Animation Triggers
+- Fully Responsive Grid and Flexbox Layout
 
 ### Technologies & Templates Used
+| Technologies | Usage                                      |
+| ----------------- | ------------------------------------------------ |
+| React Router Dom | Navigation & Routing |
+| Material UI | CSS Components, Styles & Icons       |
+| Framer Motion| CSS Animations|
+| Axios| API Pull Requests|
+| IP Address API| Handling Personalized Unique User ID's|
+| Count API| Handling Page View Count|
+| Formspree| Email Handling|
+| React Intersection Observer| Intersection Observer|
+| React Copy-To-Clipboard | onClick Copy Paste |
+| React Elastic Carousel| Carousel Menu|
+| Npm GH-Pages | Web Hosting |
 
 ### File Structure
 
