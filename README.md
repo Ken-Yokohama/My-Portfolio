@@ -98,3 +98,46 @@ V1.5 21 Mar '22 - About Me Page part 3
 - Adjusted max container width from 1600px to 1500px
 - Added Buttons for Awards and Certifications
 - Added Responsiveness to About Title 
+
+March 22
+
+ - Adjusted Max Container width from 1600px to 1500px
+ - Adjusted Buttons for Awards and Certifications
+ - Added Responsiveness to About Title Section
+ - Added Responsive Modals for Awards & Certifications
+ - Added Responsiveness to the text of Awards & Certifications
+ - Added get in touch links and css
+ - Added Responsive Background to Contact Me Page
+ - Added Responsive Fonts for Contact Me Page
+ - Added Contact Form CSS and Responsiveness
+ - Added Icons for Awards and Certifications and adjusted width of buttons 
+
+March 23
+ - Refactored responsiveness to contact me image for extra large screen sizes
+ - Fixed the positioning of the background in project cards
+ - Added Responsiveness to the technologies section of project list
+ - Added Axios and call API address API & Count API to display how many times the user has viewed my website
+ - Added routing to about me page from home title
+
+March 27
+ - Corrected Project Technologies Used for Kenterest 
+ - Mega branch 'master' of https://github.com/Ken-Yokohama/MY-Portfolio
+ - Added Resume
+ - Added github pages npm package and replaced browser router with hash router
+ - Fixed route path of images from changing path of browser router to hash router
+
+March 28 
+ - Refactored img source names due to github pages being case sensitive 
+ - Refactored About Me Technologies CSS due to safari 14.8 and below not supporting the css aspect-ration property 
+ - Added Responsiveness to the menu for dynamic viewport heights
+ - Fixed Viewport to fit the whole width of devices with notches & Changes Webpage Title to Ken Yokohama Portfolio
+ - Added Routing to Home Page when clicking on Logo  
+ - Fixed an issue When routing to the home page from logo, scroll would remain in place instead of being at 0,0
+
+March 29
+ - Fixed a bug in the contact me page where the email and contact number would not copy to the clipboard due to state changes 
+
+March 31 
+ - Added favicon
+ - 
+
