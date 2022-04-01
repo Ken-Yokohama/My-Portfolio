@@ -32,6 +32,27 @@ My-Portfolio is a static landing page used to showcase all of my projects, techn
 | React Elastic Carousel| Carousel Menu|
 | Npm GH-Pages | Web Hosting |
 
-### File Structure
-
 ### Version Logs
+V1.0 15 Mar '22 - Original Release
+
+- Created React App
+- Installed Npm Packages (MUI, Axios, Framer-Motion & React-Router-Dom)
+- Organized Files following Best Practices for Components, Containers & Pages
+- Added Routes for Home, About & Contact Page
+- Added Navbar
+- Added Styles for Typography
+- Added Styles for Quick Links
+- Added Responsiveness to Menu
+- Added Animations for Menu Containers
+- Added Responsive Styles to Navbar for better UX of mobile devices
+- Added Responsive Styles and Active Styles for Nav Menu Items
+- Added Animations for Menu Items using Framer-Motion
+- Added Animations, Styles, ToolTips to quick links
+- Added Ability to copy to clipboard when clicking on the quick links
+
+V1.1 16 Mar '22 - Responsive Layout, Design and Typography
+
+- Converted Typography to be Fully Responsive and Scale with a clamped Viewport Width
+- Converted Profile Image to be Responsive and Scale based on Device Size
+- Added Project Cards w/ Animations using Framer-Motion
+- Added Hover Animations to Cards and Buttons
