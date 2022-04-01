@@ -26,8 +26,8 @@ function Project({
             initial={{ y: "40px", opacity: 0 }}
             animate={{ y: inView ? "0" : "40px", opacity: inView ? 1 : 0 }}
             transition={{
-                y: { delay: 0.3 },
-                opacity: { delay: 0.3 },
+                y: { delay: 0, duration: 1 },
+                opacity: { delay: 0, duration: 1 },
             }}
             ref={ref}
             onMouseEnter={() => {
