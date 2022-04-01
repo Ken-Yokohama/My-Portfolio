@@ -139,5 +139,14 @@ March 29
 
 March 31 
  - Added favicon
- - 
+ - Added Ka-Chat to Projects 
+ - Added a Custom Domain NAme to Website 
 
+April 1
+ - Fixed Routing of Images for new custon domain name
+ - Added Animation, transitions on all pages and included intersection observers for projects 
+ - Adjusted Intersection Oberver to Fit ios devices better
+ - Removed animation for images in about me page to be compatible for Safari browser 
+ - Fixed animation timings for displaying project cards
+ - Added apple-touch-icons 
+ - Added Cover Photo Image File 
