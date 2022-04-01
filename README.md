@@ -56,3 +56,45 @@ V1.1 16 Mar '22 - Responsive Layout, Design and Typography
 - Converted Profile Image to be Responsive and Scale based on Device Size
 - Added Project Cards w/ Animations using Framer-Motion
 - Added Hover Animations to Cards and Buttons
+
+
+V1.2 17 Mar '22 - Contact Page
+
+- Designed Home Title Image using Clip2Comic Image Filter
+- Added Contact Page Styles, Socials & Contact Form
+- Converted Contact Page to be Fully Responsive
+- Added Temp Content for About Me Section
+
+V1.3 19 Mar '22 - About Me Page part 1
+
+- Added Fluent Technologies Images and Grid Layout
+- Removed unused images
+- Fixed Aspect Ratio of Fluent Technologies
+- Converted Fluent Technologies to be Responsive
+- Added Placeholders for Education, Awards and Certifications
+
+
+V1.4 20 Mar '22 - About Me Page part 2, Call-To-Action and Footer
+
+- Fixed a Bug where routing to a new page keeps the same page position without scrolling to the top
+- Added Button to navigate the users into the View Projects Section from the Home Page
+- Created a Call to Action Section which routes to the Contact Me Page
+- Create a Footer to display a minamalist version of key information
+- Added Responsive layout and Responsive fontsize for the call to action
+- Refactored code to include CallToAction, Project and Footer Section into the barrel file
+- Added Responsiveness to Footer
+- Converted Card Projects to be responsive and used an array to map data to the cards
+- Added Social Links to Footer w/ Routing
+- Added Styles to Navbar to fill Background on Scroll
+
+
+V1.5 21 Mar '22 - About Me Page part 3
+
+- Added Engineering and Design Tools i use to the About Me Page
+- Added React Elastic Carousel NPM Package to display my Education Section in About Me Page
+- Added Images and Responsiveness to the Education Carousel
+- Adjusted Carousel Container to have arrows for easier navigation
+- Edited Images to isolate myself in group pictures
+- Adjusted max container width from 1600px to 1500px
+- Added Buttons for Awards and Certifications
+- Added Responsiveness to About Title 
