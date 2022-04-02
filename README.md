@@ -99,7 +99,7 @@ V1.5 21 Mar '22 - About Me Page part 3
 - Added Buttons for Awards and Certifications
 - Added Responsiveness to About Title 
 
-March 22
+V1.6 22 Mar '22 -
 
  - Adjusted Max Container width from 1600px to 1500px
  - Adjusted Buttons for Awards and Certifications
@@ -112,21 +112,24 @@ March 22
  - Added Contact Form CSS and Responsiveness
  - Added Icons for Awards and Certifications and adjusted width of buttons 
 
-March 23
+V1.7 23 Mar '22 -
+
  - Refactored responsiveness to contact me image for extra large screen sizes
  - Fixed the positioning of the background in project cards
  - Added Responsiveness to the technologies section of project list
  - Added Axios and call API address API & Count API to display how many times the user has viewed my website
  - Added routing to about me page from home title
 
-March 27
+V1.8 27 Mar '22 -
+
  - Corrected Project Technologies Used for Kenterest 
  - Mega branch 'master' of https://github.com/Ken-Yokohama/MY-Portfolio
  - Added Resume
  - Added github pages npm package and replaced browser router with hash router
  - Fixed route path of images from changing path of browser router to hash router
 
-March 28 
+V1.9 28 Mar '22 -
+
  - Refactored img source names due to github pages being case sensitive 
  - Refactored About Me Technologies CSS due to safari 14.8 and below not supporting the css aspect-ration property 
  - Added Responsiveness to the menu for dynamic viewport heights
@@ -134,15 +137,18 @@ March 28
  - Added Routing to Home Page when clicking on Logo  
  - Fixed an issue When routing to the home page from logo, scroll would remain in place instead of being at 0,0
 
-March 29
+V1.10 29 Mar '22 -
+
  - Fixed a bug in the contact me page where the email and contact number would not copy to the clipboard due to state changes 
 
-March 31 
+V1.11 31 Mar '22 -
+
  - Added favicon
  - Added Ka-Chat to Projects 
  - Added a Custom Domain NAme to Website 
 
-April 1
+V1.12 1 Apr '22 -
+
  - Fixed Routing of Images for new custon domain name
  - Added Animation, transitions on all pages and included intersection observers for projects 
  - Adjusted Intersection Oberver to Fit ios devices better
