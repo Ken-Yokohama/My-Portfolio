@@ -14,6 +14,7 @@ function About(props) {
         "html.png",
         "css.png",
         "javascript.png",
+        "typescript.png",
         "react1.png",
         "nodejs1.png",
         "expressjs3.png",
@@ -28,7 +29,7 @@ function About(props) {
         "bootstrap2.png",
         "tailwindcss.jpg",
         "jquery1.png",
-        "npm1.png",
+        // "npm1.png",
         "autoit1.png",
         "github2.png",
     ];
