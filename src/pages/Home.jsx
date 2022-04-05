@@ -60,7 +60,13 @@ function Home(props) {
             name: "Ka-Chat!",
             description:
                 "Ka-Chat! is a full-stack realtime chat application created using React in the Frontend and Firebase as the CMS.",
-            technologies: ["REACT", "FIREBASE", "MATERIAL UI", "REACT ROUTER"],
+            technologies: [
+                "TYPESCRIPT",
+                "REACT",
+                "FIREBASE",
+                "MATERIAL UI",
+                "REACT ROUTER",
+            ],
             liveSiteLink: "https://ken-yokohama.github.io/Ka-Chat/",
             githubRepoLink: "https://github.com/Ken-Yokohama/Ka-Chat",
             backgroundImgUrl:
