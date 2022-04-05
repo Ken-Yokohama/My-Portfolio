@@ -6,7 +6,7 @@ import "./index.css";
 
 // Don't forget to replace BrowserRouter to HashRouter before deploying
 ReactDOM.render(
-    <Router basename="/">
+    <Router>
         <App />
     </Router>,
     document.getElementById("root")
