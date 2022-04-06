@@ -99,7 +99,7 @@ V1.5 21 Mar '22 - About Me Page part 3
 - Added Buttons for Awards and Certifications
 - Added Responsiveness to About Title 
 
-V1.6 22 Mar '22 -
+V1.6 22 Mar '22 - Contact Me Page
 
  - Adjusted Max Container width from 1600px to 1500px
  - Adjusted Buttons for Awards and Certifications
@@ -112,7 +112,7 @@ V1.6 22 Mar '22 -
  - Added Contact Form CSS and Responsiveness
  - Added Icons for Awards and Certifications and adjusted width of buttons 
 
-V1.7 23 Mar '22 -
+V1.7 23 Mar '22 - IP Address API and Count API 
 
  - Refactored responsiveness to contact me image for extra large screen sizes
  - Fixed the positioning of the background in project cards
@@ -120,15 +120,15 @@ V1.7 23 Mar '22 -
  - Added Axios and call API address API & Count API to display how many times the user has viewed my website
  - Added routing to about me page from home title
 
-V1.8 27 Mar '22 -
+V1.8 27 Mar '22 - Pre Deployment 
 
  - Corrected Project Technologies Used for Kenterest 
- - Mega branch 'master' of https://github.com/Ken-Yokohama/MY-Portfolio
- - Added Resume
+ - Added Resume in Menu section
  - Added github pages npm package and replaced browser router with hash router
  - Fixed route path of images from changing path of browser router to hash router
+ - Deployed Website to Github Pages
 
-V1.9 28 Mar '22 -
+V1.9 28 Mar '22 - Deployment Fixes
 
  - Refactored img source names due to github pages being case sensitive 
  - Refactored About Me Technologies CSS due to safari 14.8 and below not supporting the css aspect-ration property 
@@ -137,17 +137,17 @@ V1.9 28 Mar '22 -
  - Added Routing to Home Page when clicking on Logo  
  - Fixed an issue When routing to the home page from logo, scroll would remain in place instead of being at 0,0
 
-V1.10 29 Mar '22 -
+V1.10 29 Mar '22 - React Copy-To-Clipboard Bug Fixes
 
  - Fixed a bug in the contact me page where the email and contact number would not copy to the clipboard due to state changes 
 
-V1.11 31 Mar '22 -
+V1.11 31 Mar '22 - Favicon and Meta Tags
 
- - Added favicon
+ - Added favicon and Additional meta tags
  - Added Ka-Chat to Projects 
- - Added a Custom Domain NAme to Website 
+ - Added a Custom Domain Name to Website 
 
-V1.12 1 Apr '22 -
+V1.12 1 Apr '22 - Animations
 
  - Fixed Routing of Images for new custon domain name
  - Added Animation, transitions on all pages and included intersection observers for projects 
