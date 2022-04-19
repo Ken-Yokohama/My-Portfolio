@@ -24,7 +24,7 @@ function About(props) {
         "framermotion1.png",
         "react-router1.webp",
         "git1.png",
-        "heroku1.png",
+        "redux.png",
         "netlify1.png",
         "bootstrap2.png",
         "tailwindcss.jpg",
