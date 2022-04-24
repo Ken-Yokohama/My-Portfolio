@@ -23,7 +23,7 @@ function Home(props) {
             month: "MAR",
             name: "Twitter Clone",
             description:
-                "Twitter Clone is a full-stack social media web application similar to the popular website Twitter created using React in the FrontEnd and Firebase to handle the Database, Authentication & Security.",
+                "Twitter Clone is a full-stack social media web application similar to the popular website Twitter created using React in the front end and Firebase to handle the Database, Authentication & Security.",
             technologies: [
                 "REACT",
                 "FIREBASE",
@@ -53,6 +53,27 @@ function Home(props) {
             githubRepoLink: "https://github.com/Ken-Yokohama/Kenterest",
             backgroundImgUrl:
                 "/images/home-page/project-backgrounds/kenterest.JPG",
+        },
+        {
+            year: "2022",
+            month: "Apr",
+            name: "Bug Tracker",
+            description:
+                "This Bug Tracking System is a full-stack software issue management web application that allows developers to create tickets for their projects and admins to manage the progress of each project using NodeJS & Express in the back end, MongoDB as the database and React in the front end",
+
+            technologies: [
+                "MongoDB",
+                "ExpressJS",
+                "React",
+                "NodeJS",
+                "Redux",
+                "Typescript",
+            ],
+            liveSiteLink: "https://ken-yokohama.github.io/Bug-Tracking-System",
+            githubRepoLink:
+                "https://github.com/Ken-Yokohama/Bug-Tracking-System",
+            backgroundImgUrl:
+                "/images/home-page/project-backgrounds/bug-tracker.png",
         },
         {
             year: "2022",
