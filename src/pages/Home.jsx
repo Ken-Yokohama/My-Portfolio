@@ -73,7 +73,7 @@ function Home(props) {
             githubRepoLink:
                 "https://github.com/Ken-Yokohama/Bug-Tracking-System",
             backgroundImgUrl:
-                "/images/home-page/project-backgrounds/bug-tracker.png",
+                "/images/home-page/project-backgrounds/bug-tracker.jpg",
         },
         {
             year: "2022",
