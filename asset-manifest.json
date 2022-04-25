@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.3b2cd251.css",
-    "main.js": "/static/js/main.b921128e.js",
+    "main.js": "/static/js/main.fdd5ba15.js",
     "static/media/ken_yokohama_resume.pdf": "/static/media/ken_yokohama_resume.6a052799acf7a59253b0.pdf",
     "index.html": "/index.html",
     "main.3b2cd251.css.map": "/static/css/main.3b2cd251.css.map",
-    "main.b921128e.js.map": "/static/js/main.b921128e.js.map"
+    "main.fdd5ba15.js.map": "/static/js/main.fdd5ba15.js.map"
   },
   "entrypoints": [
     "static/css/main.3b2cd251.css",
-    "static/js/main.b921128e.js"
+    "static/js/main.fdd5ba15.js"
   ]
 }
