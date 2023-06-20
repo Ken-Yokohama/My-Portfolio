@@ -9,7 +9,7 @@ import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 
-function About(props) {
+function About() {
     const technologiesImgSrc = [
         "html.png",
         "css.png",

@@ -6,7 +6,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import Tooltip from "@mui/material/Tooltip";
 import resumeFile from "../pdf-files/ken_yokohama_resume.pdf";
 
-function Menu({ setShowMenu, showMenu, pageVisits }) {
+function Menu({ setShowMenu, showMenu, pageVisits }: any) {
     const handleCloseMenu = () => {
         setShowMenu(false);
         // window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); SMOOTH SCROLL

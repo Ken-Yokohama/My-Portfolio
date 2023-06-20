@@ -9,7 +9,7 @@ function ProjectList({
     description,
     liveSite,
     githubRepo,
-}) {
+}: any) {
     // Intersection Observer Func
     const [ref, inView] = useInView({
         rootMargin: "-120px",
@@ -50,7 +50,7 @@ function ProjectList({
                         justifyContent: "center",
                     }}
                 >
-                    {technologies.map((tech, index) => (
+                    {technologies.map((tech: any, index: number) => (
                         <h5 key={index}>{tech}</h5>
                     ))}
                 </Box>

@@ -4,14 +4,14 @@ import { CallToAction, Footer, Project, ProjectList } from "../components";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-function Home(props) {
+function Home() {
     const navigate = useNavigate();
 
     const [clickViewProjects, setClickViewProjects] = useState(false);
 
     const handleViewProjects = () => {
         setClickViewProjects(true);
-        document.getElementById("#featured-proj").scrollIntoView({
+        document.getElementById("#featured-proj")!.scrollIntoView({
             behavior: "smooth",
             block: "start",
         });

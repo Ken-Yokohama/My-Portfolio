@@ -5,7 +5,7 @@ import axios from "axios";
 import { Navbar } from "../components";
 import { About, Contact, Home, Menu } from "../pages";
 
-function Main(props) {
+function Main() {
     const [showMenu, setShowMenu] = useState(false);
 
     const toggleShowMenu = () => {

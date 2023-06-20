@@ -15,7 +15,7 @@ function Project({
     liveSiteLink,
     githubRepoLink,
     backgroundImg,
-}) {
+}: any) {
     const [mouseHovering, setMouseHovering] = useState(false);
 
     // Intersection Observer Func
@@ -112,16 +112,18 @@ function Project({
                             gridTemplateColumns: "1fr 1fr",
                         }}
                     >
-                        {technologies.map((technologies, index) => (
-                            <div
-                                className="technologies"
-                                key={index}
-                                style={{ display: "flex" }}
-                            >
-                                <h5>-</h5>
-                                <h5> {technologies}</h5>
-                            </div>
-                        ))}
+                        {technologies.map(
+                            (technologies: any, index: number) => (
+                                <div
+                                    className="technologies"
+                                    key={index}
+                                    style={{ display: "flex" }}
+                                >
+                                    <h5>-</h5>
+                                    <h5> {technologies}</h5>
+                                </div>
+                            )
+                        )}
                     </div>
                 </motion.div>
                 {/* Button Option 1 */}

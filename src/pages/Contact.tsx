@@ -9,7 +9,7 @@ import Tooltip from "@mui/material/Tooltip";
 import TextField from "@mui/material/TextField";
 import SendIcon from "@mui/icons-material/Send";
 
-function Contact(props) {
+function Contact() {
     return (
         <Box
             sx={{

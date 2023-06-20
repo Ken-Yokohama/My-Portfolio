@@ -5,7 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-function Navbar({ showMenu, setShowMenu, toggleShowMenu }) {
+function Navbar({ showMenu, setShowMenu, toggleShowMenu }: any) {
     const navigate = useNavigate();
 
     const [scrolledDown, setScrolledDown] = useState(false);

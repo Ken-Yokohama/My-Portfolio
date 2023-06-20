@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
 
-function Footer(props) {
+function Footer() {
     return (
         <div
             style={{

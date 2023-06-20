@@ -7,6 +7,7 @@
     "scripts": {
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist",
+        "postdeploy": "echo Don't forget to re-add Custom Domain kenyokohama.com",
         "dev": "vite",
         "build": "tsc && vite build",
         "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -17,18 +18,19 @@
         "@emotion/styled": "^11.8.1",
         "@mui/icons-material": "^5.5.1",
         "@mui/material": "^5.5.1",
-        "styled-components": "^5.3.3",
         "axios": "^0.26.1",
         "framer-motion": "^6.2.8",
+        "react": "^18.2.0",
         "react-copy-to-clipboard": "^5.0.4",
+        "react-dom": "^18.2.0",
         "react-elastic-carousel": "^0.11.5",
         "react-intersection-observer": "^8.33.1",
         "react-router-dom": "^6.2.2",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "styled-components": "^5.3.11"
     },
     "devDependencies": {
         "@types/react": "^18.0.37",
+        "@types/react-copy-to-clipboard": "^5.0.4",
         "@types/react-dom": "^18.0.11",
         "@typescript-eslint/eslint-plugin": "^5.59.0",
         "@typescript-eslint/parser": "^5.59.0",
