@@ -182,7 +182,7 @@ function Footer(props) {
                     </Box>
                 </Box>
             </div>
-            <h5 style={{ padding: "1rem" }}>Ⓒ Ken Yokohama 2022</h5>
+            <h5 style={{ padding: "1rem" }}>Ⓒ Ken Yokohama 2023</h5>
         </div>
     );
 }
