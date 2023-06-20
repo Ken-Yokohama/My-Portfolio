@@ -1,6 +1,11 @@
 import { Box } from "@mui/material";
-import React, { useState } from "react";
-import { CallToAction, Footer, Project, ProjectList } from "../components";
+import { useState } from "react";
+import {
+    CallToAction,
+    Footer,
+    FeaturedProjectCard,
+    ProjectCard,
+} from "../components";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -311,7 +316,7 @@ function Home() {
                             }}
                         >
                             {featuredProjects.map((project, index) => (
-                                <Project
+                                <FeaturedProjectCard
                                     key={index}
                                     year={project.year}
                                     month={project.month}
@@ -339,7 +344,7 @@ function Home() {
                             }}
                         >
                             {projects.map((projects, index) => (
-                                <ProjectList
+                                <ProjectCard
                                     title={projects.title}
                                     technologies={projects.technologies}
                                     description={projects.description}

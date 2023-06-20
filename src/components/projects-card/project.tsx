@@ -1,15 +1,15 @@
 import { Box } from "@mui/material";
-import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { ProjectCardProps } from "./interface";
 
-function ProjectList({
+function ProjectCard({
     title,
     technologies,
     description,
     liveSite,
     githubRepo,
-}: any) {
+}: ProjectCardProps) {
     // Intersection Observer Func
     const [ref, inView] = useInView({
         rootMargin: "-120px",
@@ -50,7 +50,7 @@ function ProjectList({
                         justifyContent: "center",
                     }}
                 >
-                    {technologies.map((tech: any, index: number) => (
+                    {technologies.map((tech, index) => (
                         <h5 key={index}>{tech}</h5>
                     ))}
                 </Box>
@@ -84,4 +84,4 @@ function ProjectList({
     );
 }
 
-export default ProjectList;
+export default ProjectCard;

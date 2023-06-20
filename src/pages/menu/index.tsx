@@ -1,12 +1,12 @@
-import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Box } from "@mui/system";
 import { NavLink } from "react-router-dom";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Tooltip from "@mui/material/Tooltip";
-import resumeFile from "../pdf-files/ken_yokohama_resume.pdf";
+import resumeFile from "../../files/ken_yokohama_resume.pdf";
+import { MenuProps } from "./interface";
 
-function Menu({ setShowMenu, showMenu, pageVisits }: any) {
+function Menu({ setShowMenu, showMenu, pageVisits }: MenuProps) {
     const handleCloseMenu = () => {
         setShowMenu(false);
         // window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); SMOOTH SCROLL

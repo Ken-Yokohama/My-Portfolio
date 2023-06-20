@@ -1,12 +1,13 @@
 import { Box } from "@mui/material";
-import React, { useState } from "react";
+import { useState } from "react";
 import LanguageIcon from "@mui/icons-material/Language";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Button from "@mui/material/Button";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { FeaturedProjectCardProps } from "./interface";
 
-function Project({
+function FeaturedProjectCard({
     year,
     month,
     name,
@@ -15,7 +16,7 @@ function Project({
     liveSiteLink,
     githubRepoLink,
     backgroundImg,
-}: any) {
+}: FeaturedProjectCardProps) {
     const [mouseHovering, setMouseHovering] = useState(false);
 
     // Intersection Observer Func
@@ -112,18 +113,16 @@ function Project({
                             gridTemplateColumns: "1fr 1fr",
                         }}
                     >
-                        {technologies.map(
-                            (technologies: any, index: number) => (
-                                <div
-                                    className="technologies"
-                                    key={index}
-                                    style={{ display: "flex" }}
-                                >
-                                    <h5>-</h5>
-                                    <h5> {technologies}</h5>
-                                </div>
-                            )
-                        )}
+                        {technologies.map((technologies, index) => (
+                            <div
+                                className="technologies"
+                                key={index}
+                                style={{ display: "flex" }}
+                            >
+                                <h5>-</h5>
+                                <h5> {technologies}</h5>
+                            </div>
+                        ))}
                     </div>
                 </motion.div>
                 {/* Button Option 1 */}
@@ -207,4 +206,4 @@ function Project({
     );
 }
 
-export default Project;
+export default FeaturedProjectCard;

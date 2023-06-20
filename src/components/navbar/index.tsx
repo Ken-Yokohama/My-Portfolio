@@ -1,11 +1,12 @@
 import { Box } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { NavbarProps } from "./interface";
 
-function Navbar({ showMenu, setShowMenu, toggleShowMenu }: any) {
+function Navbar({ showMenu, setShowMenu, toggleShowMenu }: NavbarProps) {
     const navigate = useNavigate();
 
     const [scrolledDown, setScrolledDown] = useState(false);
