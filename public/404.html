@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ken Yokohama Portfolio</title>
+        <script type="text/javascript">
+            // If we use a custom domain use 0, if we use github change to 1 and add BaseName to Router
+            var pathSegmentsToKeep = 0;
+
+            var l = window.location;
+            l.replace(
+                l.protocol +
+                    "//" +
+                    l.hostname +
+                    (l.port ? ":" + l.port : "") +
+                    l.pathname
+                        .split("/")
+                        .slice(0, 1 + pathSegmentsToKeep)
+                        .join("/") +
+                    "/?/" +
+                    l.pathname
+                        .slice(1)
+                        .split("/")
+                        .slice(pathSegmentsToKeep)
+                        .join("/")
+                        .replace(/&/g, "~and~") +
+                    (l.search
+                        ? "&" + l.search.slice(1).replace(/&/g, "~and~")
+                        : "") +
+                    l.hash
+            );
+        </script>
+    </head>
+    <body></body>
+</html>
