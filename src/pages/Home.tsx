@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import { useState } from "react";
 import {
     CallToAction,
     Footer,
@@ -12,14 +11,17 @@ import { motion } from "framer-motion";
 function Home() {
     const navigate = useNavigate();
 
-    const [clickViewProjects, setClickViewProjects] = useState(false);
-
     const handleViewProjects = () => {
-        setClickViewProjects(true);
-        document.getElementById("#featured-proj")!.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-        });
+        const buffer = window.innerWidth > 700 ? 100 : 60;
+
+        const element = document.getElementById("#featured-proj")?.offsetTop;
+
+        if (element) {
+            window.scrollTo({
+                top: element - buffer,
+                behavior: "smooth",
+            });
+        }
     };
 
     const featuredProjects = [
@@ -292,13 +294,7 @@ function Home() {
                 >
                     {/* ------------------------- Web Projects----------------------- */}
                     <div style={{ maxWidth: "1500px" }} id="#featured-proj">
-                        <h5
-                            className={
-                                clickViewProjects ? "padding-for-nav" : ""
-                            }
-                        >
-                            PROJECTS AND SHOWCASE
-                        </h5>
+                        <h5>PROJECTS AND SHOWCASE</h5>
                         <Box component="h1" sx={{ paddingBottom: "2rem" }}>
                             Featured Projects
                         </Box>
