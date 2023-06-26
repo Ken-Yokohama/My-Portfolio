@@ -1,0 +1,15 @@
+.container__carousel {
+    margin-top: 3rem;
+    position: relative;
+    background-color: var(red);
+}
+@media (max-width: 900px) {
+    .container__carousel {
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 375px) {
+    .container__carousel {
+        margin-top: 1rem;
+    }
+}

@@ -1,13 +1,19 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
 import { CallToAction, Footer } from "../components";
-import Carousel from "react-elastic-carousel";
 import Button from "@mui/material/Button";
 import { motion } from "framer-motion";
 import Modal from "@mui/material/Modal";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
+import { EmblaOptionsType } from "embla-carousel-react";
+import EmblaCarousel from "../components/embla-carousel/embla-carousel";
+
+// Embla Carousel
+const OPTIONS: EmblaOptionsType = { loop: true };
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 function About() {
     const technologiesImgSrc = [
@@ -45,17 +51,32 @@ function About() {
         "after-effects.png",
     ];
 
-    const educationImgSrc = [
-        "graduation1-arrow.png",
-        "graduation2-arrow.png",
-        "golden1.png",
-        "golden2.png",
-        "golden3.png",
+    const educationImgArr = [
+        {
+            src: "/images/about-page/education/graduation1-arrow.png",
+            title: "Graduation",
+        },
+        {
+            src: "/images/about-page/education/graduation2-arrow.png",
+            title: "Batch 2019",
+        },
+        {
+            src: "/images/about-page/education/golden1.JPG",
+            title: "Golden Thesis",
+        },
+        {
+            src: "/images/about-page/education/golden2.JPG",
+            title: "DLSU",
+        },
+        {
+            src: "/images/about-page/education/golden3.JPG",
+            title: "Geomate Award",
+        },
     ];
 
     const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const handleOpenModal = () => setOpen(true);
+    const handleCloseModal = () => setOpen(false);
 
     const [modalImgSrc, setModalImgSrc] = useState("");
 
@@ -291,34 +312,13 @@ function About() {
                                 justifyContent: "center",
                             }}
                         >
-                            <Carousel>
-                                {educationImgSrc.map((img, index) => (
-                                    <Box
-                                        sx={{
-                                            padding: "3rem 3rem 0rem 3rem",
-                                            width: "100%",
-                                            "@media (max-width: 1000px)": {
-                                                padding: "1rem 1rem 0rem 1rem",
-                                            },
-                                            "@media (max-width: 800px)": {
-                                                padding: "1rem 0rem 0rem 0rem",
-                                            },
-                                        }}
-                                        key={index}
-                                    >
-                                        <img
-                                            style={{
-                                                width: "100%",
-                                                aspectRatio: "1.75/1",
-                                            }}
-                                            src={
-                                                "/images/about-page/education/" +
-                                                img
-                                            }
-                                        />
-                                    </Box>
-                                ))}
-                            </Carousel>
+                            <EmblaCarousel
+                                slides={SLIDES}
+                                options={OPTIONS}
+                                imgArr={educationImgArr}
+                                setModalImgSrc={setModalImgSrc}
+                                handleOpenModal={handleOpenModal}
+                            />
                         </div>
                     </div>
                     {/* ---------------------Awards & Certifications------------------------ */}
@@ -391,7 +391,7 @@ function About() {
                                                 setModalImgSrc(
                                                     "/images/about-page/education/bootcamp-cert.jpg"
                                                 );
-                                                handleOpen();
+                                                handleOpenModal();
                                             }}
                                         >
                                             Certification
@@ -430,7 +430,7 @@ function About() {
                                                 setModalImgSrc(
                                                     "/images/about-page/education/golden1.JPG"
                                                 );
-                                                handleOpen();
+                                                handleOpenModal();
                                             }}
                                         >
                                             Photo
@@ -455,7 +455,7 @@ function About() {
                                                 setModalImgSrc(
                                                     "/images/about-page/education/golden4.png"
                                                 );
-                                                handleOpen();
+                                                handleOpenModal();
                                             }}
                                         >
                                             Certification
@@ -494,7 +494,7 @@ function About() {
                                                 setModalImgSrc(
                                                     "/images/about-page/education/geomate-group.jpg"
                                                 );
-                                                handleOpen();
+                                                handleOpenModal();
                                             }}
                                         >
                                             Photo
@@ -519,7 +519,7 @@ function About() {
                                                 setModalImgSrc(
                                                     "/images/about-page/education/golden3.JPG"
                                                 );
-                                                handleOpen();
+                                                handleOpenModal();
                                             }}
                                         >
                                             Certification
@@ -533,7 +533,7 @@ function About() {
                 {/* -------------Awards and Cert Modal------------------ */}
                 <Modal
                     open={open}
-                    onClose={handleClose}
+                    onClose={handleCloseModal}
                     aria-labelledby="modal-modal-title"
                     aria-describedby="modal-modal-description"
                 >
