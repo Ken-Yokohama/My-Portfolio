@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import axios from "axios";
 import { Navbar } from "../components";
 import { About, Contact, Home, Menu } from "../pages";
+import { getPageVisitCount } from "../utils/api";
 
 function Main() {
     const [showMenu, setShowMenu] = useState(false);
@@ -14,15 +14,11 @@ function Main() {
     const [pageVisits, setPageVisits] = useState(0);
 
     useEffect(() => {
-        const fetchData = async () => {
-            const getIp = await axios.get("https://api.db-ip.com/v2/free/self");
-            const getPageVisitCount = await axios.get(
-                "https://api.countapi.xyz/hit/kenyokohama/" +
-                    getIp.data.ipAddress
-            );
-            setPageVisits(getPageVisitCount.data.value);
+        const getPageVisits = async () => {
+            const count = await getPageVisitCount();
+            setPageVisits(count);
         };
-        fetchData();
+        getPageVisits();
     }, []);
 
     return (

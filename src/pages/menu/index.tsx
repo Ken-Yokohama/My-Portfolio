@@ -253,13 +253,34 @@ function Menu({ setShowMenu, showMenu, pageVisits }: MenuProps) {
                                 : { opacity: { delay: 0 }, y: { delay: 0.3 } }
                         }
                     >
-                        Thank you for viewing my portfolio{" "}
-                        <strong style={{ fontFamily: "arial" }}>
-                            {pageVisits}
-                        </strong>{" "}
-                        times. If you'd like to know more details on how I built
-                        this project or if you are just curious to see my source
-                        code, feel free to check out my GitHub.
+                        Thank you for viewing my portfolio
+                        {pageVisits !== 0 && (
+                            <span>
+                                <strong style={{ fontFamily: "arial" }}>
+                                    {" "}
+                                    {pageVisits + 1}{" "}
+                                </strong>
+                                times
+                            </span>
+                        )}
+                        . If you'd like to know more details on how I built this
+                        project or if you are just curious to see my code, feel
+                        free to check out my{" "}
+                        <strong
+                            style={{
+                                borderBottom: "2px solid",
+                            }}
+                            className="nav-menu-item"
+                            onClick={() => {
+                                window.open(
+                                    "https://github.com/Ken-Yokohama",
+                                    "_blank"
+                                );
+                            }}
+                        >
+                            GitHub
+                        </strong>
+                        .
                         {/* This project was built using react and tools from the react-ecosystem namely material-ui, react-router-dom, framer-motion & axios. */}
                     </motion.p>
                 </Box>
