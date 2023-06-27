@@ -7,3 +7,5 @@ export const getPageVisitCount = async () => {
     );
     return count.data.value;
 };
+
+export const currentYear = new Date().getFullYear();

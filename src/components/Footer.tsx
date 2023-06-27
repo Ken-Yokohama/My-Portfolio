@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import { currentYear } from "../utils/api";
 
 const Footer = () => {
     return (
@@ -181,7 +182,7 @@ const Footer = () => {
                     </Box>
                 </Box>
             </div>
-            <h5 style={{ padding: "1rem" }}>Ⓒ Ken Yokohama 2023</h5>
+            <h5 style={{ padding: "1rem" }}>Ⓒ Ken Yokohama {currentYear}</h5>
         </div>
     );
 };
