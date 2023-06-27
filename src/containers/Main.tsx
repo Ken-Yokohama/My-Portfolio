@@ -4,7 +4,7 @@ import { Navbar } from "../components";
 import { About, Contact, Home, Menu } from "../pages";
 import { getPageVisitCount } from "../utils/api";
 
-function Main() {
+const Main = () => {
     const [showMenu, setShowMenu] = useState(false);
 
     const toggleShowMenu = () => {
@@ -40,6 +40,6 @@ function Main() {
             </Routes>
         </div>
     );
-}
+};
 
 export default Main;

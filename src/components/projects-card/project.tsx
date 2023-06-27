@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ProjectCardProps } from "./interface";
 
-function ProjectCard({
+const ProjectCard = ({
     title,
     technologies,
     description,
     liveSite,
     githubRepo,
-}: ProjectCardProps) {
+}: ProjectCardProps) => {
     // Intersection Observer Func
     const [ref, inView] = useInView({
         rootMargin: "-120px",
@@ -82,6 +82,6 @@ function ProjectCard({
             </Box>
         </motion.div>
     );
-}
+};
 
 export default ProjectCard;

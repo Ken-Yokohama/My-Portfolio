@@ -1,11 +1,11 @@
 import { Main } from "./containers";
 
-function App() {
+const App = () => {
     return (
         <div>
             <Main />
         </div>
     );
-}
+};
 
 export default App;

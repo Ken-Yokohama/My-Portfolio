@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { featuredProjects, projects } from "./project-data";
 
-function Home() {
+const Home = () => {
     const navigate = useNavigate();
 
     const handleViewProjects = () => {
@@ -268,6 +268,6 @@ function Home() {
             <Footer />
         </>
     );
-}
+};
 
 export default Home;

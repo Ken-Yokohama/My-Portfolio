@@ -15,7 +15,7 @@ const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
-function About() {
+const About = () => {
     const technologiesImgSrc = [
         "html.png",
         "css.png",
@@ -567,6 +567,6 @@ function About() {
             <Footer />
         </>
     );
-}
+};
 
 export default About;

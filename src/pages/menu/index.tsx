@@ -6,7 +6,7 @@ import Tooltip from "@mui/material/Tooltip";
 import resumeFile from "../../files/ken_yokohama_resume.pdf";
 import { MenuProps } from "./interface";
 
-function Menu({ setShowMenu, showMenu, pageVisits }: MenuProps) {
+const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
     const handleCloseMenu = () => {
         setShowMenu(false);
         // window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); SMOOTH SCROLL
@@ -388,6 +388,6 @@ function Menu({ setShowMenu, showMenu, pageVisits }: MenuProps) {
             </Box>
         </motion.div>
     );
-}
+};
 
 export default Menu;

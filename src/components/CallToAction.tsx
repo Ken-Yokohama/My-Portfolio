@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-function CallToAction() {
+const CallToAction = () => {
     const navigate = useNavigate();
 
     return (
@@ -44,6 +44,6 @@ function CallToAction() {
             </Box>
         </div>
     );
-}
+};
 
 export default CallToAction;

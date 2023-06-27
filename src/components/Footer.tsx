@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-function Footer() {
+const Footer = () => {
     return (
         <div
             style={{
@@ -184,6 +184,6 @@ function Footer() {
             <h5 style={{ padding: "1rem" }}>Ⓒ Ken Yokohama 2023</h5>
         </div>
     );
-}
+};
 
 export default Footer;

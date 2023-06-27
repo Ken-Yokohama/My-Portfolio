@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FeaturedProjectCardProps } from "./interface";
 
-function FeaturedProjectCard({
+const FeaturedProjectCard = ({
     year,
     month,
     name,
@@ -16,7 +16,7 @@ function FeaturedProjectCard({
     liveSiteLink,
     githubRepoLink,
     backgroundImg,
-}: FeaturedProjectCardProps) {
+}: FeaturedProjectCardProps) => {
     const [mouseHovering, setMouseHovering] = useState(false);
 
     // Intersection Observer Func
@@ -204,6 +204,6 @@ function FeaturedProjectCard({
             </Box>
         </motion.div>
     );
-}
+};
 
 export default FeaturedProjectCard;

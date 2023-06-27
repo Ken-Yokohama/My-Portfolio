@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { NavbarProps } from "./interface";
 
-function Navbar({ showMenu, setShowMenu, toggleShowMenu }: NavbarProps) {
+const Navbar = ({ showMenu, setShowMenu, toggleShowMenu }: NavbarProps) => {
     const navigate = useNavigate();
 
     const [scrolledDown, setScrolledDown] = useState(false);
@@ -82,6 +82,6 @@ function Navbar({ showMenu, setShowMenu, toggleShowMenu }: NavbarProps) {
             </Box>
         </Box>
     );
-}
+};
 
 export default Navbar;
