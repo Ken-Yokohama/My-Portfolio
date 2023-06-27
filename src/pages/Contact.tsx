@@ -12,7 +12,7 @@ const Contact = () => {
     return (
         <Box
             sx={{
-                height: "100vh",
+                height: "100svh",
                 display: "flex",
                 flexDirection: "column",
             }}
@@ -23,7 +23,8 @@ const Contact = () => {
                     flex: "1",
                     display: "grid",
                     gridTemplateColumns: "1fr 1fr",
-                    "@media(max-width: 650px)": {
+                    "@media(max-width: 700px)": {
+                        maxHeight: "calc(100svh - 3.6rem)",
                         gridTemplateColumns: "1fr",
                     },
                 }}
@@ -34,6 +35,9 @@ const Contact = () => {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
+                        "@media(max-width: 700px)": {
+                            maxHeight: "calc(100svh - 3.6rem)",
+                        },
                     }}
                 >
                     <div>
@@ -43,15 +47,16 @@ const Contact = () => {
                             alt="contact-page-img"
                             sx={{
                                 display: "block",
+                                height: "calc(100vh - 5.6rem)",
                                 minHeight: "550px",
-                                maxHeight: "calc(100svh - 5.6rem)",
                                 maxWidth: "1800px",
                                 width: "100%",
                                 aspectRatio: "1/1",
                                 objectFit: "cover",
-                                "@media (max-width: 650px)": {
+                                "@media (max-width: 700px)": {
                                     aspectRatio: "auto",
-                                    height: "100vh",
+                                    height: "calc(100svh - 3.6rem)",
+                                    minHeight: "0px",
                                 },
                             }}
                         />
@@ -62,13 +67,12 @@ const Contact = () => {
                     className="contact-me-page"
                     sx={{
                         padding: "3rem",
-                        paddingBottom: "0",
                         display: "flex",
                         flexDirection: "column",
                         gap: "2rem",
                         backgroundColor: "rgba(255, 255, 255, 0.8)",
-                        "@media (max-width: 650px)": {
-                            marginTop: "calc(-100svh + 4rem)",
+                        "@media (max-width: 700px)": {
+                            marginTop: "calc(-100svh + 3.6rem)",
                         },
                     }}
                 >

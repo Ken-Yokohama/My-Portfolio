@@ -271,7 +271,7 @@ button.rec-dot:focus {
     font-size: clamp(2.4rem, 5.5vw, 3rem);
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
     .contact-me-page h1 {
         font-size: clamp(2.4rem, 11vw, 3rem);
     }
