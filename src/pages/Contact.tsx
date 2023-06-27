@@ -51,7 +51,7 @@ const Contact = () => {
                                 minHeight: "550px",
                                 maxWidth: "1800px",
                                 width: "100%",
-                                aspectRatio: "1/1",
+                                // aspectRatio: "1/1",
                                 objectFit: "cover",
                                 "@media (max-width: 700px)": {
                                     aspectRatio: "auto",
