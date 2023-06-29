@@ -7,7 +7,7 @@ import {
 } from "../../components";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { featuredProjects, projects } from "./project-data";
+import { featuredProjects, projects } from "../project/project-data";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -203,10 +203,12 @@ const Home = () => {
                                     year={project.year}
                                     month={project.month}
                                     name={project.name}
+                                    title={project.title}
                                     description={project.description}
                                     technologies={project.technologies}
                                     liveSiteLink={project.liveSiteLink}
                                     githubRepoLink={project.githubRepoLink}
+                                    hasProjectPage={project.hasProjectPage}
                                     backgroundImg={project.backgroundImgUrl}
                                 />
                             ))}

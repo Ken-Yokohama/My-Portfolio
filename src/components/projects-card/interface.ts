@@ -2,10 +2,12 @@ export interface FeaturedProjectCardProps {
     year: string;
     month: string;
     name: string;
+    title: string;
     description: string;
     technologies: string[];
-    liveSiteLink: string;
-    githubRepoLink: string;
+    liveSiteLink?: string;
+    githubRepoLink?: string;
+    hasProjectPage?: boolean;
     backgroundImg: string;
 }
 

@@ -30,7 +30,6 @@ const About = () => {
         "postgreSQL.png",
         "materialui2.png",
         "jest.png",
-        // "git1.png",
         "redux.png",
         "redux-saga.jpg",
         "sass.png",

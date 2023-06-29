@@ -6,17 +6,22 @@ import Button from "@mui/material/Button";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FeaturedProjectCardProps } from "./interface";
+import { useNavigate } from "react-router-dom";
 
 const FeaturedProjectCard = ({
     year,
     month,
     name,
+    title,
     description,
     technologies,
     liveSiteLink,
     githubRepoLink,
+    hasProjectPage,
     backgroundImg,
 }: FeaturedProjectCardProps) => {
+    const navigate = useNavigate();
+
     const [mouseHovering, setMouseHovering] = useState(false);
 
     // Intersection Observer Func
@@ -88,7 +93,7 @@ const FeaturedProjectCard = ({
                             : { opacity: { delay: 0 }, y: { delay: 0.0 } }
                     }
                 >
-                    <h1>{name}</h1>
+                    <h1>{title}</h1>
                     <p>{description}</p>
                 </motion.div>
                 {/* Technologies */}
@@ -155,51 +160,65 @@ const FeaturedProjectCard = ({
                             },
                         }}
                     >
-                        <motion.div
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                        >
-                            <Button
-                                sx={{
-                                    backgroundColor: "#FFA500",
-                                    ":hover": {
-                                        backgroundColor: "#e39505",
-                                    },
-                                }}
-                                fullWidth
-                                variant="contained"
-                                startIcon={<LanguageIcon />}
-                                onClick={() => {
-                                    window.open(liveSiteLink, "_blank");
-                                }}
+                        {liveSiteLink && (
+                            <motion.div
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
                             >
-                                Live Site
-                            </Button>
-                        </motion.div>{" "}
-                        <h5>or</h5> {/* Button Option 2 */}
-                        <motion.div
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                        >
-                            <Button
-                                sx={{
-                                    color: "#FFA500",
-                                    borderColor: "#FFA500",
-                                    ":hover": {
-                                        borderColor: "#e39505",
-                                        color: "#e39505",
-                                    },
-                                }}
-                                variant="outlined"
-                                endIcon={<GitHubIcon />}
-                                onClick={() => {
-                                    window.open(githubRepoLink, "_blank");
-                                }}
+                                <Button
+                                    sx={{
+                                        backgroundColor: "#FFA500",
+                                        ":hover": {
+                                            backgroundColor: "#e39505",
+                                        },
+                                    }}
+                                    fullWidth
+                                    variant="contained"
+                                    startIcon={<LanguageIcon />}
+                                    onClick={() => {
+                                        window.open(liveSiteLink, "_blank");
+                                    }}
+                                >
+                                    Live Site
+                                </Button>
+                            </motion.div>
+                        )}{" "}
+                        {liveSiteLink && githubRepoLink && <h5>or</h5>}{" "}
+                        {/* Button Option 2 */}
+                        {githubRepoLink && (
+                            <motion.div
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
                             >
-                                Github Repo
-                            </Button>
-                        </motion.div>
+                                <Button
+                                    sx={{
+                                        color: "#FFA500",
+                                        borderColor: "#FFA500",
+                                        ":hover": {
+                                            borderColor: "#e39505",
+                                            color: "#e39505",
+                                        },
+                                    }}
+                                    variant="outlined"
+                                    endIcon={<GitHubIcon />}
+                                    onClick={() => {
+                                        window.open(githubRepoLink, "_blank");
+                                    }}
+                                >
+                                    Github Repo
+                                </Button>
+                            </motion.div>
+                        )}
                     </Box>
+                    {hasProjectPage && (
+                        <div
+                            onClick={() => {
+                                navigate(`/project/${name}`);
+                            }}
+                        >
+                            View Project
+                        </div>
+                    )}
                 </motion.div>
             </Box>
         </motion.div>

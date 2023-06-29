@@ -1,10 +1,59 @@
 export const featuredProjects = [
     {
         year: "2022",
+        month: "Apr",
+        name: "bug-tracker",
+        title: "Bug Tracker",
+        description:
+            "This Bug Tracking System is a full-stack software issue management web application that allows developers to create tickets for their projects and admins to manage the progress of each project using NodeJS & Express in the back end, MongoDB as the database and React in the front end",
+        details: [""],
+        technologies: [
+            "MongoDB",
+            "ExpressJS",
+            "React",
+            "NodeJS",
+            "Redux",
+            "Typescript",
+        ],
+        liveSiteLink: "https://ken-yokohama.github.io/Bug-Tracking-System",
+        githubRepoLink: "https://github.com/Ken-Yokohama/Bug-Tracking-System",
+        backgroundImgUrl:
+            "/images/home-page/project-backgrounds/bug-tracker.jpg",
+    },
+    // Need to add
+    // entrego-hub
+    // entrego-claims
+    // entrego-cash
+    // entrego-bid
+    {
+        year: "2022",
+        month: "June",
+        name: "entrego-dev",
+        title: "Entrego Developer Portal",
+        description: "Online E-Commerce Management Platform",
+        details: [""],
+        technologies: [
+            "NextJS",
+            "Typescript",
+            "Redux",
+            "SASS",
+            "Python",
+            "Django",
+        ],
+        liveSiteLink: undefined,
+        githubRepoLink: undefined,
+        hasProjectPage: true,
+        backgroundImgUrl:
+            "/images/home-page/project-backgrounds/bug-tracker.jpg", //Use Figma Mockups
+    },
+    {
+        year: "2022",
         month: "MAR",
-        name: "Twitter Clone",
+        name: "twitter-clone",
+        title: "Twitter Clone",
         description:
             "Twitter Clone is a full-stack social media web application similar to the popular website Twitter created using React in the front end and Firebase to handle the Database, Authentication & Security.",
+        details: [""],
         technologies: [
             "REACT",
             "FIREBASE",
@@ -20,9 +69,11 @@ export const featuredProjects = [
     {
         year: "2022",
         month: "FEB",
-        name: "Kenterest",
+        name: "kenterest",
+        title: "Kenterest",
         description:
             "Kenterest is a full-stack social media photo sharing web application similar to the popular website Pinterest created using React in the Frontend and Sanity.io as the CMS.",
+        details: [""],
         technologies: [
             "REACT",
             "SANITY.IO",
@@ -36,30 +87,12 @@ export const featuredProjects = [
     },
     {
         year: "2022",
-        month: "Apr",
-        name: "Bug Tracker",
-        description:
-            "This Bug Tracking System is a full-stack software issue management web application that allows developers to create tickets for their projects and admins to manage the progress of each project using NodeJS & Express in the back end, MongoDB as the database and React in the front end",
-
-        technologies: [
-            "MongoDB",
-            "ExpressJS",
-            "React",
-            "NodeJS",
-            "Redux",
-            "Typescript",
-        ],
-        liveSiteLink: "https://ken-yokohama.github.io/Bug-Tracking-System",
-        githubRepoLink: "https://github.com/Ken-Yokohama/Bug-Tracking-System",
-        backgroundImgUrl:
-            "/images/home-page/project-backgrounds/bug-tracker.jpg",
-    },
-    {
-        year: "2022",
         month: "MAR",
-        name: "Ka-Chat!",
+        name: "ka-chat",
+        title: "Ka-Chat!",
         description:
             "Ka-Chat! is a full-stack realtime chat application created using React in the Frontend and Firebase as the CMS.",
+        details: [""],
         technologies: [
             "TYPESCRIPT",
             "REACT",
