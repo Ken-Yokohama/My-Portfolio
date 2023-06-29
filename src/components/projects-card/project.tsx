@@ -10,7 +10,6 @@ const ProjectCard = ({
     liveSite,
     githubRepo,
 }: ProjectCardProps) => {
-    // Intersection Observer Func
     const { ref, inView } = useInView({
         rootMargin: "-120px",
         triggerOnce: true,

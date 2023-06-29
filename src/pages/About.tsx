@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
-import { CallToAction, Footer } from "../components";
+import { CallToAction, Footer, TextReveal } from "../components";
 import Button from "@mui/material/Button";
 import { motion } from "framer-motion";
 import Modal from "@mui/material/Modal";
@@ -173,7 +173,7 @@ const About = () => {
                                 opacity: { delay: 0.6 },
                             }}
                         >
-                            LANGUAGES
+                            Tech Stack
                         </motion.h5>
                         <motion.h2
                             initial={{ y: "40px", opacity: 0 }}
@@ -188,7 +188,7 @@ const About = () => {
                                 marginTop: "1rem",
                             }}
                         >
-                            Some Technologies I'm fluent with
+                            Exploring My Technology Toolkit
                         </motion.h2>
 
                         <Box
@@ -238,7 +238,9 @@ const About = () => {
                             alignItems: "center",
                         }}
                     >
-                        <h5>SOFTWARE</h5>
+                        <h5>
+                            <TextReveal duration={0.8} text="Development" />
+                        </h5>
                         <Box
                             component="h2"
                             sx={{
@@ -247,7 +249,10 @@ const About = () => {
                                 marginTop: "1rem",
                             }}
                         >
-                            Engineering & Design Tools I Use
+                            <TextReveal
+                                duration={1}
+                                text="More Developer Tools I've Used"
+                            />
                         </Box>
 
                         <Box
@@ -288,11 +293,33 @@ const About = () => {
 
                     {/* ---------------------EDUCATION------------------------ */}
                     <div>
-                        <h1>Education</h1>
-                        <h2 style={{ fontWeight: "100", paddingTop: "1rem" }}>
+                        <h1>
+                            <TextReveal duration={0.8} text="Education" />
+                        </h1>
+                        <h2
+                            style={{
+                                color: "#6E6E73",
+                                // fontWeight: "100",
+                                //  paddingTop: "1rem"
+                            }}
+                        >
                             Graduated from{" "}
-                            <strong>De La Salle University </strong> batch
-                            2014-2019
+                            <TextReveal
+                                duration={1}
+                                text="De La Salle University"
+                            />
+                            {/* <strong
+                                style={{
+                                    // color: "orange",
+                                    color: "black",
+                                    // fontWeight: "800",
+                                    // borderBottom: "3px solid",
+                                    // backgroundColor: "orange",
+                                }}
+                            >
+                                De La Salle University
+                            </strong> */}{" "}
+                            batch 2014-2019
                         </h2>
                         <Box
                             component="h5"
@@ -302,7 +329,11 @@ const About = () => {
                                 "@media (min-width: 700px)": {},
                             }}
                         >
-                            Bachelor of Science in Civil Engineering
+                            Bachelor of Science in{" "}
+                            <TextReveal
+                                duration={0.6}
+                                text="Civil Engineering"
+                            />
                         </Box>
 
                         <div
