@@ -7,8 +7,8 @@ const ProjectCard = ({
     title,
     technologies,
     description,
-    liveSite,
-    githubRepo,
+    liveSiteLink,
+    githubRepoLink,
 }: ProjectCardProps) => {
     const { ref, inView } = useInView({
         rootMargin: "-120px",
@@ -72,10 +72,10 @@ const ProjectCard = ({
                         gap: "1rem",
                     }}
                 >
-                    <a href={liveSite} target="_blank">
+                    <a href={liveSiteLink} target="_blank">
                         <i>Link to Live Website</i>
                     </a>
-                    <a href={githubRepo} target="_blank">
+                    <a href={githubRepoLink} target="_blank">
                         <i>Link to Github Repository</i>
                     </a>
                 </Box>

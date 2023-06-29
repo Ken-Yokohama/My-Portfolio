@@ -15,6 +15,6 @@ export interface ProjectCardProps {
     title: string;
     technologies: string[];
     description: string;
-    liveSite: string;
-    githubRepo: string;
+    liveSiteLink?: string;
+    githubRepoLink?: string;
 }

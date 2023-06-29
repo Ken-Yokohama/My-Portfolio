@@ -1,12 +1,8 @@
 import { useParams } from "react-router-dom";
-import { featuredProjects } from "./project-data";
+import { projectPages } from "./project-data";
 
 const ProjectPage = () => {
     const { projectName } = useParams();
-
-    const projectPages = featuredProjects.filter(
-        (project) => project.hasProjectPage
-    );
 
     const project = projectPages.find(
         (project) => project.name === projectName

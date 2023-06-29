@@ -232,8 +232,8 @@ const Home = () => {
                                     title={projects.title}
                                     technologies={projects.technologies}
                                     description={projects.description}
-                                    liveSite={projects.liveSite}
-                                    githubRepo={projects.githubRepo}
+                                    liveSiteLink={projects.liveSiteLink}
+                                    githubRepoLink={projects.githubRepoLink}
                                     key={index}
                                 />
                             ))}

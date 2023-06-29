@@ -1,5 +1,21 @@
-export const featuredProjects = [
+interface Project {
+    featuredProject: boolean;
+    year: string;
+    month: string;
+    name: string;
+    title: string;
+    description: string;
+    details: string[];
+    technologies: string[];
+    liveSiteLink?: string;
+    githubRepoLink?: string;
+    hasProjectPage?: boolean;
+    backgroundImgUrl: string;
+}
+
+const allProjects: Project[] = [
     {
+        featuredProject: true,
         year: "2022",
         month: "Apr",
         name: "bug-tracker",
@@ -26,6 +42,7 @@ export const featuredProjects = [
     // entrego-cash
     // entrego-bid
     {
+        featuredProject: true,
         year: "2022",
         month: "June",
         name: "entrego-dev",
@@ -47,6 +64,7 @@ export const featuredProjects = [
             "/images/home-page/project-backgrounds/bug-tracker.jpg", //Use Figma Mockups
     },
     {
+        featuredProject: true,
         year: "2022",
         month: "MAR",
         name: "twitter-clone",
@@ -67,6 +85,7 @@ export const featuredProjects = [
             "/images/home-page/project-backgrounds/twitter-clone.JPG",
     },
     {
+        featuredProject: true,
         year: "2022",
         month: "FEB",
         name: "kenterest",
@@ -86,6 +105,7 @@ export const featuredProjects = [
         backgroundImgUrl: "/images/home-page/project-backgrounds/kenterest.JPG",
     },
     {
+        featuredProject: true,
         year: "2022",
         month: "MAR",
         name: "ka-chat",
@@ -104,41 +124,74 @@ export const featuredProjects = [
         githubRepoLink: "https://github.com/Ken-Yokohama/Ka-Chat",
         backgroundImgUrl: "/images/home-page/project-backgrounds/ka-chat.JPG",
     },
-];
-
-export const projects = [
     {
+        featuredProject: false,
+        year: "",
+        month: "",
+        name: "mailchimp-api",
         title: "MailChimp API Newsletter Sign Up Page",
         technologies: ["nodeJS", "expressJS", "mailChimp API"],
         description:
             "This is a web application that uses the MailChimp API to subscribe users to my personal mailing list. In the Mailchimp database, we are able to organize each user and filter which content we want to send for individual users. Additionally, using the MailChimp api allows us to sync all data (subscriber, customers, orders, products) and enables marketing automation with email campaigns, automations, ads, postcards and more.",
-        liveSite: "https://still-garden-96667.herokuapp.com/",
-        githubRepo:
+        details: [""],
+        liveSiteLink: "https://still-garden-96667.herokuapp.com/",
+        githubRepoLink:
             "https://github.com/Ken-Yokohama/Node-Express-JS-Training-Files#mailchimp-api-newsletter-signup",
+        backgroundImgUrl: "",
     },
     {
+        featuredProject: false,
+        year: "",
+        month: "",
+        name: "ejs-to-do-list",
         title: "EJS Express To Do List App",
         technologies: ["nodeJS", "expressJS", "Mongo DB", "EJS"],
         description:
             "This is a simple web application that uses MongoDB as the database and EJS for templating as well as partials for components. The frontend displays the current date & month at the top. Input feilds allows users to input any tasks they have for the given day. Users can also crossout any tasks that have been completed.",
-        liveSite: "https://to-do-list-using-mongodb-atlas.herokuapp.com/",
-        githubRepo:
+        details: [""],
+        liveSiteLink: "https://to-do-list-using-mongodb-atlas.herokuapp.com/",
+        githubRepoLink:
             "https://github.com/Ken-Yokohama/Node-Express-JS-Training-Files#ejstodoist-v1",
+        backgroundImgUrl: "",
     },
     {
+        featuredProject: false,
+        year: "",
+        month: "",
+        name: "psbsi",
         title: "PSBSI",
         technologies: ["HTML", "CSS", "JS", "JQUERY", "BOOTSTRAP"],
+        details: [""],
         description:
             "This is the landing page for the company Pioneer Specialty Building Systems Inc. The website displays all completed & upcoming projects done by the company as well as details on its building systems such as Waterproofing, Eifs & Sips.",
-        liveSite: "https://ken-yokohama.github.io/psbsi/",
-        githubRepo: "https://github.com/Ken-Yokohama/psbsi",
+        liveSiteLink: "https://ken-yokohama.github.io/psbsi/",
+        githubRepoLink: "https://github.com/Ken-Yokohama/psbsi",
+        backgroundImgUrl: "",
     },
     {
+        featuredProject: false,
+        year: "",
+        month: "",
+        name: "tindog",
         title: "Tindog",
         technologies: ["HTML", "CSS", "JS", "BOOTSTRAP"],
+        details: [""],
         description:
             "This is a simple static webpage used as a parody of Tinder... But for Dogs! This project was mainly used to learn basic CSS design patterns as well as responsive design using the Bootstrap grid system.",
-        liveSite: "https://ken-yokohama.github.io/TinDog/",
-        githubRepo: "https://github.com/Ken-Yokohama/TinDog",
+        liveSiteLink: "https://ken-yokohama.github.io/TinDog/",
+        githubRepoLink: "https://github.com/Ken-Yokohama/TinDog",
+        backgroundImgUrl: "",
     },
 ];
+
+export const featuredProjects = allProjects.filter(
+    (project) => project.featuredProject
+);
+
+export const projects = allProjects.filter(
+    (project) => !project.featuredProject
+);
+
+export const projectPages = featuredProjects.filter(
+    (project) => project.hasProjectPage
+);
