@@ -7,7 +7,7 @@
     "scripts": {
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist",
-        "postdeploy": "echo Don't forget to re-add Custom Domain kenyokohama.com",
+        "postdeploy": "echo Published At http://kenyokohama.com",
         "dev": "vite",
         "build": "tsc && vite build",
         "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",

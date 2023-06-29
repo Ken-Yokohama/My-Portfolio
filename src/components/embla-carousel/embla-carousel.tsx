@@ -76,7 +76,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     }, [emblaApi, onInit, onSelect]);
 
     return (
-        <section className="container__carousel theme-light">
+        <section className="container__carousel embla-theme-light">
             <div className="embla">
                 <div className="embla__viewport" ref={emblaRef}>
                     <div className="embla__container">
