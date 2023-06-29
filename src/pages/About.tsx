@@ -22,33 +22,35 @@ const About = () => {
         "javascript.png",
         "typescript.png",
         "react1.png",
+        "nextjs.png",
         "nodejs1.png",
         "expressjs3.png",
         "Firebase1.png",
         "mongodb1.jpg",
+        "postgreSQL.png",
         "materialui2.png",
-        "framermotion1.png",
-        "react-router1.webp",
-        "git1.png",
+        "jest.png",
+        // "git1.png",
         "redux.png",
-        "netlify1.png",
-        "bootstrap2.png",
+        "redux-saga.jpg",
+        "sass.png",
         "tailwindcss.jpg",
-        "jquery1.png",
+        "python.png",
         // "npm1.png",
-        "autoit1.png",
-        "github2.png",
+        "django-rest.png",
+        "electron.png",
+        // "github2.png",
     ];
 
-    const designImgSrc = [
-        "autocad.jpg",
-        "sketchup.png",
-        "layout.png",
-        "planswift.png",
-        "bluebeam.jpg",
-        "premiere-pro.png",
-        "photoshop.png",
-        "after-effects.png",
+    const developerToolsImgSrc = [
+        "docker.png",
+        "vite.jpg",
+        "jira.jpg",
+        "figma.png",
+        "slack.png",
+        "git1.png",
+        "AWS_S3.jpg",
+        "AWS_SES.jpg",
     ];
 
     const educationImgArr = [
@@ -268,7 +270,7 @@ const About = () => {
                                 },
                             }}
                         >
-                            {designImgSrc.map((img, index) => (
+                            {developerToolsImgSrc.map((img, index) => (
                                 <div
                                     key={index}
                                     style={{
@@ -283,7 +285,10 @@ const About = () => {
                                             maxWidth: "80%",
                                             maxHeight: "80%",
                                         }}
-                                        src={"/images/about-page/design/" + img}
+                                        src={
+                                            "/images/about-page/developer-tools/" +
+                                            img
+                                        }
                                         alt={img}
                                     />
                                 </div>
