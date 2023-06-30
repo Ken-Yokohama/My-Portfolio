@@ -276,6 +276,8 @@ const About = () => {
                                 >
                                     <img
                                         style={{
+                                            objectFit: "cover",
+                                            width: "100%",
                                             maxWidth: "80%",
                                             maxHeight: "80%",
                                         }}
