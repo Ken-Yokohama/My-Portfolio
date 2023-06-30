@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
-import { CallToAction, Footer, TextReveal } from "../components";
+import { CallToAction, Footer } from "../components";
 import Button from "@mui/material/Button";
 import { motion } from "framer-motion";
 import Modal from "@mui/material/Modal";
@@ -239,9 +239,7 @@ const About = () => {
                             alignItems: "center",
                         }}
                     >
-                        <h5>
-                            <TextReveal duration={0.8} text="Development" />
-                        </h5>
+                        <h5>Development</h5>
                         <Box
                             component="h2"
                             sx={{
@@ -250,10 +248,7 @@ const About = () => {
                                 marginTop: "1rem",
                             }}
                         >
-                            <TextReveal
-                                duration={1}
-                                text="More Developer Tools I've Used"
-                            />
+                            More Developer Tools I've Used
                         </Box>
 
                         <Box
@@ -297,9 +292,7 @@ const About = () => {
 
                     {/* ---------------------EDUCATION------------------------ */}
                     <div>
-                        <h1>
-                            <TextReveal duration={0.8} text="Education" />
-                        </h1>
+                        <h1>Education</h1>
                         <h2
                             style={{
                                 color: "#6E6E73",
@@ -308,11 +301,7 @@ const About = () => {
                             }}
                         >
                             Graduated from{" "}
-                            <TextReveal
-                                duration={1}
-                                text="De La Salle University"
-                            />
-                            {/* <strong
+                            <strong
                                 style={{
                                     // color: "orange",
                                     color: "black",
@@ -322,7 +311,7 @@ const About = () => {
                                 }}
                             >
                                 De La Salle University
-                            </strong> */}{" "}
+                            </strong>{" "}
                             batch 2014-2019
                         </h2>
                         <Box
@@ -333,11 +322,7 @@ const About = () => {
                                 "@media (min-width: 700px)": {},
                             }}
                         >
-                            Bachelor of Science in{" "}
-                            <TextReveal
-                                duration={0.6}
-                                text="Civil Engineering"
-                            />
+                            Bachelor of Science in Civil Engineering
                         </Box>
 
                         <div
