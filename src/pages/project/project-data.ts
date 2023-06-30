@@ -16,8 +16,8 @@ interface Project {
 const allProjects: Project[] = [
     {
         featuredProject: true,
-        year: "2022",
-        month: "Apr",
+        year: "2023",
+        month: "June",
         name: "bug-tracker",
         title: "Bug Tracker",
         description:
@@ -36,15 +36,34 @@ const allProjects: Project[] = [
         backgroundImgUrl:
             "/images/home-page/project-backgrounds/bug-tracker.jpg",
     },
-    // Need to add
-    // entrego-hub
-    // entrego-claims
-    // entrego-cash
-    // entrego-bid
     {
         featuredProject: true,
-        year: "2022",
+        year: "2023",
         month: "June",
+        name: "entrego-cash",
+        title: "Entrego Cash Management System",
+        description: "Online Task and Workflow Automation Platform",
+        details: [""],
+        technologies: [
+            "React",
+            "Typescript",
+            "Redux",
+            "SASS",
+            "Java",
+            "Spring",
+            "AWS SQS",
+            "AWS S3",
+        ],
+        liveSiteLink: undefined,
+        githubRepoLink: undefined,
+        hasProjectPage: true,
+        backgroundImgUrl:
+            "/images/home-page/project-backgrounds/bug-tracker.jpg", //Use Figma Mockups
+    },
+    {
+        featuredProject: true,
+        year: "2023",
+        month: "May",
         name: "entrego-dev",
         title: "Entrego Developer Portal",
         description: "Online E-Commerce Management Platform",
@@ -56,6 +75,86 @@ const allProjects: Project[] = [
             "SASS",
             "Python",
             "Django",
+            "PostgreSQL",
+        ],
+        liveSiteLink: undefined,
+        githubRepoLink: undefined,
+        hasProjectPage: true,
+        backgroundImgUrl:
+            "/images/home-page/project-backgrounds/bug-tracker.jpg", //Use Figma Mockups
+    },
+    {
+        featuredProject: true,
+        year: "2022",
+        month: "Oct",
+        name: "entrego-bid",
+        title: "Entrego Bidding System",
+        description: "Online Task and Workflow Automation Platform",
+        details: [""],
+        technologies: [
+            "React",
+            "Typescript",
+            "Redux",
+            "SASS",
+            "Java",
+            "Spring",
+            "Python",
+            "Django",
+            "PostgreSQL",
+        ],
+        liveSiteLink: undefined,
+        githubRepoLink: undefined,
+        hasProjectPage: true,
+        backgroundImgUrl:
+            "/images/home-page/project-backgrounds/bug-tracker.jpg", //Use Figma Mockups
+    },
+    {
+        featuredProject: true,
+        year: "2022",
+        month: "June",
+        name: "entrego-hub",
+        title: "Entrego Hub Management System",
+        description: "Enterprise IT Service Management Platform",
+        details: [""],
+        technologies: [
+            "React",
+            "Typescript",
+            "Redux",
+            "SASS",
+            "Java",
+            "Spring",
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "AWS SQS",
+            "AWS S3",
+            "AWS SNS",
+            "AWS SES",
+        ],
+        liveSiteLink: undefined,
+        githubRepoLink: undefined,
+        hasProjectPage: true,
+        backgroundImgUrl:
+            "/images/home-page/project-backgrounds/bug-tracker.jpg", //Use Figma Mockups
+    },
+    {
+        featuredProject: true,
+        year: "2022",
+        month: "June",
+        name: "entrego-claims",
+        title: "Entrego Claims Management System",
+        description: "Online Task and Workflow Automation Platform",
+        details: [""],
+        technologies: [
+            "React",
+            "Typescript",
+            "Redux",
+            "SASS",
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "AWS S3",
+            "AWS SES",
         ],
         liveSiteLink: undefined,
         githubRepoLink: undefined,
