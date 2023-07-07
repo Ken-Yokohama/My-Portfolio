@@ -34,7 +34,7 @@ const allProjects: Project[] = [
         liveSiteLink: "https://ken-yokohama.github.io/Bug-Tracking-System",
         githubRepoLink: "https://github.com/Ken-Yokohama/Bug-Tracking-System",
         backgroundImgUrl:
-            "/images/home-page/project-backgrounds/bug-tracker.jpg",
+            "/images/home-page/project-backgrounds/bug-tracker-multi-1.webp",
     },
     {
         featuredProject: true,
@@ -58,7 +58,7 @@ const allProjects: Project[] = [
         githubRepoLink: undefined,
         hasProjectPage: true,
         backgroundImgUrl:
-            "/images/home-page/project-backgrounds/bug-tracker.jpg", //Use Figma Mockups
+            "/images/home-page/project-backgrounds/cash-multi-1.webp",
     },
     {
         featuredProject: true,
@@ -81,7 +81,7 @@ const allProjects: Project[] = [
         githubRepoLink: undefined,
         hasProjectPage: true,
         backgroundImgUrl:
-            "/images/home-page/project-backgrounds/bug-tracker.jpg", //Use Figma Mockups
+            "/images/home-page/project-backgrounds/dvp-desktop-1.webp",
     },
     {
         featuredProject: true,
@@ -106,7 +106,7 @@ const allProjects: Project[] = [
         githubRepoLink: undefined,
         hasProjectPage: true,
         backgroundImgUrl:
-            "/images/home-page/project-backgrounds/bug-tracker.jpg", //Use Figma Mockups
+            "/images/home-page/project-backgrounds/bid-multi-1.webp",
     },
     {
         featuredProject: true,
@@ -135,7 +135,7 @@ const allProjects: Project[] = [
         githubRepoLink: undefined,
         hasProjectPage: true,
         backgroundImgUrl:
-            "/images/home-page/project-backgrounds/bug-tracker.jpg", //Use Figma Mockups
+            "/images/home-page/project-backgrounds/hms-multi-1.webp",
     },
     {
         featuredProject: true,
@@ -160,7 +160,7 @@ const allProjects: Project[] = [
         githubRepoLink: undefined,
         hasProjectPage: true,
         backgroundImgUrl:
-            "/images/home-page/project-backgrounds/bug-tracker.jpg", //Use Figma Mockups
+            "/images/home-page/project-backgrounds/claims-multi-1.webp",
     },
     {
         featuredProject: true,
@@ -184,7 +184,7 @@ const allProjects: Project[] = [
             "/images/home-page/project-backgrounds/twitter-clone.JPG",
     },
     {
-        featuredProject: true,
+        featuredProject: false,
         year: "2022",
         month: "FEB",
         name: "kenterest",
@@ -204,7 +204,7 @@ const allProjects: Project[] = [
         backgroundImgUrl: "/images/home-page/project-backgrounds/kenterest.JPG",
     },
     {
-        featuredProject: true,
+        featuredProject: false,
         year: "2022",
         month: "MAR",
         name: "ka-chat",

@@ -216,7 +216,7 @@ const Home = () => {
                     </div>
                     {/* ------------------------- Projects ----------------------- */}
                     <div style={{ maxWidth: "1500px" }}>
-                        <h5>Completed Works</h5>
+                        <h5>Expanded Collection</h5>
                         <Box component="h1" sx={{ paddingBottom: "2rem" }}>
                             Projects List
                         </Box>
