@@ -17,22 +17,22 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const About = () => {
     const technologiesImgSrc = [
-        "html.png",
-        "css.png",
-        "javascript.png",
-        "typescript.png",
-        "react1.png",
+        "html.webp",
+        "css.webp",
+        "javascript.webp",
+        "typescript.webp",
+        "react1.webp",
         "nextjs.png",
         "nodejs1.png",
-        "expressjs3.png",
-        "Firebase1.png",
-        "mongodb1.jpg",
-        "postgreSQL.png",
-        "materialui2.png",
+        "expressjs3.webp",
+        "Firebase1.webp",
+        "mongodb1.webp",
+        "postgreSQL.webp",
+        "materialui2.webp",
         "jest.png",
-        "redux.png",
-        "redux-saga.jpg",
-        "sass.png",
+        "redux.webp",
+        "redux-saga.webp",
+        "sass.webp",
         "tailwindcss.jpg",
         "python.png",
         // "npm1.png",
@@ -54,23 +54,23 @@ const About = () => {
 
     const educationImgArr = [
         {
-            src: "/images/about-page/education/graduation1-arrow.png",
+            src: "/images/about-page/education/graduation1-arrow.webp",
             title: "Graduation",
         },
         {
-            src: "/images/about-page/education/graduation2-arrow.png",
+            src: "/images/about-page/education/graduation2-arrow.webp",
             title: "Batch 2019",
         },
         {
-            src: "/images/about-page/education/golden1.JPG",
+            src: "/images/about-page/education/golden1.webp",
             title: "Golden Thesis",
         },
         {
-            src: "/images/about-page/education/golden2.JPG",
+            src: "/images/about-page/education/golden2.webp",
             title: "DLSU",
         },
         {
-            src: "/images/about-page/education/golden3.JPG",
+            src: "/images/about-page/education/golden3.webp",
             title: "Geomate Award",
         },
     ];
@@ -411,7 +411,7 @@ const About = () => {
                                             endIcon={<WorkspacePremiumIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/images/about-page/education/bootcamp-cert.jpg"
+                                                    "/images/about-page/education/bootcamp-cert.webp"
                                                 );
                                                 handleOpenModal();
                                             }}
@@ -450,7 +450,7 @@ const About = () => {
                                             startIcon={<PhotoCameraIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/images/about-page/education/golden1.JPG"
+                                                    "/images/about-page/education/golden1.webp"
                                                 );
                                                 handleOpenModal();
                                             }}
@@ -475,7 +475,7 @@ const About = () => {
                                             endIcon={<WorkspacePremiumIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/images/about-page/education/golden4.png"
+                                                    "/images/about-page/education/golden4.webp"
                                                 );
                                                 handleOpenModal();
                                             }}
@@ -514,7 +514,7 @@ const About = () => {
                                             startIcon={<PhotoCameraIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/images/about-page/education/geomate-group.jpg"
+                                                    "/images/about-page/education/geomate-group.webp"
                                                 );
                                                 handleOpenModal();
                                             }}
@@ -539,7 +539,7 @@ const About = () => {
                                             endIcon={<WorkspacePremiumIcon />}
                                             onClick={() => {
                                                 setModalImgSrc(
-                                                    "/images/about-page/education/golden3.JPG"
+                                                    "/images/about-page/education/golden3.webp"
                                                 );
                                                 handleOpenModal();
                                             }}
