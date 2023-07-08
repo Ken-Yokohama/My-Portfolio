@@ -160,7 +160,7 @@ const Home = () => {
                             </Box>
                         </motion.div>
                     </Box>
-                    <div className="img-div">
+                    <div className="hero-img-container">
                         <img
                             src="/images/home-page/profile-img2.JPG"
                             alt="profile-image"

@@ -38,50 +38,45 @@ img {
     -ms-user-select: none;
 }
 
-/* Left and Right Container Controls */
 .page-container {
     padding-left: 4vw;
     padding-right: 4vw;
-}
-
-@media (min-width: 2500px) {
-    .page-container {
-        padding-left: 10vw;
-        padding-right: 10vw;
+    @media (width >= 2500px) {
+        & {
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
     }
-}
-
-@media (min-width: 3000px) {
-    .page-container {
-        padding-left: 15vw;
-        padding-right: 15vw;
+    @media (width >= 3000px) {
+        & {
+            padding-left: 15vw;
+            padding-right: 15vw;
+        }
     }
-}
-@media (min-width: 4000px) {
-    .page-container {
-        padding-left: 20vw;
-        padding-right: 20vw;
+    @media (width >= 4000px) {
+        & {
+            padding-left: 20vw;
+            padding-right: 20vw;
+        }
     }
-}
 
-.page-container h1 {
-    font-size: 3.5rem;
-    font-weight: 900;
-}
-
-.page-container h3 {
-    font-size: 1.2rem;
-    font-weight: 500;
+    & h1 {
+        font-size: 3.5rem;
+        font-weight: 900;
+    }
+    & h3 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
 }
 
 /* Padding for Top Navbar */
 .padding-for-nav {
     padding-top: 3.6rem;
-}
-
-@media (min-width: 700px) {
-    .padding-for-nav {
-        padding-top: 5.6rem;
+    @media (width >= 700px) {
+        & {
+            padding-top: 5.6rem;
+        }
     }
 }
 
@@ -94,56 +89,51 @@ img {
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
-
-.nav-menu-item:hover {
-    color: white;
+    &:hover {
+        color: white;
+    }
 }
 
 /* Home Profile Image CSS */
 
-.img-div {
+.hero-img-container {
     width: 300px;
+    @media (width <= 900px) {
+        & {
+            width: 100%;
+        }
+    }
 }
 
 .profile-img {
     width: 100%;
-    /* aspect-ratio: 1.05/1; */
-    /*^^ Default Original CSS */
     transform: scale(1.5) translate(0, 0);
-}
-
-@media (max-width: 900px) {
-    .img-div {
-        width: 100%;
+    @media (width <= 900px) {
+        & {
+            transform: scale(1) translate(0, 0);
+            min-height: 276px;
+            min-width: 290px;
+        }
     }
-
-    .profile-img {
-        transform: scale(1) translate(0, 0);
-        min-height: 276px;
-        min-width: 290px;
-    }
-
-    /* Responsive Font Mid Range */
-    .title h1 {
-        font-size: clamp(1.8rem, 4vw, 2.2rem);
-        /* font-size: 1.8rem; */
-        /* font-size: 4vw; */
-        /* font-size: 2.2rem; */
-    }
-
-    .title h3 {
-        font-size: clamp(1rem, 2.1vw, 1.2rem);
+    @media (width <= 650px) {
+        & {
+            transform: scale(1) translate(0, 0);
+            height: 100%;
+            width: 100%;
+            min-height: 100%;
+            min-width: 100%;
+        }
     }
 }
 
-@media (max-width: 650px) {
-    .profile-img {
-        transform: scale(1) translate(0, 0);
-        height: 100%;
-        width: 100%;
-        min-height: 100%;
-        min-width: 100%;
+.title {
+    @media (width <= 900px) {
+        & h1 {
+            font-size: clamp(1.8rem, 4vw, 2.2rem);
+        }
+        & h3 {
+            font-size: clamp(1rem, 2.1vw, 1.2rem);
+        }
     }
 }
 
