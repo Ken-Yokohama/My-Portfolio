@@ -58,6 +58,11 @@ const Home = () => {
                             zIndex: "1",
                             backgroundColor: "rgba(255, 255, 255, 0.8)",
                             padding: "1rem",
+                            "@media (max-width: 1200px)": {
+                                width: "55vw",
+                                maxWidth: "600px",
+                                marginRight: "-100px",
+                            },
                             "@media (max-width: 900px)": {
                                 width: "900px",
                                 marginRight: "-100px",
