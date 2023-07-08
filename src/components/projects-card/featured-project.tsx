@@ -153,7 +153,7 @@ const FeaturedProjectCard = ({
                             // "@media (max-width: 1000px)": {
                             //     flexDirection: "column",
                             // },
-                            "@media (width <= 1000px)": {
+                            "@media (max-width: 1000px)": {
                                 flexDirection: "column",
                             },
 

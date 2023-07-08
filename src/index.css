@@ -48,19 +48,19 @@ img {
 .page-container {
     padding-left: 4vw;
     padding-right: 4vw;
-    @media (width >= 2500px) {
+    @media (min-width: 2500px) {
         & {
             padding-left: 10vw;
             padding-right: 10vw;
         }
     }
-    @media (width >= 3000px) {
+    @media (min-width: 3000px) {
         & {
             padding-left: 15vw;
             padding-right: 15vw;
         }
     }
-    @media (width >= 4000px) {
+    @media (min-width: 4000px) {
         & {
             padding-left: 20vw;
             padding-right: 20vw;
@@ -80,7 +80,7 @@ img {
 /* Padding for Top Navbar */
 .padding-for-nav {
     padding-top: 3.6rem;
-    @media (width >= 700px) {
+    @media (min-width: 700px) {
         & {
             padding-top: 5.6rem;
         }
@@ -105,7 +105,7 @@ img {
 
 .hero-img-container {
     width: 300px;
-    @media (width <= 900px) {
+    @media (max-width: 900px) {
         & {
             width: 100%;
         }
@@ -115,14 +115,14 @@ img {
 .profile-img {
     width: 100%;
     transform: scale(1.5) translate(0, 0);
-    @media (width <= 900px) {
+    @media (max-width: 900px) {
         & {
             transform: scale(1) translate(0, 0);
             min-height: 276px;
             min-width: 290px;
         }
     }
-    @media (width <= 650px) {
+    @media (max-width: 650px) {
         & {
             transform: scale(1) translate(0, 0);
             height: 100%;
@@ -134,7 +134,7 @@ img {
 }
 
 .title {
-    @media (width <= 900px) {
+    @media (max-width: 900px) {
         & h1 {
             font-size: clamp(1.8rem, 4vw, 2.2rem);
         }
@@ -145,7 +145,7 @@ img {
 }
 
 /* Responsive Desktop Font */
-@media (width >= 900px) {
+@media (min-width: 900px) {
     .title h1 {
         font-size: clamp(2.4rem, 4vw, 3.5rem);
     }
