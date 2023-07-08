@@ -6,10 +6,17 @@
 
 body {
     font-family: "Raleway";
+    /* For Fixing Raleway Numbers */
+    -webkit-font-feature-settings: "lnum";
+    -moz-font-feature-settings: "lnum";
+    font-feature-settings: "lnum";
 }
 
 h1 {
     font-size: 3rem;
+    & {
+        margin-left: -0.08em;
+    }
 }
 
 h2 {
@@ -166,30 +173,46 @@ img {
     }
 }
 
-/* Responsive Project Card Font */
-.project-cards h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-}
-
-.project-cards p {
-    font-size: clamp(0.75rem, 1.5vw, 1rem);
-}
-
-.project-cards h2 {
-    font-size: clamp(1.3rem, 2.6vw, 2rem);
-}
-
-@media (max-width: 650px) {
-    .project-cards h1 {
-        font-size: clamp(2rem, 8.5vw, 3.5rem);
+.project-cards {
+    & h1 {
+        /* font-size: clamp(2rem, 5vw, 3.5rem); */
+        font-size: clamp(1.5rem, 3vw, 3.5rem);
+    }
+    & h2 {
+        font-size: clamp(1.3rem, 2.6vw, 2rem);
+    }
+    & p {
+        font-size: clamp(0.75rem, 1.5vw, 1rem);
     }
 
-    .project-cards p {
-        font-size: clamp(0.75rem, 2.5vw, 1rem);
-    }
+    @media (max-width: 650px) {
+        & h1 {
+            font-size: clamp(2rem, 8.5vw, 3.5rem);
+        }
 
-    .project-cards h2 {
-        font-size: clamp(1.3rem, 5vw, 2rem);
+        & p {
+            font-size: clamp(0.75rem, 2.5vw, 1rem);
+        }
+
+        & h2 {
+            font-size: clamp(1.3rem, 5vw, 2rem);
+        }
+    }
+    & .button-container {
+        /* .button-div is for hover animation */
+        & .button-div {
+            width: 180px;
+            @media (max-width: 1000px) {
+                & {
+                    width: 100%;
+                }
+            }
+            @media (max-width: 500px) {
+                & {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 

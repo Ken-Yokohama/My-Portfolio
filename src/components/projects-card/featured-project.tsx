@@ -120,7 +120,7 @@ const FeaturedProjectCard = ({
                     >
                         {technologies.map((technologies, index) => (
                             <div
-                                className="technologies"
+                                className="project-tech-stack"
                                 key={index}
                                 style={{ display: "flex" }}
                             >
@@ -145,23 +145,32 @@ const FeaturedProjectCard = ({
                     }
                 >
                     <Box
+                        className="button-container"
                         sx={{
                             display: "flex",
                             alignItems: "center",
                             gap: "1rem",
-                            "@media (max-width: 935px)": {
+                            // "@media (max-width: 1000px)": {
+                            //     flexDirection: "column",
+                            // },
+                            "@media (width <= 1000px)": {
                                 flexDirection: "column",
                             },
+
+                            // "@media (max-width: 935px)": {
+                            //     flexDirection: "column",
+                            // },
                             "@media (max-width: 650px)": {
                                 flexDirection: "row",
                             },
-                            "@media (max-width: 370px)": {
+                            "@media (max-width: 500px)": {
                                 flexDirection: "column",
                             },
                         }}
                     >
                         {liveSiteLink && (
                             <motion.div
+                                className="button-div"
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                             >
@@ -183,10 +192,10 @@ const FeaturedProjectCard = ({
                                 </Button>
                             </motion.div>
                         )}{" "}
-                        {liveSiteLink && githubRepoLink && <h5>or</h5>}{" "}
                         {/* Button Option 2 */}
                         {githubRepoLink && (
                             <motion.div
+                                className="button-div"
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                             >
@@ -200,6 +209,7 @@ const FeaturedProjectCard = ({
                                         },
                                     }}
                                     variant="outlined"
+                                    fullWidth
                                     endIcon={<GitHubIcon />}
                                     onClick={() => {
                                         window.open(githubRepoLink, "_blank");
@@ -209,16 +219,31 @@ const FeaturedProjectCard = ({
                                 </Button>
                             </motion.div>
                         )}
+                        {hasProjectPage && (
+                            <motion.div
+                                className="button-div"
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                                <Button
+                                    sx={{
+                                        backgroundColor: "#FFA500",
+                                        ":hover": {
+                                            backgroundColor: "#e39505",
+                                        },
+                                    }}
+                                    fullWidth
+                                    variant="contained"
+                                    startIcon={<LanguageIcon />}
+                                    onClick={() => {
+                                        navigate(`/project/${name}`);
+                                    }}
+                                >
+                                    View Details
+                                </Button>
+                            </motion.div>
+                        )}
                     </Box>
-                    {hasProjectPage && (
-                        <div
-                            onClick={() => {
-                                navigate(`/project/${name}`);
-                            }}
-                        >
-                            View Project
-                        </div>
-                    )}
                 </motion.div>
             </Box>
         </motion.div>

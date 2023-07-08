@@ -20,9 +20,10 @@ const allProjects: Project[] = [
         month: "June",
         name: "bug-tracker",
         title: "Bug Tracker",
-        description:
+        description: "Full-stack issue management web application",
+        details: [
             "This Bug Tracking System is a full-stack software issue management web application that allows developers to create tickets for their projects and admins to manage the progress of each project using NodeJS & Express in the back end, MongoDB as the database and React in the front end",
-        details: [""],
+        ],
         technologies: [
             "MongoDB",
             "ExpressJS",
@@ -168,9 +169,10 @@ const allProjects: Project[] = [
         month: "MAR",
         name: "twitter-clone",
         title: "Twitter Clone",
-        description:
+        description: "Full-stack social media web application",
+        details: [
             "Twitter Clone is a full-stack social media web application similar to the popular website Twitter created using React in the front end and Firebase to handle the Database, Authentication & Security.",
-        details: [""],
+        ],
         technologies: [
             "REACT",
             "FIREBASE",
@@ -260,9 +262,9 @@ const allProjects: Project[] = [
         name: "psbsi",
         title: "PSBSI",
         technologies: ["HTML", "CSS", "JS", "JQUERY", "BOOTSTRAP"],
-        details: [""],
         description:
             "This is the landing page for the company Pioneer Specialty Building Systems Inc. The website displays all completed & upcoming projects done by the company as well as details on its building systems such as Waterproofing, Eifs & Sips.",
+        details: [""],
         liveSiteLink: "https://ken-yokohama.github.io/psbsi/",
         githubRepoLink: "https://github.com/Ken-Yokohama/psbsi",
         backgroundImgUrl: "",
@@ -274,9 +276,9 @@ const allProjects: Project[] = [
         name: "tindog",
         title: "Tindog",
         technologies: ["HTML", "CSS", "JS", "BOOTSTRAP"],
-        details: [""],
         description:
             "This is a simple static webpage used as a parody of Tinder... But for Dogs! This project was mainly used to learn basic CSS design patterns as well as responsive design using the Bootstrap grid system.",
+        details: [""],
         liveSiteLink: "https://ken-yokohama.github.io/TinDog/",
         githubRepoLink: "https://github.com/Ken-Yokohama/TinDog",
         backgroundImgUrl: "",
