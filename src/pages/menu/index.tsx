@@ -14,6 +14,20 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
         window.scrollTo(0, 0);
     };
 
+    const showAnimateRightProps = (delay: number) => ({
+        initial: { x: "-40px", opacity: 0 },
+        animate: showMenu ? { x: "0", opacity: 1 } : { x: "-40px", opacity: 0 },
+        transition: showMenu
+            ? {
+                  x: { delay },
+                  opacity: { delay },
+              }
+            : {
+                  opacity: { delay: 0 },
+                  x: { delay: 0.3 },
+              },
+    });
+
     return (
         <motion.div
             className="menu-page"
@@ -32,25 +46,7 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                         }
                         onClick={handleCloseMenu}
                     >
-                        <motion.h1
-                            initial={{ x: "-40px", opacity: 0 }}
-                            animate={
-                                showMenu
-                                    ? { x: "0", opacity: 1 }
-                                    : { x: "-40px", opacity: 0 }
-                            }
-                            transition={
-                                showMenu
-                                    ? {
-                                          x: { delay: 0.2 },
-                                          opacity: { delay: 0.2 },
-                                      }
-                                    : {
-                                          opacity: { delay: 0 },
-                                          x: { delay: 0.3 },
-                                      }
-                            }
-                        >
+                        <motion.h1 {...showAnimateRightProps(0.2)}>
                             Home
                         </motion.h1>
                     </NavLink>
@@ -61,25 +57,7 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                         }
                         onClick={handleCloseMenu}
                     >
-                        <motion.h1
-                            initial={{ x: "-40px", opacity: 0 }}
-                            animate={
-                                showMenu
-                                    ? { x: "0", opacity: 1 }
-                                    : { x: "-40px", opacity: 0 }
-                            }
-                            transition={
-                                showMenu
-                                    ? {
-                                          x: { delay: 0.3 },
-                                          opacity: { delay: 0.3 },
-                                      }
-                                    : {
-                                          opacity: { delay: 0 },
-                                          x: { delay: 0.3 },
-                                      }
-                            }
-                        >
+                        <motion.h1 {...showAnimateRightProps(0.3)}>
                             About Me
                         </motion.h1>
                     </NavLink>
@@ -90,40 +68,12 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                         }
                         onClick={handleCloseMenu}
                     >
-                        <motion.h1
-                            initial={{ x: "-40px", opacity: 0 }}
-                            animate={
-                                showMenu
-                                    ? { x: "0", opacity: 1 }
-                                    : { x: "-40px", opacity: 0 }
-                            }
-                            transition={
-                                showMenu
-                                    ? {
-                                          x: { delay: 0.4 },
-                                          opacity: { delay: 0.4 },
-                                      }
-                                    : {
-                                          opacity: { delay: 0 },
-                                          x: { delay: 0.3 },
-                                      }
-                            }
-                        >
+                        <motion.h1 {...showAnimateRightProps(0.4)}>
                             Contact Me
                         </motion.h1>
                     </NavLink>
                     <motion.h1
-                        initial={{ x: "-40px", opacity: 0 }}
-                        animate={
-                            showMenu
-                                ? { x: "0", opacity: 1 }
-                                : { x: "-40px", opacity: 0 }
-                        }
-                        transition={
-                            showMenu
-                                ? { x: { delay: 0.5 }, opacity: { delay: 0.5 } }
-                                : { opacity: { delay: 0 }, x: { delay: 0.3 } }
-                        }
+                        {...showAnimateRightProps(0.5)}
                         className="nav-menu-item"
                         onClick={() => {
                             window.open(
@@ -140,23 +90,7 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                         download="ken_yokohama_resume"
                     >
                         <motion.h1
-                            initial={{ x: "-40px", opacity: 0 }}
-                            animate={
-                                showMenu
-                                    ? { x: "0", opacity: 1 }
-                                    : { x: "-40px", opacity: 0 }
-                            }
-                            transition={
-                                showMenu
-                                    ? {
-                                          x: { delay: 0.6 },
-                                          opacity: { delay: 0.6 },
-                                      }
-                                    : {
-                                          opacity: { delay: 0 },
-                                          x: { delay: 0.3 },
-                                      }
-                            }
+                            {...showAnimateRightProps(0.6)}
                             className="nav-menu-item"
                         >
                             <Box className="nav-resume">Resume</Box>
