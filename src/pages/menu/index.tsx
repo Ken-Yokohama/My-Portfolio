@@ -5,6 +5,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import Tooltip from "@mui/material/Tooltip";
 import resumeFile from "../../files/ken_yokohama_resume.pdf";
 import { MenuProps } from "./interface";
+import "./menu.css";
 
 const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
     const handleCloseMenu = () => {
@@ -15,51 +16,15 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
 
     return (
         <motion.div
+            className="menu-page"
             initial={{ y: "-100vh" }}
-            // animate={{ y: showMenu ? "0" : ["-100vh"] }}
             animate={{
                 y: showMenu ? ["100vh", "0vh"] : [null, "-100vh"],
             }}
             transition={{ duration: 0.3 }}
-            style={{
-                position: "fixed",
-                display: "flex",
-                backgroundColor: "orange",
-                flexDirection: "column",
-                justifyContent: "center",
-                height: "100vh",
-                width: "100vw",
-                gap: "3rem",
-                zIndex: "3",
-            }}
         >
-            <Box
-                sx={{
-                    paddingLeft: "6vw",
-                    "@media(max-width: 700px)": {
-                        paddingTop: "90px",
-                    },
-                    "@media(min-width: 700px)": {
-                        display: "flex",
-                        justifyContent: "space-between",
-
-                        paddingRight: "7vw",
-                    },
-                }}
-            >
-                <Box
-                    sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "0.5rem",
-                        padding: "1rem 1rem 1rem 0",
-                        // "@media (min-width: 600px)": {
-                        //     marginLeft: "6rem",
-                        //     marginRight: "6rem",
-                        //     backgroundColor: "blue",
-                        // },
-                    }}
-                >
+            <Box className="menu-body">
+                <Box className="nav-container">
                     <NavLink
                         to="/"
                         className={({ isActive }) =>
@@ -167,15 +132,7 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                             );
                         }}
                     >
-                        <Box
-                            sx={{
-                                "@media(max-height: 500px)": {
-                                    display: "none",
-                                },
-                            }}
-                        >
-                            Github
-                        </Box>
+                        <Box className="nav-github">Github</Box>
                     </motion.h1>
                     <a
                         href={resumeFile}
@@ -202,29 +159,11 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                             }
                             className="nav-menu-item"
                         >
-                            <Box
-                                sx={{
-                                    "@media(max-height: 500px)": {
-                                        display: "none",
-                                    },
-                                }}
-                            >
-                                Resume
-                            </Box>
+                            <Box className="nav-resume">Resume</Box>
                         </motion.h1>
                     </a>
                 </Box>
-                <Box
-                    sx={{
-                        display: "none",
-                        "@media(min-width: 800px)": {
-                            display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "center",
-                            width: "400px",
-                        },
-                    }}
-                >
+                <Box className="side-note-container">
                     <motion.h3
                         initial={{ y: "40px", opacity: 0 }}
                         animate={
@@ -285,23 +224,7 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                     </motion.p>
                 </Box>
             </Box>
-            <Box
-                sx={{
-                    padding: "1rem",
-                    paddingLeft: "6vw",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "1rem",
-                    "@media(min-width: 700px)": {
-                        display: "flex",
-                        flexDirection: "row",
-                        gap: "2rem",
-                    },
-                    "@media(max-height: 600px)": {
-                        display: "none",
-                    },
-                }}
-            >
+            <Box className="menu-footer">
                 <motion.h3
                     initial={{ y: "40px", opacity: 0 }}
                     animate={
@@ -317,18 +240,7 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                 >
                     <b>Quick Links:</b>
                 </motion.h3>
-                <Box
-                    sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "0.5rem",
-                        "@media(min-width: 700px)": {
-                            display: "flex",
-                            flexDirection: "row",
-                            gap: "2rem",
-                        },
-                    }}
-                >
+                <Box className="quick-links">
                     <motion.div
                         initial={{ y: "40px", opacity: 0 }}
                         animate={
