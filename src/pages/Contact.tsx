@@ -11,6 +11,7 @@ import SendIcon from "@mui/icons-material/Send";
 const Contact = () => {
     return (
         <Box
+            className="contact-me-page"
             sx={{
                 height: "100svh",
                 display: "flex",
@@ -64,7 +65,7 @@ const Contact = () => {
                 </Box>
                 {/* Contact Forms */}
                 <Box
-                    className="contact-me-page"
+                    className="contact-forms"
                     sx={{
                         padding: "3rem",
                         display: "flex",

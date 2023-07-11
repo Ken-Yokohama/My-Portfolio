@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800&display=swap");
 
+:root {
+    --color-primary: #fff;
+    --color-secondary: #fff;
+    --size-h1: 3rem; /* clamp(1rem,14vw,3rem) */
+}
+
 * {
     margin: 0;
 }
@@ -13,9 +19,10 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
-    & {
-        margin-left: -0.08em;
+    font-size: var(--size-h1);
+    margin-left: -0.07em;
+    & b {
+        font-weight: 900;
     }
 }
 
@@ -23,7 +30,14 @@ h2 {
     font-size: 2rem;
 }
 
-/* Global Typography */
+h3 {
+    font-size: 1.2rem; /* Best Size for Hero Subheading */
+    font-weight: 500;
+    & b {
+        font-size: 1.17rem; /* Best Size for Menu Navbar */
+    }
+}
+
 h5 {
     font-size: 0.75rem;
     letter-spacing: 0.3rem;
@@ -48,42 +62,25 @@ img {
 .page-container {
     padding-left: 4vw;
     padding-right: 4vw;
-    @media (min-width: 2500px) {
-        & {
-            padding-left: 10vw;
-            padding-right: 10vw;
-        }
+    @media (width >= 2500px) {
+        padding-left: 10vw;
+        padding-right: 10vw;
     }
-    @media (min-width: 3000px) {
-        & {
-            padding-left: 15vw;
-            padding-right: 15vw;
-        }
+    @media (width >= 3000px) {
+        padding-left: 15vw;
+        padding-right: 15vw;
     }
-    @media (min-width: 4000px) {
-        & {
-            padding-left: 20vw;
-            padding-right: 20vw;
-        }
-    }
-
-    & h1 {
-        font-size: 3.5rem;
-        font-weight: 900;
-    }
-    & h3 {
-        font-size: 1.2rem;
-        font-weight: 500;
+    @media (width >= 4000px) {
+        padding-left: 20vw;
+        padding-right: 20vw;
     }
 }
 
 /* Padding for Top Navbar */
 .padding-for-nav {
     padding-top: 3.6rem;
-    @media (min-width: 700px) {
-        & {
-            padding-top: 5.6rem;
-        }
+    @media (width >= 700px) {
+        padding-top: 5.6rem;
     }
 }
 
@@ -101,188 +98,153 @@ img {
     }
 }
 
-/* Home Profile Image CSS */
+.home-page {
+    .hero-section {
+        .hero-txt-container {
+            & h1 {
+                @media (width >= 900px) {
+                    font-size: clamp(2.4rem, 4vw, 3.5rem);
+                }
+                @media (width <= 900px) {
+                    font-size: clamp(1.8rem, 4vw, 2.2rem);
+                }
+                @media (width <= 510px) {
+                    font-size: clamp(1rem, 6vw, 2rem);
+                }
+            }
 
-.hero-img-container {
-    width: 300px;
-    @media (max-width: 900px) {
-        & {
-            width: 100%;
+            & h3 {
+                @media (width <= 900px) {
+                    font-size: clamp(1rem, 2.1vw, 1.2rem);
+                }
+                @media (width <= 510px) {
+                    font-size: clamp(0.7rem, 4vw, 1.2rem);
+                }
+            }
+
+            & h5 {
+                @media (width <= 510px) {
+                    font-size: clamp(0.4rem, 2vw, 0.75rem);
+                }
+            }
+        }
+        .hero-img-container {
+            width: 300px;
+            @media (width <= 900px) {
+                width: 100%;
+            }
+            & img {
+                width: 100%;
+                transform: scale(1.5) translate(0, 0);
+                @media (width <= 900px) {
+                    transform: scale(1) translate(0, 0);
+                    min-height: 276px;
+                    min-width: 290px;
+                }
+                @media (width <= 650px) {
+                    transform: scale(1) translate(0, 0);
+                    height: 100%;
+                    width: 100%;
+                    min-height: 100%;
+                    min-width: 100%;
+                }
+            }
         }
     }
 }
 
-.profile-img {
-    width: 100%;
-    transform: scale(1.5) translate(0, 0);
-    @media (max-width: 900px) {
-        & {
-            transform: scale(1) translate(0, 0);
-            min-height: 276px;
-            min-width: 290px;
-        }
-    }
-    @media (max-width: 650px) {
-        & {
-            transform: scale(1) translate(0, 0);
-            height: 100%;
-            width: 100%;
-            min-height: 100%;
-            min-width: 100%;
-        }
-    }
-}
-
-.title {
-    @media (max-width: 900px) {
-        & h1 {
-            font-size: clamp(1.8rem, 4vw, 2.2rem);
-        }
-        & h3 {
-            font-size: clamp(1rem, 2.1vw, 1.2rem);
-        }
-    }
-}
-
-/* Responsive Desktop Font */
-@media (min-width: 900px) {
-    .title h1 {
-        font-size: clamp(2.4rem, 4vw, 3.5rem);
-    }
-}
-
-/* Responsive Mobile Font */
-
-@media (max-width: 510px) {
-    .title h1 {
-        font-size: clamp(1rem, 6vw, 2rem);
-    }
-    .title h5 {
-        font-size: clamp(0.4rem, 2vw, 0.75rem);
-    }
-    .title h3 {
-        font-size: clamp(0.7rem, 4vw, 1.2rem);
-    }
-}
-
-/* Call To Action Responsiveness*/
-
-@media (max-width: 390px) {
-    #call-to-action-h1 {
-        font-size: clamp(2rem, 13vw, 3.5rem);
-    }
-}
-
+/* Featured Project Cards */
 .project-cards {
     & h1 {
         /* font-size: clamp(2rem, 5vw, 3.5rem); */
-        font-size: clamp(1.5rem, 3vw, 3.5rem);
+        font-size: clamp(1.5rem, 3vw, 3rem);
+        @media (width <= 650px) {
+            font-size: clamp(2rem, 8.5vw, 3rem);
+        }
     }
     & h2 {
         font-size: clamp(1.3rem, 2.6vw, 2rem);
-    }
-    & p {
-        font-size: clamp(0.75rem, 1.5vw, 1rem);
-    }
-
-    @media (max-width: 650px) {
-        & h1 {
-            font-size: clamp(2rem, 8.5vw, 3.5rem);
-        }
-
-        & p {
-            font-size: clamp(0.75rem, 2.5vw, 1rem);
-        }
-
-        & h2 {
+        @media (width <= 650px) {
             font-size: clamp(1.3rem, 5vw, 2rem);
         }
     }
-    & .button-container {
+    & p {
+        font-size: clamp(0.75rem, 1.5vw, 1rem);
+        @media (width <= 650px) {
+            font-size: clamp(0.75rem, 2.5vw, 1rem);
+        }
+    }
+
+    .button-container {
         /* .button-div is for hover animation */
-        & .button-div {
+        .button-div {
             width: 180px;
-            @media (max-width: 1000px) {
-                & {
-                    width: 100%;
-                }
-            }
-            @media (max-width: 500px) {
-                & {
-                    width: 100%;
-                }
+            @media (width <= 1000px) {
+                width: 100%;
             }
         }
     }
 }
 
-/* About Me Graduation Carousel Photos */
-/* square buttons */
-.rec.rec-arrow {
-    border-radius: 0;
-}
-/* round buttons on hover */
-.rec.rec-arrow-left:hover:enabled,
-.rec.rec-arrow-right:hover:enabled {
-    border-radius: 50%;
-    background-color: orange;
-}
-
-.rec.rec-arrow:focus:enabled {
-    background-color: orange;
-}
-/* hide disabled buttons */
-.rec.rec-arrow:disabled {
-    visibility: hidden;
-}
-
-button.rec-dot:hover,
-button.rec-dot_active,
-button.rec-dot:focus {
-    background-color: orange;
-    box-shadow: 0 0 1px 3px rgb(250, 194, 141);
-}
-
-@media (max-width: 550px) {
-    .rec.rec-arrow {
-        border-radius: 0;
-        display: none;
-    }
-}
-
-/* Responsive font for About me Title */
-
-.about-title h1 {
-    font-size: clamp(1.8rem, 4.5vw, 3.5rem);
-    text-align: center;
-    max-width: 1200px;
-}
-
-.about-title h6 {
-    font-size: clamp(1.2rem, 2.4vw, 1.8rem);
-    text-align: center;
-    width: 70vw;
-}
-
-@media (max-width: 600px) {
-    .about-title h1 {
-        text-align: start;
-    }
-
-    .about-title h6 {
-        text-align: start;
-        width: 100%;
+.about-me-page {
+    .hero-section {
+        & h1 {
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            text-align: center;
+            max-width: 1200px;
+            @media (width <= 600px) {
+                text-align: start;
+            }
+        }
+        & h6 {
+            font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+            text-align: center;
+            width: 70vw;
+            @media (width <= 600px) {
+                text-align: start;
+                width: 100%;
+            }
+        }
     }
 }
 
 /* Responsive Font for Contact Me */
-
-.contact-me-page h1 {
-    font-size: clamp(2.4rem, 5.5vw, 3rem);
+.contact-me-page {
+    .contact-forms {
+        & h1 {
+            font-size: clamp(2.4rem, 5.5vw, 3rem);
+            @media (width <= 700px) {
+                font-size: clamp(2.4rem, 11vw, 3rem);
+            }
+        }
+    }
 }
 
-@media (max-width: 700px) {
-    .contact-me-page h1 {
-        font-size: clamp(2.4rem, 11vw, 3rem);
+.call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        max-width: 1500px;
+        text-align: center;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        @media (width >= 650px) {
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+        }
+
+        .header {
+            transition: color 0.5s ease;
+            cursor: pointer;
+            &:hover {
+                color: #808080;
+            }
+            @media (width <= 390px) {
+                font-size: clamp(2rem, 13vw, 3.5rem);
+            }
+        }
     }
 }

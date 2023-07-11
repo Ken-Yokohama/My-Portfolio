@@ -27,10 +27,11 @@ const Home = () => {
 
     return (
         <>
-            <div className="page-container">
-                {/* -------------------------Title----------------------- */}
+            <div className="page-container home-page">
+                {/* -------------------------Hero Section----------------------- */}
 
                 <Box
+                    className="hero-section"
                     sx={{
                         display: "flex",
                         alignItems: " center",
@@ -42,8 +43,6 @@ const Home = () => {
                             minHeight: "100%",
                             padding: "0",
                             gap: "1rem",
-                            // Padding for Nav
-                            // paddingTop: "5.6rem",
                         },
                         "@media (max-width: 650px)": {
                             flexDirection: "column-reverse",
@@ -53,7 +52,7 @@ const Home = () => {
                     }}
                 >
                     <Box
-                        className="title"
+                        className="hero-txt-container"
                         sx={{
                             zIndex: "1",
                             backgroundColor: "rgba(255, 255, 255, 0.8)",
@@ -95,7 +94,7 @@ const Home = () => {
                                 opacity: { delay: 0.4 },
                             }}
                         >
-                            FULL STACK DEVELOPER
+                            <b>FULL STACK DEVELOPER</b>
                         </motion.h1>
                         <motion.h3
                             initial={{ y: "40px", opacity: 0 }}
@@ -169,7 +168,6 @@ const Home = () => {
                         <img
                             src="/images/home-page/profile-img2.JPG"
                             alt="profile-image"
-                            className="profile-img"
                             style={{ filter: "grayscale(100%)" }}
                         />
                     </div>
@@ -187,7 +185,7 @@ const Home = () => {
                     <div style={{ maxWidth: "1500px" }} id="#featured-proj">
                         <h5>PROJECTS AND SHOWCASE</h5>
                         <Box component="h1" sx={{ paddingBottom: "2rem" }}>
-                            Featured Projects
+                            <b>Featured Projects</b>
                         </Box>
                         <Box
                             sx={{
@@ -223,7 +221,7 @@ const Home = () => {
                     <div style={{ maxWidth: "1500px" }}>
                         <h5>Expanded Collection</h5>
                         <Box component="h1" sx={{ paddingBottom: "2rem" }}>
-                            Projects List
+                            <b>Projects List</b>
                         </Box>
                         <Box
                             sx={{
@@ -244,31 +242,6 @@ const Home = () => {
                             ))}
                         </Box>
                     </div>
-
-                    {/* ------------------------- Engineering Projects LOW PRIORITY----------------------- */}
-                    {/* <div style={{ maxWidth: "1500px" }}>
-                    <h5>3D Modelling</h5>
-                    <Box component="h1" sx={{ paddingBottom: "2rem" }}>
-                        Engineering Renders
-                    </Box>
-                    <Box
-                        sx={{
-                            display: "grid",
-                            gridTemplateColumns: "1fr",
-                            gap: "2rem",
-                            "@media(min-width: 650px)": {
-                                gridTemplateColumns: "1fr 1fr",
-                            },
-                            "@media(min-width: 1300px)": {
-                                gap: "4rem",
-                            },
-                        }}
-                    >
-                        <Project backgroundImg="https://images.unsplash.com/photo-1605496036006-fa36378ca4ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" />
-                        <Project backgroundImg="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" />
-                        <Project backgroundImg="https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80" />
-                    </Box>
-                </div> */}
                 </div>
                 <CallToAction />
             </div>

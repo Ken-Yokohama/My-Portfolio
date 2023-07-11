@@ -61,7 +61,7 @@ const Navbar = ({ showMenu, setShowMenu, toggleShowMenu }: NavbarProps) => {
                         cursor: "pointer",
                     }}
                 >
-                    KEN YOKOHAMA
+                    <b>KEN YOKOHAMA</b>
                 </motion.h3>
                 <motion.div
                     // whileHover={{ color: "white" }}
@@ -75,7 +75,9 @@ const Navbar = ({ showMenu, setShowMenu, toggleShowMenu }: NavbarProps) => {
                         gap: "0.25rem",
                     }}
                 >
-                    <h3>Menu</h3>
+                    <h3>
+                        <b>Menu</b>
+                    </h3>
                     {!showMenu && <MenuIcon />}
                     {showMenu && <CloseIcon />}
                 </motion.div>

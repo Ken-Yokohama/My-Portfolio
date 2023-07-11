@@ -238,7 +238,7 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                                 : { opacity: { delay: 0 }, y: { delay: 0.3 } }
                         }
                     >
-                        My Portfolio
+                        <b>My Portfolio</b>
                     </motion.h3>
                     <motion.p
                         initial={{ y: "40px", opacity: 0 }}
@@ -315,7 +315,7 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                             : { opacity: { delay: 0 }, y: { delay: 0.3 } }
                     }
                 >
-                    Quick Links:
+                    <b>Quick Links:</b>
                 </motion.h3>
                 <Box
                     sx={{

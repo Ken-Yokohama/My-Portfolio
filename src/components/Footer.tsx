@@ -44,7 +44,9 @@ const Footer = () => {
                             },
                         }}
                     >
-                        <h3>Contact Information</h3>
+                        <h3>
+                            <b>Contact Information</b>
+                        </h3>
                         <Box
                             sx={{
                                 "@media (max-width: 990px)": {
@@ -67,7 +69,9 @@ const Footer = () => {
                     </Box>
 
                     <Box>
-                        <h3>Latest Projects:</h3>
+                        <h3>
+                            <b>Latest Projects</b>
+                        </h3>
                         <Box
                             sx={{
                                 display: "grid",
@@ -146,7 +150,9 @@ const Footer = () => {
                         {/* Projects.map function */}
                     </Box>
                     <Box>
-                        <h3>Social Links</h3>
+                        <h3>
+                            <b>Social Links</b>
+                        </h3>
                         <Box
                             sx={{
                                 cursor: "pointer",

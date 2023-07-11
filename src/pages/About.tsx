@@ -84,7 +84,7 @@ const About = () => {
     return (
         <>
             <div
-                className="page-container padding-for-nav"
+                className="page-container padding-for-nav about-me-page"
                 style={{
                     display: "flex",
                     flexDirection: "column",
@@ -108,9 +108,9 @@ const About = () => {
                         },
                     }}
                 >
-                    {/* ---------------------About Me Header------------------------ */}
+                    {/* ---------------------Hero Section------------------------ */}
                     <div
-                        className="about-title"
+                        className="hero-section"
                         style={{
                             display: "flex",
                             flexDirection: "column",
@@ -136,9 +136,11 @@ const About = () => {
                                 opacity: { delay: 0.4 },
                             }}
                         >
-                            My name is Ken Yokohama. I specialize in creating
-                            fast, user-friendly & secure websites following best
-                            practices.
+                            <b>
+                                My name is Ken Yokohama. I specialize in
+                                creating fast, user-friendly & secure websites
+                                following best practices.
+                            </b>
                         </motion.h1>
                         <motion.h6
                             initial={{ y: "40px", opacity: 0 }}
@@ -294,7 +296,9 @@ const About = () => {
 
                     {/* ---------------------EDUCATION------------------------ */}
                     <div>
-                        <h1>Education</h1>
+                        <h1>
+                            <b>Education</b>
+                        </h1>
                         <h2
                             style={{
                                 color: "#6E6E73",
@@ -346,8 +350,8 @@ const About = () => {
                     {/* ---------------------Awards & Certifications------------------------ */}
 
                     <div>
-                        <h1 style={{ fontSize: "clamp(1rem,14vw,3.5rem)" }}>
-                            Awards & Certifications
+                        <h1>
+                            <b>Awards & Certifications</b>
                         </h1>
                         <Box
                             sx={{

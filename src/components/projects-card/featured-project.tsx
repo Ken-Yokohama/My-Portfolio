@@ -93,7 +93,9 @@ const FeaturedProjectCard = ({
                             : { opacity: { delay: 0 }, y: { delay: 0.0 } }
                     }
                 >
-                    <h1>{title}</h1>
+                    <h1>
+                        <b>{title}</b>
+                    </h1>
                     <p>{description}</p>
                 </motion.div>
                 {/* Technologies */}
