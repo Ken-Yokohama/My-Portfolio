@@ -8,6 +8,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { featuredProjects, projects } from "../project/project-data";
+import { animateUpProps } from "../../utils/animation";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -31,33 +32,14 @@ const Home = () => {
                 {/* -------------------------Hero Section----------------------- */}
                 <Box className="hero-section">
                     <Box className="hero-txt-container">
-                        <motion.h5
-                            initial={{ y: "40px", opacity: 0 }}
-                            animate={{ y: "0", opacity: 1 }}
-                            transition={{
-                                y: { delay: 0.3 },
-                                opacity: { delay: 0.3 },
-                            }}
-                        >
+                        <motion.h5 {...animateUpProps(true, 0.3)}>
                             KEN YOKOHAMA
                         </motion.h5>
-                        <motion.h1
-                            initial={{ y: "40px", opacity: 0 }}
-                            animate={{ y: "0", opacity: 1 }}
-                            transition={{
-                                y: { delay: 0.4 },
-                                opacity: { delay: 0.4 },
-                            }}
-                        >
+                        <motion.h1 {...animateUpProps(true, 0.4)}>
                             <b>FULL STACK DEVELOPER</b>
                         </motion.h1>
                         <motion.h3
-                            initial={{ y: "40px", opacity: 0 }}
-                            animate={{ y: "0", opacity: 1 }}
-                            transition={{
-                                y: { delay: 0.5 },
-                                opacity: { delay: 0.5 },
-                            }}
+                            {...animateUpProps(true, 0.5)}
                             style={{ maxWidth: "600px" }}
                         >
                             Hello! I'm a <strong>Web Developer</strong> and
@@ -65,14 +47,7 @@ const Home = () => {
                             problems, learning new things and turning ideas into
                             reality with the use of code.
                         </motion.h3>
-                        <motion.div
-                            initial={{ y: "40px", opacity: 0 }}
-                            animate={{ y: "0", opacity: 1 }}
-                            transition={{
-                                y: { delay: 0.6 },
-                                opacity: { delay: 0.6 },
-                            }}
-                        >
+                        <motion.div {...animateUpProps(true, 0.6)}>
                             <Box component="h4" className="actions">
                                 <Box
                                     component="strong"

@@ -7,6 +7,10 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FeaturedProjectCardProps } from "./interface";
 import { useNavigate } from "react-router-dom";
+import {
+    featuredProjectContainerProps as containerAnimationProps,
+    featuredProjectHoverProps as hoverAnimationProps,
+} from "../../utils/animation";
 
 const FeaturedProjectCard = ({
     year,
@@ -29,12 +33,7 @@ const FeaturedProjectCard = ({
 
     return (
         <motion.div
-            initial={{ y: "40px", opacity: 0 }}
-            animate={{ y: inView ? "0" : "40px", opacity: inView ? 1 : 0 }}
-            transition={{
-                y: { delay: 0, duration: 0.3 },
-                opacity: { delay: 0, duration: 0.8 },
-            }}
+            {...containerAnimationProps(inView)}
             ref={ref}
             onMouseEnter={() => {
                 setMouseHovering(true);
@@ -64,54 +63,18 @@ const FeaturedProjectCard = ({
                     gap: "2rem",
                 }}
             >
-                <motion.h5
-                    initial={{ y: "40px", opacity: 0 }}
-                    animate={
-                        mouseHovering
-                            ? { y: "0", opacity: 1 }
-                            : { y: "40px", opacity: 0 }
-                    }
-                    transition={
-                        mouseHovering
-                            ? { y: { delay: 0.0 }, opacity: { delay: 0.0 } }
-                            : { opacity: { delay: 0 }, y: { delay: 0.0 } }
-                    }
-                >
+                <motion.h5 {...hoverAnimationProps(mouseHovering, 0.0)}>
                     {year} - {month}
                 </motion.h5>
                 {/* Title & Desc */}
-                <motion.div
-                    initial={{ y: "40px", opacity: 0 }}
-                    animate={
-                        mouseHovering
-                            ? { y: "0", opacity: 1 }
-                            : { y: "40px", opacity: 0 }
-                    }
-                    transition={
-                        mouseHovering
-                            ? { y: { delay: 0.1 }, opacity: { delay: 0.1 } }
-                            : { opacity: { delay: 0 }, y: { delay: 0.0 } }
-                    }
-                >
+                <motion.div {...hoverAnimationProps(mouseHovering, 0.1)}>
                     <h1>
                         <b>{title}</b>
                     </h1>
                     <p>{description}</p>
                 </motion.div>
                 {/* Technologies */}
-                <motion.div
-                    initial={{ y: "40px", opacity: 0 }}
-                    animate={
-                        mouseHovering
-                            ? { y: "0", opacity: 1 }
-                            : { y: "40px", opacity: 0 }
-                    }
-                    transition={
-                        mouseHovering
-                            ? { y: { delay: 0.2 }, opacity: { delay: 0.2 } }
-                            : { opacity: { delay: 0 }, y: { delay: 0.0 } }
-                    }
-                >
+                <motion.div {...hoverAnimationProps(mouseHovering, 0.2)}>
                     <h2>Technologies Used</h2>
                     <div
                         style={{
@@ -133,19 +96,7 @@ const FeaturedProjectCard = ({
                     </div>
                 </motion.div>
                 {/* Button Option 1 */}
-                <motion.div
-                    initial={{ y: "40px", opacity: 0 }}
-                    animate={
-                        mouseHovering
-                            ? { y: "0", opacity: 1 }
-                            : { y: "40px", opacity: 0 }
-                    }
-                    transition={
-                        mouseHovering
-                            ? { y: { delay: 0.3 }, opacity: { delay: 0.3 } }
-                            : { opacity: { delay: 0 }, y: { delay: 0.0 } }
-                    }
-                >
+                <motion.div {...hoverAnimationProps(mouseHovering, 0.3)}>
                     <Box
                         className="button-container"
                         sx={{

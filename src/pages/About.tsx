@@ -9,6 +9,7 @@ import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 import { EmblaOptionsType } from "embla-carousel-react";
 import EmblaCarousel from "../components/embla-carousel/embla-carousel";
+import { animateUpProps } from "../utils/animation";
 
 // Embla Carousel
 const OPTIONS: EmblaOptionsType = { loop: true };
@@ -118,24 +119,10 @@ const About = () => {
                             gap: "2rem",
                         }}
                     >
-                        <motion.h5
-                            initial={{ y: "40px", opacity: 0 }}
-                            animate={{ y: "0", opacity: 1 }}
-                            transition={{
-                                y: { delay: 0.3 },
-                                opacity: { delay: 0.3 },
-                            }}
-                        >
+                        <motion.h5 {...animateUpProps(true, 0.3)}>
                             About Me
                         </motion.h5>
-                        <motion.h1
-                            initial={{ y: "40px", opacity: 0 }}
-                            animate={{ y: "0", opacity: 1 }}
-                            transition={{
-                                y: { delay: 0.4 },
-                                opacity: { delay: 0.4 },
-                            }}
-                        >
+                        <motion.h1 {...animateUpProps(true, 0.4)}>
                             <b>
                                 My name is Ken Yokohama. I specialize in
                                 creating fast, user-friendly & secure websites
@@ -143,12 +130,7 @@ const About = () => {
                             </b>
                         </motion.h1>
                         <motion.h6
-                            initial={{ y: "40px", opacity: 0 }}
-                            animate={{ y: "0", opacity: 1 }}
-                            transition={{
-                                y: { delay: 0.5 },
-                                opacity: { delay: 0.5 },
-                            }}
+                            {...animateUpProps(true, 0.5)}
                             style={{
                                 fontWeight: "100",
                                 maxWidth: "800px",
@@ -168,23 +150,11 @@ const About = () => {
                             alignItems: "center",
                         }}
                     >
-                        <motion.h5
-                            initial={{ y: "40px", opacity: 0 }}
-                            animate={{ y: "0", opacity: 1 }}
-                            transition={{
-                                y: { delay: 0.6 },
-                                opacity: { delay: 0.6 },
-                            }}
-                        >
+                        <motion.h5 {...animateUpProps(true, 0.6)}>
                             Tech Stack
                         </motion.h5>
                         <motion.h2
-                            initial={{ y: "40px", opacity: 0 }}
-                            animate={{ y: "0", opacity: 1 }}
-                            transition={{
-                                y: { delay: 0.7 },
-                                opacity: { delay: 0.7 },
-                            }}
+                            {...animateUpProps(true, 0.7)}
                             style={{
                                 textAlign: "center",
                                 marginBottom: "3rem",

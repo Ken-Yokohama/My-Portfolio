@@ -7,6 +7,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import Tooltip from "@mui/material/Tooltip";
 import TextField from "@mui/material/TextField";
 import SendIcon from "@mui/icons-material/Send";
+import { animateUpProps } from "../utils/animation";
 
 const Contact = () => {
     return (
@@ -78,23 +79,11 @@ const Contact = () => {
                     }}
                 >
                     <div>
-                        <motion.h1
-                            initial={{ y: "40px", opacity: 0 }}
-                            animate={{ y: "0", opacity: 1 }}
-                            transition={{
-                                y: { delay: 0.3 },
-                                opacity: { delay: 0.3 },
-                            }}
-                        >
+                        <motion.h1 {...animateUpProps(true, 0.3)}>
                             Socials
                         </motion.h1>
                         <motion.div
-                            initial={{ y: "40px", opacity: 0 }}
-                            animate={{ y: "0", opacity: 1 }}
-                            transition={{
-                                y: { delay: 0.4 },
-                                opacity: { delay: 0.4 },
-                            }}
+                            {...animateUpProps(true, 0.4)}
                             style={{
                                 display: "flex",
                                 alignItems: "center",
@@ -153,14 +142,7 @@ const Contact = () => {
                         </motion.div>
                     </div>
                     <div>
-                        <motion.h1
-                            initial={{ y: "40px", opacity: 0 }}
-                            animate={{ y: "0", opacity: 1 }}
-                            transition={{
-                                y: { delay: 0.5 },
-                                opacity: { delay: 0.5 },
-                            }}
-                        >
+                        <motion.h1 {...animateUpProps(true, 0.5)}>
                             Get In Touch
                         </motion.h1>
                         <Box
@@ -175,14 +157,7 @@ const Contact = () => {
                                 },
                             }}
                         >
-                            <motion.div
-                                initial={{ y: "40px", opacity: 0 }}
-                                animate={{ y: "0", opacity: 1 }}
-                                transition={{
-                                    y: { delay: 0.6 },
-                                    opacity: { delay: 0.6 },
-                                }}
-                            >
+                            <motion.div {...animateUpProps(true, 0.6)}>
                                 <p>Email:</p>
                                 <CopyToClipboard text="kenlopezyokohama@gmail.com">
                                     <Tooltip title="Copy Email to Clipboard">
@@ -199,14 +174,7 @@ const Contact = () => {
                                     </Tooltip>
                                 </CopyToClipboard>
                             </motion.div>
-                            <motion.div
-                                initial={{ y: "40px", opacity: 0 }}
-                                animate={{ y: "0", opacity: 1 }}
-                                transition={{
-                                    y: { delay: 0.7 },
-                                    opacity: { delay: 0.7 },
-                                }}
-                            >
+                            <motion.div {...animateUpProps(true, 0.7)}>
                                 <p>Contact No:</p>
                                 <CopyToClipboard text="+639175787991">
                                     <Tooltip title="Copy Phone Number to Clipboard">
@@ -227,14 +195,7 @@ const Contact = () => {
                         </Box>
                     </div>
                     <div style={{ maxWidth: "550px" }}>
-                        <motion.h1
-                            initial={{ y: "40px", opacity: 0 }}
-                            animate={{ y: "0", opacity: 1 }}
-                            transition={{
-                                y: { delay: 0.8 },
-                                opacity: { delay: 0.8 },
-                            }}
-                        >
+                        <motion.h1 {...animateUpProps(true, 0.8)}>
                             Contact Form
                         </motion.h1>
                         <form
@@ -247,12 +208,7 @@ const Contact = () => {
                             }}
                         >
                             <motion.div
-                                initial={{ y: "40px", opacity: 0 }}
-                                animate={{ y: "0", opacity: 1 }}
-                                transition={{
-                                    y: { delay: 0.9 },
-                                    opacity: { delay: 0.9 },
-                                }}
+                                {...animateUpProps(true, 0.9)}
                                 style={{
                                     display: "flex",
                                     gap: "1rem",
@@ -279,14 +235,7 @@ const Contact = () => {
                                     fullWidth
                                 />
                             </motion.div>
-                            <motion.div
-                                initial={{ y: "40px", opacity: 0 }}
-                                animate={{ y: "0", opacity: 1 }}
-                                transition={{
-                                    y: { delay: 1 },
-                                    opacity: { delay: 1 },
-                                }}
-                            >
+                            <motion.div {...animateUpProps(true, 1)}>
                                 <TextField
                                     id="outlined-basic"
                                     label="Message"
@@ -300,14 +249,7 @@ const Contact = () => {
                                 />
                             </motion.div>
 
-                            <motion.div
-                                initial={{ y: "40px", opacity: 0 }}
-                                animate={{ y: "0", opacity: 1 }}
-                                transition={{
-                                    y: { delay: 1.1 },
-                                    opacity: { delay: 1.1 },
-                                }}
-                            >
+                            <motion.div {...animateUpProps(true, 1.1)}>
                                 <motion.div
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.9 }}

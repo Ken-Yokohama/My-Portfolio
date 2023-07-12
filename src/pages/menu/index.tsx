@@ -6,6 +6,7 @@ import Tooltip from "@mui/material/Tooltip";
 import resumeFile from "../../files/ken_yokohama_resume.pdf";
 import { MenuProps } from "./interface";
 import "./menu.css";
+import { animateRightProps, animateUpProps } from "../../utils/animation";
 
 const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
     const handleCloseMenu = () => {
@@ -13,20 +14,6 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
         // window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); SMOOTH SCROLL
         window.scrollTo(0, 0);
     };
-
-    const showAnimateRightProps = (delay: number) => ({
-        initial: { x: "-40px", opacity: 0 },
-        animate: showMenu ? { x: "0", opacity: 1 } : { x: "-40px", opacity: 0 },
-        transition: showMenu
-            ? {
-                  x: { delay },
-                  opacity: { delay },
-              }
-            : {
-                  opacity: { delay: 0 },
-                  x: { delay: 0.3 },
-              },
-    });
 
     return (
         <motion.div
@@ -46,7 +33,7 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                         }
                         onClick={handleCloseMenu}
                     >
-                        <motion.h1 {...showAnimateRightProps(0.2)}>
+                        <motion.h1 {...animateRightProps(showMenu, 0.2)}>
                             Home
                         </motion.h1>
                     </NavLink>
@@ -57,7 +44,7 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                         }
                         onClick={handleCloseMenu}
                     >
-                        <motion.h1 {...showAnimateRightProps(0.3)}>
+                        <motion.h1 {...animateRightProps(showMenu, 0.3)}>
                             About Me
                         </motion.h1>
                     </NavLink>
@@ -68,12 +55,12 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                         }
                         onClick={handleCloseMenu}
                     >
-                        <motion.h1 {...showAnimateRightProps(0.4)}>
+                        <motion.h1 {...animateRightProps(showMenu, 0.4)}>
                             Contact Me
                         </motion.h1>
                     </NavLink>
                     <motion.h1
-                        {...showAnimateRightProps(0.5)}
+                        {...animateRightProps(showMenu, 0.5)}
                         className="nav-menu-item"
                         onClick={() => {
                             window.open(
@@ -90,7 +77,7 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                         download="ken_yokohama_resume"
                     >
                         <motion.h1
-                            {...showAnimateRightProps(0.6)}
+                            {...animateRightProps(showMenu, 0.6)}
                             className="nav-menu-item"
                         >
                             <Box className="nav-resume">Resume</Box>
@@ -98,34 +85,10 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                     </a>
                 </Box>
                 <Box className="side-note-container">
-                    <motion.h3
-                        initial={{ y: "40px", opacity: 0 }}
-                        animate={
-                            showMenu
-                                ? { y: "0", opacity: 1 }
-                                : { y: "40px", opacity: 0 }
-                        }
-                        transition={
-                            showMenu
-                                ? { y: { delay: 1 }, opacity: { delay: 1 } }
-                                : { opacity: { delay: 0 }, y: { delay: 0.3 } }
-                        }
-                    >
+                    <motion.h3 {...animateUpProps(showMenu, 1)}>
                         <b>My Portfolio</b>
                     </motion.h3>
-                    <motion.p
-                        initial={{ y: "40px", opacity: 0 }}
-                        animate={
-                            showMenu
-                                ? { y: "0", opacity: 1 }
-                                : { y: "40px", opacity: 0 }
-                        }
-                        transition={
-                            showMenu
-                                ? { y: { delay: 1 }, opacity: { delay: 1 } }
-                                : { opacity: { delay: 0 }, y: { delay: 0.3 } }
-                        }
-                    >
+                    <motion.p {...animateUpProps(showMenu, 1)}>
                         Thank you for viewing my portfolio
                         {pageVisits !== 0 && (
                             <span>
@@ -159,35 +122,11 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                 </Box>
             </Box>
             <Box className="menu-footer">
-                <motion.h3
-                    initial={{ y: "40px", opacity: 0 }}
-                    animate={
-                        showMenu
-                            ? { y: "0", opacity: 1 }
-                            : { y: "40px", opacity: 0 }
-                    }
-                    transition={
-                        showMenu
-                            ? { y: { delay: 0.7 }, opacity: { delay: 0.7 } }
-                            : { opacity: { delay: 0 }, y: { delay: 0.3 } }
-                    }
-                >
+                <motion.h3 {...animateUpProps(showMenu, 0.7)}>
                     <b>Quick Links:</b>
                 </motion.h3>
                 <Box className="quick-links">
-                    <motion.div
-                        initial={{ y: "40px", opacity: 0 }}
-                        animate={
-                            showMenu
-                                ? { y: "0", opacity: 1 }
-                                : { y: "40px", opacity: 0 }
-                        }
-                        transition={
-                            showMenu
-                                ? { y: { delay: 0.8 }, opacity: { delay: 0.8 } }
-                                : { opacity: { delay: 0 }, y: { delay: 0.3 } }
-                        }
-                    >
+                    <motion.div {...animateUpProps(showMenu, 0.8)}>
                         <p>Email:</p>
                         <CopyToClipboard text="kenlopezyokohama@gmail.com">
                             <Tooltip title="Copy Email to Clipboard">
@@ -201,19 +140,7 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                             </Tooltip>
                         </CopyToClipboard>
                     </motion.div>
-                    <motion.div
-                        initial={{ y: "40px", opacity: 0 }}
-                        animate={
-                            showMenu
-                                ? { y: "0", opacity: 1 }
-                                : { y: "40px", opacity: 0 }
-                        }
-                        transition={
-                            showMenu
-                                ? { y: { delay: 0.9 }, opacity: { delay: 0.9 } }
-                                : { opacity: { delay: 0 }, y: { delay: 0.3 } }
-                        }
-                    >
+                    <motion.div {...animateUpProps(showMenu, 0.9)}>
                         <p>Contact No:</p>
                         <CopyToClipboard text="+639175787991">
                             <Tooltip title="Copy Phone Number to Clipboard">

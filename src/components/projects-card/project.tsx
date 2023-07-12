@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ProjectCardProps } from "./interface";
+import { projectContainerProps as containerAnimationProps } from "../../utils/animation";
 
 const ProjectCard = ({
     title,
@@ -18,12 +19,7 @@ const ProjectCard = ({
     return (
         <motion.div
             ref={ref}
-            initial={{ x: "-100px", opacity: 0 }}
-            animate={{ x: inView ? "0" : "-100px", opacity: inView ? 1 : 0 }}
-            transition={{
-                x: { delay: 0.0 },
-                opacity: { delay: 0.0 },
-            }}
+            {...containerAnimationProps(inView)}
             style={{ border: "2px solid" }}
         >
             <Box
