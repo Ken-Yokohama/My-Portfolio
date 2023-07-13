@@ -18,3 +18,8 @@ export interface ProjectCardProps {
     liveSiteLink?: string;
     githubRepoLink?: string;
 }
+
+export interface HoverPromptProps {
+    isDark: boolean;
+    isVisible: boolean;
+}

@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LanguageIcon from "@mui/icons-material/Language";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Button from "@mui/material/Button";
@@ -11,6 +11,8 @@ import {
     featuredProjectContainerProps as containerAnimationProps,
     featuredProjectHoverProps as hoverAnimationProps,
 } from "../../utils/animation";
+import HoverPrompt from "./hover-prompt";
+import "./css/featured-project.css";
 
 const FeaturedProjectCard = ({
     year,
@@ -27,9 +29,16 @@ const FeaturedProjectCard = ({
     const navigate = useNavigate();
 
     const [mouseHovering, setMouseHovering] = useState(false);
+    const [showHoverPrompt, setShowHoverPrompt] = useState(false);
 
     // Intersection Observer Func
     const [ref, inView] = useInView({ triggerOnce: true });
+
+    useEffect(() => {
+        if (inView) {
+            setShowHoverPrompt(true);
+        }
+    }, [inView]);
 
     return (
         <motion.div
@@ -37,6 +46,7 @@ const FeaturedProjectCard = ({
             ref={ref}
             onMouseEnter={() => {
                 setMouseHovering(true);
+                setShowHoverPrompt(false);
             }}
             onMouseLeave={() => {
                 setMouseHovering(false);
@@ -199,6 +209,8 @@ const FeaturedProjectCard = ({
                     </Box>
                 </motion.div>
             </Box>
+
+            <HoverPrompt isDark={true} isVisible={showHoverPrompt} />
         </motion.div>
     );
 };
