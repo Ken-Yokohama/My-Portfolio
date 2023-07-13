@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import { projectPages } from "./project-data";
+import "./project-page.css";
+import { ErrorPage } from "..";
 
 const ProjectPage = () => {
     const { projectName } = useParams();
@@ -9,11 +11,7 @@ const ProjectPage = () => {
     );
 
     if (!project) {
-        return (
-            <div>
-                <div>{/* Need to Add 404 Page, Then Link here */}</div>
-            </div>
-        );
+        return <ErrorPage />;
     }
 
     return (
