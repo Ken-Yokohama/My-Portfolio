@@ -200,6 +200,7 @@ const FeaturedProjectCard = ({
                                     startIcon={<LanguageIcon />}
                                     onClick={() => {
                                         navigate(`/project/${name}`);
+                                        window.scrollTo(0, 0);
                                     }}
                                 >
                                     View Details

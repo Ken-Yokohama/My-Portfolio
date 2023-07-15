@@ -44,7 +44,11 @@ const allProjects: Project[] = [
         name: "entrego-cash",
         title: "Entrego Cash Management System",
         description: "Online Task and Workflow Automation Platform",
-        details: [""],
+        details: [
+            "Our team developed an innovative cash management system that combines the power of React in the frontend and Java Spring in the backend for the company. This product enables efficient tracking, monitoring, and optimization of cash flows, empowering the company to make data-driven financial decisions with ease and accuracy.",
+            "By seamlessly integrating React and Java Spring, the system offers a user-friendly interface and robust backend functionalities. It streamlines cash management processes, automates tasks, and ensures real-time visibility into financial data, ultimately enhancing the company's financial performance and reducing operational costs.",
+            "With our cash management system, the company gains a competitive edge in today's dynamic business landscape. The React-powered frontend provides a responsive and intuitive user experience, while the Java Spring backend ensures security and scalability. By centralizing cash management, financial teams can analyze trends, forecast cash needs, and optimize cash allocation efficiently. This holistic solution empowers the company to stay agile, make informed decisions, and achieve sustainable growth in the ever-changing market.",
+        ],
         technologies: [
             "React",
             "Typescript",
@@ -68,7 +72,11 @@ const allProjects: Project[] = [
         name: "entrego-dev",
         title: "Entrego Developer Portal",
         description: "Online E-Commerce Management Platform",
-        details: [""],
+        details: [
+            "Our collaborative team successfully crafted a developer portal leveraging Next.js and Django technologies, empowering Entrego's growth and innovation. This dynamic platform serves as a centralized hub, providing developers with comprehensive documentation, APIs, and tools to streamline the development process. The Next.js frontend ensures a seamless user experience, while Django's robust backend ensures security and scalability.",
+            "By offering an intuitive and feature-rich developer portal, Entrego can attract and engage developers more effectively. The portal fosters a strong developer community, encouraging collaboration and feedback, leading to accelerated product development and enhanced customer experiences.",
+            "With our Next.js and Django-powered developer portal, Entrego gains a competitive edge in the market. The platform's seamless integration with your existing systems ensures efficient collaboration between developers and internal teams, reducing development time and costs. Additionally, the portal's comprehensive analytics and tracking capabilities enable you to gain valuable insights into developer behavior, allowing you to make data-driven decisions and continuously optimize the developer experience for long-term success.",
+        ],
         technologies: [
             "NextJS",
             "Typescript",
@@ -91,7 +99,11 @@ const allProjects: Project[] = [
         name: "entrego-bid",
         title: "Entrego Bidding System",
         description: "Online Task and Workflow Automation Platform",
-        details: [""],
+        details: [
+            "Our team developed an innovative bidding system using React and Spring for Entrego. This product revolutionizes the way Entrego manages procurement processes, streamlining bids from suppliers and enhancing transparency. By leveraging the power of React's dynamic user interface and Spring's robust backend, the system ensures efficient communication and fosters competitive pricing, empowering Entrego to make well-informed decisions.",
+            "With our bidding system, Entrego gains real-time insights into supplier responses, accelerating the evaluation process. The intuitive interface facilitates easy navigation, enabling users to quickly access critical data and submit bids effortlessly.",
+            "By implementing our React and Spring-based Taskflow automation system, the company experiences enhanced collaboration among teams, faster task completion, and reduced errors. The system's integration with existing tools allows for smooth data exchange, ensuring a seamless transition. Furthermore, the real-time tracking and reporting features enable better decision-making and process optimization. Altogether, the product brings immense value by revolutionizing the company's operations and driving significant cost and time savings.",
+        ],
         technologies: [
             "React",
             "Typescript",
@@ -116,7 +128,11 @@ const allProjects: Project[] = [
         name: "entrego-hub",
         title: "Entrego Hub Management System",
         description: "Enterprise IT Service Management Platform",
-        details: [""],
+        details: [
+            "Our Hub Management System is an innovative solution developed by our skilled team, integrating React, Django, and Spring technologies. This product empowers companies to efficiently manage their hubs and streamline operations. Through its user-friendly interface, administrators can oversee various processes, from inventory and logistics to personnel and finance, with unparalleled ease.",
+            "By leveraging the power of React, Django, and Spring, our system offers seamless integration with other essential company systems, fostering a cohesive and interconnected ecosystem. This synergy optimizes data flow and ensures real-time synchronization across all platforms.",
+            "The Hub Management System's robust architecture enables scalability and adaptability, making it suitable for businesses of all sizes and industries. Its key features include centralized hub monitoring, automated reporting, and advanced analytics, empowering decision-makers with valuable insights. Moreover, the system's ability to connect and communicate with external platforms simplifies data exchange and enhances operational efficiency, ultimately driving growth and success for our clients in today's dynamic business landscape.",
+        ],
         technologies: [
             "React",
             "Typescript",
@@ -145,7 +161,11 @@ const allProjects: Project[] = [
         name: "entrego-claims",
         title: "Entrego Claims Management System",
         description: "Online Task and Workflow Automation Platform",
-        details: [""],
+        details: [
+            "The Claims Management System developed for our company is a powerful and efficient solution that seamlessly integrates React and Django technologies. This comprehensive platform streamlines the entire claims process, enabling our organization to manage and process claims with utmost precision and speed. With an intuitive user interface and robust backend capabilities, our system optimizes workflow and enhances productivity.",
+            "Through the React frontend, users can easily submit and track claims, while Django's backend handles data processing, storage, and authentication. The system offers real-time updates and notifications, ensuring transparent communication between clients, employees, and stakeholders.",
+            "Our Claims Management System brings unprecedented efficiency and organization to our company's claims handling operations. The seamless interaction between React and Django empowers our team to process claims swiftly, reduce manual errors, and track progress with precision. By providing users with a user-friendly interface, coupled with the robustness of Django's backend, the system ensures a seamless experience for claimants and employees alike, fostering trust and satisfaction in our services.",
+        ],
         technologies: [
             "React",
             "Typescript",
