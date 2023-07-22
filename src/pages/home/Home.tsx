@@ -70,7 +70,7 @@ const Home = () => {
                     </Box>
                     <div className="hero-img-container">
                         <img
-                            src="/images/home-page/profile-img2.JPG"
+                            src="/images/home-page/profile-img2.webp"
                             alt="profile-image"
                         />
                     </div>

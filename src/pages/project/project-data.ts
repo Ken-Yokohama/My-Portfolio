@@ -203,7 +203,7 @@ const allProjects: Project[] = [
         liveSiteLink: "https://ken-yokohama.github.io/Twitter-Clone",
         githubRepoLink: "https://github.com/Ken-Yokohama/Twitter-Clone",
         backgroundImgUrl:
-            "/images/home-page/project-backgrounds/twitter-clone.JPG",
+            "/images/home-page/project-backgrounds/twitter-clone.webp",
     },
     {
         featuredProject: false,
