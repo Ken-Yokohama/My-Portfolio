@@ -8,7 +8,7 @@ import { MenuProps } from "./interface";
 import "./menu.css";
 import { animateRightProps, animateUpProps } from "../../utils/animation";
 
-const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
+const Menu = ({ setShowMenu, showMenu }: MenuProps) => {
     const handleCloseMenu = () => {
         setShowMenu(false);
         // window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); SMOOTH SCROLL
@@ -89,19 +89,10 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                         <b>My Portfolio</b>
                     </motion.h3>
                     <motion.p {...animateUpProps(showMenu, 1)}>
-                        Thank you for viewing my portfolio
-                        {pageVisits !== 0 && (
-                            <span>
-                                <strong style={{ fontFamily: "arial" }}>
-                                    {" "}
-                                    {pageVisits + 1}{" "}
-                                </strong>
-                                times
-                            </span>
-                        )}
-                        . If you'd like to know more details on how I built this
-                        project or if you are just curious to see my code, feel
-                        free to check out my{" "}
+                        Thank you for viewing my portfolio. If you'd like to
+                        know more details on how I built this project or if you
+                        are just curious to see my code, feel free to check out
+                        my{" "}
                         <strong
                             style={{
                                 borderBottom: "2px solid",
@@ -117,7 +108,6 @@ const Menu = ({ setShowMenu, showMenu, pageVisits }: MenuProps) => {
                             GitHub
                         </strong>
                         .
-                        {/* This project was built using react and tools from the react-ecosystem namely material-ui, react-router-dom, framer-motion & axios. */}
                     </motion.p>
                 </Box>
             </Box>

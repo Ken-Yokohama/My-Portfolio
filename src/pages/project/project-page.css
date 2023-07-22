@@ -13,10 +13,10 @@
             padding-top: 7rem;
             justify-content: space-between;
         }
-        @media (width >= 1300px) {
+        /* @media (width >= 1300px) {
             display: flex;
             padding-top: 12rem;
-        }
+        } */
         .project-details {
             opacity: 1;
             display: flex;

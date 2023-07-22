@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Navbar } from "../components";
 import { About, Contact, ErrorPage, Home, Menu, ProjectPage } from "../pages";
-import { getPageVisitCount } from "../utils/api";
 
 const Main = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -11,16 +10,6 @@ const Main = () => {
         setShowMenu((prevValue) => !prevValue);
     };
 
-    const [pageVisits, setPageVisits] = useState(0);
-
-    useEffect(() => {
-        const getPageVisits = async () => {
-            const count = await getPageVisitCount();
-            setPageVisits(count);
-        };
-        getPageVisits();
-    }, []);
-
     return (
         <div>
             <Navbar
@@ -28,11 +17,7 @@ const Main = () => {
                 setShowMenu={setShowMenu}
                 toggleShowMenu={toggleShowMenu}
             />
-            <Menu
-                setShowMenu={setShowMenu}
-                showMenu={showMenu}
-                pageVisits={pageVisits}
-            />
+            <Menu setShowMenu={setShowMenu} showMenu={showMenu} />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
