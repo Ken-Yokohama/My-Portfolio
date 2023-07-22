@@ -1,0 +1,1 @@
+const i=(a,t)=>({initial:{x:"-40px",opacity:0},animate:a?{x:"0",opacity:1}:{x:"-40px",opacity:0},transition:a?{x:{delay:t},opacity:{delay:t}}:{opacity:{delay:0},x:{delay:.3}}}),p=(a,t)=>({initial:{y:"40px",opacity:0},animate:a?{y:"0",opacity:1}:{y:"40px",opacity:0},transition:a?{y:{delay:t},opacity:{delay:t}}:{opacity:{delay:0},y:{delay:.3}}});export{p as a,i as b};
