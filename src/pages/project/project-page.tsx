@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { projectPages } from "./project-data";
 import "./project-page.css";
-import { ErrorPage } from "..";
+import ErrorPage from "../404";
 
 const ProjectPage = () => {
     const { projectName } = useParams();
