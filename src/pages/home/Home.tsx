@@ -1,14 +1,10 @@
 import { Box } from "@mui/material";
-import {
-    CallToAction,
-    Footer,
-    FeaturedProjectCard,
-    ProjectCard,
-} from "../../components";
+import { CallToAction, Footer, ProjectCard } from "../../components";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { featuredProjects, projects } from "../project/project-data";
 import { animateUpProps } from "../../utils/animation";
+import FeaturedProjectLazy from "../../components/projects-card/featured-project-lazy";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -85,7 +81,7 @@ const Home = () => {
                         </Box>
                         <Box className="featured-proj-container">
                             {featuredProjects.map((project, index) => (
-                                <FeaturedProjectCard
+                                <FeaturedProjectLazy
                                     key={index}
                                     year={project.year}
                                     month={project.month}
