@@ -2,6 +2,7 @@ import { FeaturedProjectCardProps } from "./interface";
 import { lazy, Suspense } from "react";
 import { useInView } from "react-intersection-observer";
 import "./css/featured-project.css";
+import FeaturedProjectPlaceholder from "./featured-project-placeholder";
 
 const FeaturedProjectCard = lazy(() => import("./featured-project"));
 
@@ -21,7 +22,11 @@ const FeaturedProjectLazy = ({
 
     return (
         <>
-            <Suspense>
+            <Suspense
+                fallback={
+                    <FeaturedProjectPlaceholder backgroundImg={backgroundImg} />
+                }
+            >
                 {inView ? (
                     <FeaturedProjectCard
                         year={year}
@@ -36,19 +41,10 @@ const FeaturedProjectLazy = ({
                         backgroundImg={backgroundImg}
                     />
                 ) : (
-                    <div
+                    <FeaturedProjectPlaceholder
+                        backgroundImg={backgroundImg}
                         ref={ref}
-                        style={{
-                            backgroundColor: "red",
-                            opacity: "0",
-                        }}
-                    >
-                        <div
-                            style={{
-                                aspectRatio: "1/1.25",
-                            }}
-                        ></div>
-                    </div>
+                    />
                 )}
             </Suspense>
         </>

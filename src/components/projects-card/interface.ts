@@ -19,6 +19,10 @@ export interface ProjectCardProps {
     githubRepoLink?: string;
 }
 
+export interface FeaturedProjectPlaceholderProps {
+    backgroundImg: string;
+}
+
 export interface HoverPromptProps {
     isDark: boolean;
     isVisible: boolean;
