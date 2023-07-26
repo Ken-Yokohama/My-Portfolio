@@ -82,10 +82,30 @@ const About = () => {
                                 maxWidth: "800px",
                             }}
                         >
-                            I make sure that systems and databases are secure as
+                            {/* I make sure that systems and databases are secure as
                             well as put a strong emphasis on UI/UX of the
-                            website
+                            website */}
+                            I also put a strong emphasis on UI/UX and maintain a
+                            clean and efficient codebase for optimal
+                            functionality.
                         </motion.h6>
+                        <motion.div {...animateUpProps(true, 0.6)}>
+                            <motion.div
+                                className="button-container"
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                                <Button
+                                    className="button"
+                                    fullWidth
+                                    variant="outlined"
+                                    href="https://pagespeed.web.dev/analysis/https-kenyokohama-com/ikfoebx9kz?form_factor=desktop"
+                                    target="_blank"
+                                >
+                                    View Performance
+                                </Button>
+                            </motion.div>
+                        </motion.div>
                     </div>
                     {/* ---------------------LANGUAGES SECTION------------------------ */}
 
