@@ -15,6 +15,7 @@ import {
     educationImgArr,
     technologiesImgSrc,
 } from "./img-src";
+import "./about.css";
 
 // Embla Carousel
 const OPTIONS: EmblaOptionsType = { loop: true };
@@ -30,14 +31,7 @@ const About = () => {
 
     return (
         <>
-            <div
-                className="page-container padding-for-nav about-me-page"
-                style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                }}
-            >
+            <div className="page-container padding-for-nav about-me-page">
                 <Box
                     sx={{
                         maxWidth: "1500px",
@@ -232,41 +226,68 @@ const About = () => {
 
                     {/* ---------------------EDUCATION------------------------ */}
                     <div>
-                        <h1>
-                            <b>Education</b>
-                        </h1>
-                        <h2
-                            style={{
-                                color: "#6E6E73",
-                                // fontWeight: "100",
-                                //  paddingTop: "1rem"
-                            }}
-                        >
-                            Graduated from{" "}
-                            <strong
-                                style={{
-                                    // color: "orange",
-                                    color: "black",
-                                    // fontWeight: "800",
-                                    // borderBottom: "3px solid",
-                                    // backgroundColor: "orange",
-                                }}
-                            >
-                                De La Salle University
-                            </strong>{" "}
-                            batch 2014-2019
-                        </h2>
                         <Box
                             component="h5"
                             sx={{
+                                textAlign: "center",
                                 paddingLeft: "2.5px",
                                 paddingTop: "1rem",
                                 "@media (min-width: 700px)": {},
                             }}
                         >
-                            Bachelor of Science in Civil Engineering
+                            Education
+                        </Box>
+                        <Box
+                            component="h1"
+                            sx={{
+                                textAlign: "center",
+                                marginTop: "1rem",
+                            }}
+                        >
+                            <b>My Academic Pursuits</b>
                         </Box>
 
+                        <Box
+                            sx={{
+                                display: "flex",
+                                justifyContent: "center",
+                            }}
+                        >
+                            <Box
+                                component="h3"
+                                sx={{
+                                    maxWidth: "1000px",
+                                    textAlign: "center",
+                                    color: "#6E6E73",
+                                    marginTop: "2rem",
+                                    marginBottom: "3rem",
+                                    fontSize: "1.4rem",
+                                    fontWeight: "600",
+                                    "@media (max-width: 700px)": {
+                                        marginBottom: "1rem",
+                                        textAlign: "left",
+                                    },
+                                }}
+                            >
+                                I Graduated from{" "}
+                                <strong
+                                    style={{
+                                        color: "black",
+                                        fontWeight: "600",
+                                    }}
+                                >
+                                    De La Salle University
+                                </strong>{" "}
+                                in 2019 attaining a Bachelor of Science in Civil
+                                Engineering. During my time at DLSU, I was
+                                immersed in a comprehensive and challenging
+                                curriculum that provided me with a strong
+                                foundation in engineering principles and
+                                practices.
+                                {/* , empowering me to excel in various
+                                technical aspects of software development. */}
+                            </Box>
+                        </Box>
                         <div
                             style={{
                                 display: "flex",

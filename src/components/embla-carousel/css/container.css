@@ -1,5 +1,4 @@
 .container__carousel {
-    margin-top: 3rem;
     position: relative;
 }
 @media (width <= 900px) {
