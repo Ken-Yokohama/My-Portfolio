@@ -31,8 +31,8 @@ const About = () => {
 
     return (
         <>
+            {/* ---------------------Hero Section------------------------ */}
             <div className="page-container padding-for-nav about-me-page">
-                {/* ---------------------Hero Section------------------------ */}
                 <div
                     className="hero-section limit-width"
                     style={{
@@ -83,8 +83,9 @@ const About = () => {
                         </motion.div>
                     </motion.div>
                 </div>
-                {/* ---------------------LANGUAGES SECTION------------------------ */}
-
+            </div>
+            {/* ---------------------LANGUAGES SECTION------------------------ */}
+            <div className="page-container about-me-page">
                 <div
                     className="section-spacing limit-width"
                     style={{
@@ -144,8 +145,9 @@ const About = () => {
                         ))}
                     </Box>
                 </div>
-                {/* ---------------------ENGINEERING & DESIGN SECTION------------------------ */}
-
+            </div>
+            {/* ---------------------ENGINEERING & DESIGN SECTION------------------------ */}
+            <div className="page-container about-me-page">
                 <div
                     className="section-spacing limit-width"
                     style={{
@@ -207,8 +209,9 @@ const About = () => {
                     </Box>
                 </div>
             </div>
+            {/* ---------------------Work Experience SECTION------------------------ */}
+            {/* ---------------------EDUCATION------------------------ */}
             <div className="page-container about-me-page">
-                {/* ---------------------EDUCATION------------------------ */}
                 <div className="section-spacing limit-width">
                     <Box
                         component="h5"
@@ -287,8 +290,9 @@ const About = () => {
                         />
                     </div>
                 </div>
-                {/* ---------------------Awards & Certifications------------------------ */}
-
+            </div>
+            {/* ---------------------Awards & Certifications------------------------ */}
+            <div className="page-container about-me-page">
                 <div className="section-spacing limit-width">
                     <h1>
                         <b>Awards &{/* Certifications */}</b>
@@ -495,7 +499,9 @@ const About = () => {
                         </div>
                     </Box>
                 </div>
+            </div>
 
+            <div className="page-container about-me-page">
                 <CallToAction />
             </div>
             <Footer />
