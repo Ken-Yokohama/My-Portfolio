@@ -92,24 +92,17 @@ const FeaturedProjectCard = ({
                         <h1>
                             <b>{title}</b>
                         </h1>
-                        <p>{description}</p>
+                        <p className="description">{description}</p>
                     </motion.div>
                     {/* Technologies */}
-                    <motion.div {...hoverAnimationProps(mouseHovering, 0.2)}>
+                    <motion.div
+                        {...hoverAnimationProps(mouseHovering, 0.2)}
+                        className="technologies-used"
+                    >
                         <h2>Technologies Used</h2>
-                        <div
-                            style={{
-                                fontWeight: "100",
-                                display: "grid",
-                                gridTemplateColumns: "1fr 1fr",
-                            }}
-                        >
+                        <div className="technologies-container">
                             {technologies.map((technologies, index) => (
-                                <div
-                                    className="project-tech-stack"
-                                    key={index}
-                                    style={{ display: "flex" }}
-                                >
+                                <div key={index} style={{ display: "flex" }}>
                                     <h5>-</h5>
                                     <h5> {technologies}</h5>
                                 </div>
@@ -150,6 +143,7 @@ const FeaturedProjectCard = ({
                                 >
                                     <Button
                                         sx={{
+                                            color: "#2C3437",
                                             backgroundColor: "#FFA500",
                                             ":hover": {
                                                 backgroundColor: "#e39505",
@@ -158,9 +152,8 @@ const FeaturedProjectCard = ({
                                         fullWidth
                                         variant="contained"
                                         startIcon={<LanguageIcon />}
-                                        onClick={() => {
-                                            window.open(liveSiteLink, "_blank");
-                                        }}
+                                        href={liveSiteLink}
+                                        target="_blank"
                                     >
                                         Live Site
                                     </Button>
@@ -185,12 +178,8 @@ const FeaturedProjectCard = ({
                                         variant="outlined"
                                         fullWidth
                                         endIcon={<GitHubIcon />}
-                                        onClick={() => {
-                                            window.open(
-                                                githubRepoLink,
-                                                "_blank"
-                                            );
-                                        }}
+                                        href={githubRepoLink}
+                                        target="_blank"
                                     >
                                         Github Repo
                                     </Button>
@@ -204,6 +193,7 @@ const FeaturedProjectCard = ({
                                 >
                                     <Button
                                         sx={{
+                                            color: "#2C3437",
                                             backgroundColor: "#FFA500",
                                             ":hover": {
                                                 backgroundColor: "#e39505",

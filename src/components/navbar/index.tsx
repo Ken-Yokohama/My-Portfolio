@@ -48,26 +48,39 @@ const Navbar = ({ showMenu, setShowMenu, toggleShowMenu }: NavbarProps) => {
                     },
                 }}
             >
-                <motion.h3
-                    whileTap={{ color: "#A9A9A9" }}
-                    initial={{ color: "#000000" }}
-                    transition={{ color: { duration: 0.3 } }}
-                    onClick={() => {
-                        navigate("/");
-                        setShowMenu(false);
-                        window.scrollTo(0, 0);
-                    }}
+                <a
+                    href="https://kenyokohama.com/"
                     style={{
-                        cursor: "pointer",
+                        color: "black",
+                        textDecoration: "none",
+                    }}
+                    onClick={(e) => {
+                        if (!e.ctrlKey && !e.metaKey) {
+                            e.preventDefault();
+                        }
                     }}
                 >
-                    <b>KEN YOKOHAMA</b>
-                </motion.h3>
+                    <motion.h3
+                        whileHover={{ color: "#A9A9A9" }}
+                        initial={{ color: "#000000" }}
+                        transition={{ color: { duration: 0.2 } }}
+                        onClick={() => {
+                            navigate("/");
+                            setShowMenu(false);
+                            window.scrollTo(0, 0);
+                        }}
+                        style={{
+                            cursor: "pointer",
+                        }}
+                    >
+                        <b>KEN YOKOHAMA</b>
+                    </motion.h3>
+                </a>
                 <motion.div
                     // whileHover={{ color: "white" }}
-                    whileTap={{ color: "#A9A9A9" }}
+                    whileHover={{ color: "#A9A9A9" }}
                     initial={{ color: "#000000" }}
-                    transition={{ color: { duration: 0.3 } }}
+                    transition={{ color: { duration: 0.2 } }}
                     onClick={toggleShowMenu}
                     style={{
                         cursor: "pointer",

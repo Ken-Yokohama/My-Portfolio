@@ -23,6 +23,11 @@ const ProjectPage = () => {
                         <h1>{project.title}</h1>
                     </div>
                     <div>
+                        <h5>Role</h5>
+                        <h3>Front-End Development</h3>
+                        <h3>UX / UI Design</h3>
+                    </div>
+                    <div>
                         <h5>Technologies Used</h5>
                         <div className="technologies">
                             {project.technologies.map((tech) => (

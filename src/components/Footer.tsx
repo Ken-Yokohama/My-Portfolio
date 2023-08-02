@@ -1,7 +1,10 @@
 import { Box } from "@mui/material";
 import { currentYear } from "../utils/api";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+    const navigate = useNavigate();
+
     return (
         <div
             style={{
@@ -88,12 +91,12 @@ const Footer = () => {
                                 }}
                                 onClick={() => {
                                     window.open(
-                                        "https://ken-yokohama.github.io/Twitter-Clone/",
+                                        "https://ken-yokohama.github.io/Bug-Tracking-System",
                                         "_blank"
                                     );
                                 }}
                             >
-                                <p>Twitter Clone</p>
+                                <p>Bug Tracking System</p>
                             </Box>
                             {/* Project 2 */}
                             <Box
@@ -104,13 +107,11 @@ const Footer = () => {
                                     },
                                 }}
                                 onClick={() => {
-                                    window.open(
-                                        "https://kenterest.netlify.app/",
-                                        "_blank"
-                                    );
+                                    navigate(`/project/entrego-cash`);
+                                    window.scrollTo(0, 0);
                                 }}
                             >
-                                <p>Kenterest</p>
+                                <p>Entrego Cash</p>
                             </Box>
                             {/* Project 3 */}
                             <Box
@@ -121,13 +122,11 @@ const Footer = () => {
                                     },
                                 }}
                                 onClick={() => {
-                                    window.open(
-                                        "https://still-garden-96667.herokuapp.com/",
-                                        "_blank"
-                                    );
+                                    navigate(`/project/entrego-hub`);
+                                    window.scrollTo(0, 0);
                                 }}
                             >
-                                <p>MailChimp API</p>
+                                <p>Entrego HMS</p>
                             </Box>
                             {/* Project 4 */}
                             <Box
@@ -138,13 +137,11 @@ const Footer = () => {
                                     },
                                 }}
                                 onClick={() => {
-                                    window.open(
-                                        "https://to-do-list-using-mongodb-atlas.herokuapp.com/",
-                                        "_blank"
-                                    );
+                                    navigate(`/project/entrego-claims`);
+                                    window.scrollTo(0, 0);
                                 }}
                             >
-                                <p>MongoDB To Do List</p>
+                                <p>Entrego Claims</p>
                             </Box>
                         </Box>
                         {/* Projects.map function */}

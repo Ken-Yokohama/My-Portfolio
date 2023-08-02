@@ -57,10 +57,10 @@ const ProjectCard = ({
                     display: "flex",
                     flexDirection: "column",
                     gap: "0.5rem",
+                    margin: "0.5rem 0",
                 }}
             >
-                <h3>Description</h3>
-                <p>{description}</p>
+                <p style={{ marginBottom: "0.5rem" }}>{description}</p>
                 <Box
                     sx={{
                         display: "flex",
@@ -69,10 +69,10 @@ const ProjectCard = ({
                     }}
                 >
                     <a href={liveSiteLink} target="_blank">
-                        <i>Link to Live Website</i>
+                        <i>Live Website</i>
                     </a>
                     <a href={githubRepoLink} target="_blank">
-                        <i>Link to Github Repository</i>
+                        <i>Github Repository</i>
                     </a>
                 </Box>
             </Box>

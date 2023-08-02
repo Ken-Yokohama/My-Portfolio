@@ -45,9 +45,9 @@ const allProjects: Project[] = [
         title: "Entrego Cash Management System",
         description: "Online Task and Workflow Automation Platform",
         details: [
-            "Our team developed an innovative cash management system that combines the power of React in the frontend and Java Spring in the backend for the company. This product enables efficient tracking, monitoring, and optimization of cash flows, empowering the company to make data-driven financial decisions with ease and accuracy.",
-            "By seamlessly integrating React and Java Spring, the system offers a user-friendly interface and robust backend functionalities. It streamlines cash management processes, automates tasks, and ensures real-time visibility into financial data, ultimately enhancing the company's financial performance and reducing operational costs.",
-            "With our cash management system, the company gains a competitive edge in today's dynamic business landscape. The React-powered frontend provides a responsive and intuitive user experience, while the Java Spring backend ensures security and scalability. By centralizing cash management, financial teams can analyze trends, forecast cash needs, and optimize cash allocation efficiently. This holistic solution empowers the company to stay agile, make informed decisions, and achieve sustainable growth in the ever-changing market.",
+            "Our team developed an innovative cash management system that combines the power of React in the frontend and Java Spring in the backend for Entrego. This product enables efficient tracking, monitoring, and optimization of cash flows, empowering Entrego to make data-driven financial decisions with ease and accuracy.",
+            "As the lead frontend developer of the team, I collaborated closely with stakeholders, product owners and domain experts to gather requirements and understand each of the specific needs to improve UI / UX. This involved conducting thorough discussions and refining the project scope to ensure that the end product would meet all the necessary criteria.",
+            "Throughout the development process, I performed rigorous unit testing and debugging to identify and rectify any potential issues, ensuring the application's stability and reliability. Additionally, I collaborated with the backend team to integrate the frontend seamlessly using the Java Spring services, creating a cohesive and efficient data flow. By centralizing cash management, financial teams can analyze trends, forecast cash needs, and optimize cash allocation efficiently. This holistic solution empowers Entrego to stay agile, make informed decisions, and achieve sustainable growth in the ever-changing market.",
         ],
         technologies: [
             "React",
@@ -102,7 +102,7 @@ const allProjects: Project[] = [
         details: [
             "Our team developed an innovative bidding system using React and Spring for Entrego. This product revolutionizes the way Entrego manages procurement processes, streamlining bids from suppliers and enhancing transparency. By leveraging the power of React's dynamic user interface and Spring's robust backend, the system ensures efficient communication and fosters competitive pricing, empowering Entrego to make well-informed decisions.",
             "With our bidding system, Entrego gains real-time insights into supplier responses, accelerating the evaluation process. The intuitive interface facilitates easy navigation, enabling users to quickly access critical data and submit bids effortlessly.",
-            "By implementing our React and Spring-based Taskflow automation system, the company experiences enhanced collaboration among teams, faster task completion, and reduced errors. The system's integration with existing tools allows for smooth data exchange, ensuring a seamless transition. Furthermore, the real-time tracking and reporting features enable better decision-making and process optimization. Altogether, the product brings immense value by revolutionizing the company's operations and driving significant cost and time savings.",
+            "By implementing our React and Spring-based Taskflow automation system, Entrego experiences enhanced collaboration among teams, faster task completion, and reduced errors. The system's integration with existing tools allows for smooth data exchange, ensuring a seamless transition. Furthermore, the real-time tracking and reporting features enable better decision-making and process optimization. Altogether, the product brings immense value by revolutionizing Entrego's operations and driving significant cost and time savings.",
         ],
         technologies: [
             "React",
@@ -265,7 +265,7 @@ const allProjects: Project[] = [
         year: "",
         month: "",
         name: "ejs-to-do-list",
-        title: "EJS Express To Do List App",
+        title: "EJS Express App",
         technologies: ["nodeJS", "expressJS", "Mongo DB", "EJS"],
         description:
             "This is a simple web application that uses MongoDB as the database and EJS for templating as well as partials for components. The frontend displays the current date & month at the top. Input feilds allows users to input any tasks they have for the given day. Users can also crossout any tasks that have been completed.",
@@ -283,24 +283,10 @@ const allProjects: Project[] = [
         title: "PSBSI",
         technologies: ["HTML", "CSS", "JS", "JQUERY", "BOOTSTRAP"],
         description:
-            "This is the landing page for the company Pioneer Specialty Building Systems Inc. The website displays all completed & upcoming projects done by the company as well as details on its building systems such as Waterproofing, Eifs & Sips.",
+            "This is the landing page for Pioneer Specialty Building Systems Inc. a specialty construction company based in Manila, Philippines. The website follows responsive design practices and displays all completed & upcoming projects done by the company as well as details on its building systems such as Waterproofing, Eifs & Sips.",
         details: [""],
         liveSiteLink: "https://ken-yokohama.github.io/psbsi/",
         githubRepoLink: "https://github.com/Ken-Yokohama/psbsi",
-        backgroundImgUrl: "",
-    },
-    {
-        featuredProject: false,
-        year: "",
-        month: "",
-        name: "tindog",
-        title: "Tindog",
-        technologies: ["HTML", "CSS", "JS", "BOOTSTRAP"],
-        description:
-            "This is a simple static webpage used as a parody of Tinder... But for Dogs! This project was mainly used to learn basic CSS design patterns as well as responsive design using the Bootstrap grid system.",
-        details: [""],
-        liveSiteLink: "https://ken-yokohama.github.io/TinDog/",
-        githubRepoLink: "https://github.com/Ken-Yokohama/TinDog",
         backgroundImgUrl: "",
     },
 ];

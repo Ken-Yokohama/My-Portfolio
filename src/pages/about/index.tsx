@@ -4,9 +4,6 @@ import { CallToAction, Footer } from "../../components";
 import Button from "@mui/material/Button";
 import { motion } from "framer-motion";
 import Modal from "@mui/material/Modal";
-import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
-import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
-import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 import { EmblaOptionsType } from "embla-carousel-react";
 import EmblaCarousel from "../../components/embla-carousel/embla-carousel";
 import { animateUpProps } from "../../utils/animation";
@@ -16,6 +13,8 @@ import {
     technologiesImgSrc,
 } from "./img-src";
 import "./about.css";
+import WorkSection from "./work-section";
+import AwardsSection from "./awards-section";
 
 // Embla Carousel
 const OPTIONS: EmblaOptionsType = { loop: true };
@@ -154,6 +153,7 @@ const About = () => {
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
+                        paddingBottom: "4rem",
                     }}
                 >
                     <h5>Development</h5>
@@ -209,7 +209,8 @@ const About = () => {
                     </Box>
                 </div>
             </div>
-            {/* ---------------------Work Experience SECTION------------------------ */}
+            {/* ---------------------WORK SECTION------------------------ */}
+            <WorkSection />
             {/* ---------------------EDUCATION------------------------ */}
             <div className="page-container about-me-page">
                 <div className="section-spacing limit-width">
@@ -292,215 +293,11 @@ const About = () => {
                 </div>
             </div>
             {/* ---------------------Awards & Certifications------------------------ */}
-            <div className="page-container about-me-page">
-                <div className="section-spacing limit-width">
-                    <h1>
-                        <b>Awards &{/* Certifications */}</b>
-                    </h1>
-                    <Box
-                        sx={{
-                            display: "flex",
-                            flexDirection: "column",
-                            gap: "1rem",
-                            paddingTop: "1rem",
-                        }}
-                    >
-                        <div>
-                            <h2 style={{ fontWeight: "100" }}>
-                                The Complete 2021 Web Development Bootcamp
-                            </h2>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    gap: "1rem",
-                                    paddingTop: "0.5rem",
-                                }}
-                            >
-                                <motion.div
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
-                                >
-                                    <Button
-                                        sx={{
-                                            backgroundColor: "#FFA500",
-                                            ":hover": {
-                                                backgroundColor: "#e39505",
-                                            },
-                                            width: "120px",
-                                        }}
-                                        fullWidth
-                                        variant="contained"
-                                        startIcon={<HistoryEduIcon />}
-                                        onClick={() => {
-                                            window.open(
-                                                "https://www.udemy.com/course/the-complete-web-development-bootcamp/",
-                                                "_blank"
-                                            );
-                                        }}
-                                    >
-                                        Course
-                                    </Button>
-                                </motion.div>{" "}
-                                <motion.div
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
-                                >
-                                    <Button
-                                        sx={{
-                                            color: "#FFA500",
-                                            borderColor: "#FFA500",
-                                            ":hover": {
-                                                borderColor: "#e39505",
-                                                color: "#e39505",
-                                            },
-                                        }}
-                                        variant="outlined"
-                                        endIcon={<WorkspacePremiumIcon />}
-                                        onClick={() => {
-                                            setModalImgSrc(
-                                                "/images/about-page/education/bootcamp-cert.webp"
-                                            );
-                                            handleOpenModal();
-                                        }}
-                                    >
-                                        Certification
-                                    </Button>
-                                </motion.div>
-                            </Box>
-                        </div>
-                        <div>
-                            <h2 style={{ fontWeight: "100" }}>
-                                Golden Thesis Awardee
-                            </h2>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    gap: "1rem",
-                                    paddingTop: "0.5rem",
-                                }}
-                            >
-                                <motion.div
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
-                                >
-                                    <Button
-                                        sx={{
-                                            backgroundColor: "#FFA500",
-                                            ":hover": {
-                                                backgroundColor: "#e39505",
-                                            },
-                                            width: "120px",
-                                        }}
-                                        fullWidth
-                                        variant="contained"
-                                        startIcon={<PhotoCameraIcon />}
-                                        onClick={() => {
-                                            setModalImgSrc(
-                                                "/images/about-page/education/golden1.webp"
-                                            );
-                                            handleOpenModal();
-                                        }}
-                                    >
-                                        Photo
-                                    </Button>
-                                </motion.div>{" "}
-                                <motion.div
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
-                                >
-                                    <Button
-                                        sx={{
-                                            color: "#FFA500",
-                                            borderColor: "#FFA500",
-                                            ":hover": {
-                                                borderColor: "#e39505",
-                                                color: "#e39505",
-                                            },
-                                        }}
-                                        variant="outlined"
-                                        endIcon={<WorkspacePremiumIcon />}
-                                        onClick={() => {
-                                            setModalImgSrc(
-                                                "/images/about-page/education/golden4.webp"
-                                            );
-                                            handleOpenModal();
-                                        }}
-                                    >
-                                        Certification
-                                    </Button>
-                                </motion.div>
-                            </Box>
-                        </div>
-                        <div>
-                            <h2 style={{ fontWeight: "100" }}>
-                                Geomate Tokyo Best Paper Award
-                            </h2>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    gap: "1rem",
-                                    paddingTop: "0.5rem",
-                                }}
-                            >
-                                <motion.div
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
-                                >
-                                    <Button
-                                        sx={{
-                                            backgroundColor: "#FFA500",
-                                            ":hover": {
-                                                backgroundColor: "#e39505",
-                                            },
-                                            width: "120px",
-                                        }}
-                                        fullWidth
-                                        variant="contained"
-                                        startIcon={<PhotoCameraIcon />}
-                                        onClick={() => {
-                                            setModalImgSrc(
-                                                "/images/about-page/education/geomate-group.webp"
-                                            );
-                                            handleOpenModal();
-                                        }}
-                                    >
-                                        Photo
-                                    </Button>
-                                </motion.div>{" "}
-                                <motion.div
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
-                                >
-                                    <Button
-                                        sx={{
-                                            color: "#FFA500",
-                                            borderColor: "#FFA500",
-                                            ":hover": {
-                                                borderColor: "#e39505",
-                                                color: "#e39505",
-                                            },
-                                        }}
-                                        variant="outlined"
-                                        endIcon={<WorkspacePremiumIcon />}
-                                        onClick={() => {
-                                            setModalImgSrc(
-                                                "/images/about-page/education/golden3.webp"
-                                            );
-                                            handleOpenModal();
-                                        }}
-                                    >
-                                        Certification
-                                    </Button>
-                                </motion.div>
-                            </Box>
-                        </div>
-                    </Box>
-                </div>
-            </div>
-
+            <AwardsSection
+                handleOpenModal={handleOpenModal}
+                setModalImgSrc={setModalImgSrc}
+            />
+            {/* ---------------------Call To Action Section------------------------ */}
             <div className="page-container about-me-page">
                 <CallToAction />
             </div>
