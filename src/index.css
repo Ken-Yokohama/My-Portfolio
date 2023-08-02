@@ -140,6 +140,10 @@ img {
         padding-left: 20vw;
         padding-right: 20vw;
     }
+    .limit-width {
+        max-width: 1500px;
+        width: 100%;
+    }
 }
 
 /* Padding for Top Navbar */
