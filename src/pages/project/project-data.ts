@@ -221,7 +221,7 @@ const allProjects: Project[] = [
             "REACT ROUTER",
             "UUID",
         ],
-        liveSiteLink: "https://kenterest.netlify.app/",
+        liveSiteLink: "https://ken-yokohama.github.io/Kenterest/",
         githubRepoLink: "https://github.com/Ken-Yokohama/Kenterest",
         backgroundImgUrl: "/images/home-page/project-backgrounds/kenterest.JPG",
     },
@@ -255,24 +255,9 @@ const allProjects: Project[] = [
         description:
             "This is a web application that uses the MailChimp API to subscribe users to my personal mailing list. In the Mailchimp database, we are able to organize each user and filter which content we want to send for individual users. Additionally, using the MailChimp api allows us to sync all data (subscriber, customers, orders, products) and enables marketing automation with email campaigns, automations, ads, postcards and more.",
         details: [""],
-        liveSiteLink: "https://still-garden-96667.herokuapp.com/",
+        liveSiteLink: "https://ken-yokohama-newsletter-signup.onrender.com/",
         githubRepoLink:
             "https://github.com/Ken-Yokohama/Node-Express-JS-Training-Files#mailchimp-api-newsletter-signup",
-        backgroundImgUrl: "",
-    },
-    {
-        featuredProject: false,
-        year: "",
-        month: "",
-        name: "ejs-to-do-list",
-        title: "EJS Express App",
-        technologies: ["nodeJS", "expressJS", "Mongo DB", "EJS"],
-        description:
-            "This is a simple web application that uses MongoDB as the database and EJS for templating as well as partials for components. The frontend displays the current date & month at the top. Input feilds allows users to input any tasks they have for the given day. Users can also crossout any tasks that have been completed.",
-        details: [""],
-        liveSiteLink: "https://to-do-list-using-mongodb-atlas.herokuapp.com/",
-        githubRepoLink:
-            "https://github.com/Ken-Yokohama/Node-Express-JS-Training-Files#ejstodoist-v1",
         backgroundImgUrl: "",
     },
     {
