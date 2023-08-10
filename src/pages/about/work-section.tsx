@@ -9,7 +9,7 @@ const WorkSection = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="about-me-page work-section-container">
+        <section className="about-me-page work-section-container">
             <Box className="work-section">
                 <Box className="text-container">
                     <h1>Over 3 Years of Experience</h1>
@@ -72,7 +72,7 @@ const WorkSection = () => {
                     />
                 </Box>
             </Box>
-        </div>
+        </section>
     );
 };
 
