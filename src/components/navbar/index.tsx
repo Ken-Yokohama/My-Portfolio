@@ -5,6 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { NavbarProps } from "./interface";
+import "./navbar.css";
 
 const Navbar = ({ showMenu, setShowMenu, toggleShowMenu }: NavbarProps) => {
     const navigate = useNavigate();
@@ -26,34 +27,18 @@ const Navbar = ({ showMenu, setShowMenu, toggleShowMenu }: NavbarProps) => {
 
     return (
         <Box
+            className="nav-bar-container"
             sx={{
                 background: showMenu ? "none" : scrolledDown ? "white" : "none",
-                position: "fixed",
-                width: "100%",
-                zIndex: "10",
-                transition: "background 1s",
                 "@media(min-width: 800px)": {
                     background: "none",
                 },
             }}
         >
-            <Box
-                sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    padding: "1rem",
-                    "@media (min-width:700px)": {
-                        padding: "2rem",
-                    },
-                }}
-            >
+            <Box className="nav-bar page-container">
                 <a
+                    className="home-link"
                     href="https://kenyokohama.com/"
-                    style={{
-                        color: "black",
-                        textDecoration: "none",
-                    }}
                     onClick={(e) => {
                         if (!e.ctrlKey && !e.metaKey) {
                             e.preventDefault();
@@ -69,24 +54,17 @@ const Navbar = ({ showMenu, setShowMenu, toggleShowMenu }: NavbarProps) => {
                             setShowMenu(false);
                             window.scrollTo(0, 0);
                         }}
-                        style={{
-                            cursor: "pointer",
-                        }}
                     >
                         <b>KEN YOKOHAMA</b>
                     </motion.h3>
                 </a>
                 <motion.div
+                    className="menu"
                     // whileHover={{ color: "white" }}
                     whileHover={{ color: "#A9A9A9" }}
                     initial={{ color: "#000000" }}
                     transition={{ color: { duration: 0.2 } }}
                     onClick={toggleShowMenu}
-                    style={{
-                        cursor: "pointer",
-                        display: "flex",
-                        gap: "0.25rem",
-                    }}
                 >
                     <h3>
                         <b>Menu</b>

@@ -49,43 +49,26 @@ const EmblaSlide = ({
                 }}
             />
             <div
-                style={{
-                    width: 0,
-                    // For title inside image
-                    position: "absolute",
-                    bottom: "1rem",
-                    left: "6vw",
-                    textShadow: "1px 1px black",
-                    color: "white",
-                }}
+            // For title inside image
+            // style={{
+            //     width: 0,
+            //     position: "absolute",
+            //     bottom: "1rem",
+            //     left: "6vw",
+            //     textShadow: "1px 1px black",
+            //     color: "white",
+            // }}
             >
                 <motion.div
-                    animate={
-                        isHovered
-                            ? { y: "-3px", opacity: "1" }
-                            : { y: "0", opacity: "0.8" }
-                    }
+                    animate={isHovered ? { color: "grey" } : { color: "black" }}
                 >
-                    <Box
-                        component="strong"
-                        className="hover-underline-animation"
+                    <strong
+                        className="embla__slide__text"
                         onMouseEnter={() => {
                             setIsHovered(true);
                         }}
                         onMouseLeave={() => {
                             setIsHovered(false);
-                        }}
-                        sx={{
-                            marginTop: "0.3rem",
-                            // width: 0,
-                            display: "inline-block",
-                            fontSize: "1.3rem",
-                            whiteSpace: "nowrap",
-                            textTransform: "uppercase",
-                            borderBottom: "3px solid",
-                            boxShadow: "0 2px 2px -2px gray",
-                            cursor: "pointer",
-                            transition: "color 0.3s ease",
                         }}
                         onClick={() => {
                             setModalImgSrc(imgArr[index].src);
@@ -93,7 +76,7 @@ const EmblaSlide = ({
                         }}
                     >
                         {imgArr[index].title}
-                    </Box>
+                    </strong>
                 </motion.div>
             </div>
         </Box>

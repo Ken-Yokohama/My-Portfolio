@@ -1,0 +1,28 @@
+.nav-bar-container {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    transition: background 1s;
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        @media (width >= 700px) {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .home-link {
+            color: black;
+            text-decoration: none;
+        }
+
+        .menu {
+            cursor: pointer;
+            display: flex;
+            gap: 0.25rem;
+        }
+    }
+}

@@ -91,28 +91,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     </div>
                 </div>
 
-                <Box
-                    sx={{
-                        // position: "absolute",
-                        // bottom: "0",
-                        // right: "0",
-                        display: "flex",
-                        gap: "2rem",
-                        justifyContent: "flex-end",
-                        marginTop: "0.5rem",
-                        "@media (max-width: 500px)": {
-                            display: "none",
-                        },
-                    }}
-                >
-                    <h2
-                        style={{
-                            fontSize: "1.3rem",
-                            whiteSpace: "nowrap",
-                            textTransform: "uppercase",
-                            fontFamily: '"Clarkson",Helvetica,sans-serif',
-                        }}
-                    >
+                <Box className="embla__pagination">
+                    <h2 className="counter">
                         <Counter
                             count={`0${selectedIndex + 1}`}
                             direction={direction}
@@ -120,33 +100,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                         {/* <span>0{selectedIndex + 1} </span> */}
                         <span style={{ color: "grey" }}>/ 05</span>
                     </h2>
-                    <div
-                        style={{
-                            display: "flex",
-                            gap: "1rem",
-                            alignItems: "center",
-                        }}
-                    >
+                    <div className="arrows-container">
                         <ArrowBackIcon
                             onClick={() => {
                                 scrollPrev();
                                 setDirection(-1);
                             }}
-                            sx={{
-                                cursor: "pointer",
-                                stroke: "black",
-                                strokeWidth: ".5",
-                            }}
+                            className="arrow-icon"
                         />
                         <ArrowForwardIcon
+                            className="arrow-icon"
                             onClick={() => {
                                 scrollNext();
                                 setDirection(1);
-                            }}
-                            sx={{
-                                cursor: "pointer",
-                                stroke: "black",
-                                strokeWidth: ".5",
                             }}
                         />
                     </div>

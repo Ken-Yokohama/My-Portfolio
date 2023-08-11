@@ -50,6 +50,7 @@ const Counter = ({ count, direction }: CounterProps) => {
                     transform: "translate(-50%, -50%)",
                     zIndex: 1,
                     bottom: "-.75rem",
+                    backgroundColor: "white",
                     right: "7.8rem",
                 }}
                 variants={variants}
