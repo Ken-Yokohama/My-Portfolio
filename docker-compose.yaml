@@ -1,0 +1,18 @@
+version: "4.19"
+services:
+    client:
+        build: .
+        container_name: ken-yokohama-portfolio
+        ports:
+            - "5173:5173"
+        volumes:
+            # - .:/client:ro # https://github.com/vitejs/vite/issues/9470
+            - ./src:/client/src:ro
+            - ./index.html:/client/index.html:ro
+            - ./public:/client/public:ro
+            - /client/node_modules
+        environment:
+            - CHOKIDAR_USEPOLLING=true
+            - WATCHPACK_POLLING=true
+        stdin_open: true
+        tty: true

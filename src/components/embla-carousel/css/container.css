@@ -1,0 +1,13 @@
+.container__carousel {
+    position: relative;
+}
+@media (width <= 900px) {
+    .container__carousel {
+        margin-top: 2rem;
+    }
+}
+@media (width <= 375px) {
+    .container__carousel {
+        margin-top: 1rem;
+    }
+}

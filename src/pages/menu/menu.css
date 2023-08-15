@@ -1,0 +1,87 @@
+.nav-menu-item-active {
+    color: white;
+    text-decoration: underline;
+}
+
+.nav-menu-item {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        color: white;
+    }
+}
+
+.menu-page {
+    position: fixed;
+    display: flex;
+    background-color: orange;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    gap: 3rem;
+    z-index: 3;
+
+    .menu-body {
+        padding-left: 6vw;
+        @media (width <= 700px) {
+            padding-top: 90px;
+        }
+        @media (width >= 700px) {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 7vw;
+        }
+
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 1rem 1rem 1rem 0;
+
+            .nav-github,
+            .nav-resume {
+                @media (height <= 500px) {
+                    display: none;
+                }
+            }
+        }
+        .side-note-container {
+            display: none;
+            @media (width >= 800px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 400px;
+            }
+        }
+    }
+
+    .menu-footer {
+        padding: 1rem;
+        padding-left: 6vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        @media (width >= 700px) {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+        }
+        @media (height <= 600px) {
+            display: none;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            @media (width >= 700px) {
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.hover-prompt {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .text {
+        margin-bottom: 1rem;
+        color: white;
+        @media (width <= 1000px) {
+            margin-bottom: 0.5rem;
+        }
+        &.dark {
+            color: black;
+        }
+    }
+    .arrows {
+        /* width: 60px;
+        height: 80px; */
+        width: 40px;
+        height: min(80px, 5vw);
+        /* @media (width <= 450px) {
+            width: 20px;
+        } */
+        @media (width <= 650px) {
+            height: min(80px, 9vw);
+        }
+        @media (650px <= width <= 1000px) {
+            height: min(80px, 5vw);
+        }
+
+        &.dark path {
+            stroke: black;
+        }
+        & path {
+            stroke: white;
+            fill: transparent;
+            stroke-width: 1px;
+            animation: arrow 2s infinite;
+            -webkit-animation: arrow 2s infinite;
+            display: none;
+        }
+        .sm {
+            @media (width <= 450px) {
+                display: block;
+            }
+            @media (650px <= width <= 1000px) {
+                display: block;
+            }
+        }
+        .md {
+            @media (450px <= width <= 650px) {
+                display: block;
+            }
+            @media (1000px <= width <= 1300px) {
+                display: block;
+            }
+        }
+        .lg {
+            @media (1300px <= width) {
+                display: block;
+            }
+        }
+
+        .a1 {
+            animation-delay: -1s;
+            -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+        }
+        .a2 {
+            animation-delay: -0.5s;
+            -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+        }
+        .a3 {
+            animation-delay: 0s;
+            -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+        }
+    }
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}

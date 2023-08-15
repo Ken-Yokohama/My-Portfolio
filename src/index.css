@@ -1,22 +1,109 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800&display=swap");
+@font-face {
+    font-family: "Raleway";
+    src: url("/fonts/Raleway-Medium-subset.woff2") format("woff2"),
+        url("/fonts/Raleway-Medium.woff2") format("woff2"),
+        url("/fonts/Raleway-Medium.woff") format("woff");
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway Numbers";
+    src: url("/fonts/Raleway-Medium-numbers.woff2") format("woff2");
+    font-weight: 500;
+    unicode-range: U+30-39;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("/fonts/Raleway-SemiBold-subset.woff2") format("woff2"),
+        url("/fonts/Raleway-SemiBold.woff2") format("woff2"),
+        url("/fonts/Raleway-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway Numbers";
+    src: url("/fonts/Raleway-SemiBold-numbers.woff2") format("woff2");
+    font-weight: 600;
+    unicode-range: U+30-39;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("/fonts/Raleway-Bold-subset.woff2") format("woff2"),
+        url("/fonts/Raleway-Bold.woff2") format("woff2"),
+        url("/fonts/Raleway-Bold.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway Numbers";
+    src: url("/fonts/Raleway-Bold-numbers.woff2") format("woff2");
+    font-weight: 700;
+    unicode-range: U+30-39;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("/fonts/Raleway-ExtraBold-subset.woff2") format("woff2"),
+        url("/fonts/Raleway-ExtraBold.woff2") format("woff2"),
+        url("/fonts/Raleway-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway Numbers";
+    src: url("/fonts/Raleway-ExtraBold-numbers.woff2") format("woff2");
+    font-weight: 800;
+    unicode-range: U+30-39;
+    font-display: swap;
+}
+
+:root {
+    --color-primary: #fff;
+    --color-secondary: #fff;
+    --size-h1: 3rem; /* clamp(1rem,14vw,3rem) */
+}
 
 * {
     margin: 0;
 }
 
 body {
-    font-family: "Raleway";
+    font-family: "Raleway Numbers", "Raleway";
+    /* For Fixing Raleway Numbers */
+    -webkit-font-feature-settings: "lnum";
+    -moz-font-feature-settings: "lnum";
+    font-feature-settings: "lnum";
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: var(--size-h1);
+    margin-left: -0.07em;
+    & b {
+        font-weight: 900;
+    }
 }
 
 h2 {
     font-size: 2rem;
 }
 
-/* Global Typography */
+h3 {
+    font-size: 1.2rem; /* Best Size for Hero Subheading */
+    font-weight: 500;
+    & b {
+        font-size: 1.17rem; /* Best Size for Menu Navbar */
+    }
+}
+
 h5 {
     font-size: 0.75rem;
     letter-spacing: 0.3rem;
@@ -29,241 +116,223 @@ h6 {
     font-weight: 600;
 }
 
-/* Left and Right Container Controls */
+img {
+    /* Prevent Img from being draggable */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 .page-container {
     padding-left: 4vw;
     padding-right: 4vw;
-}
-
-@media (min-width: 2500px) {
-    .page-container {
+    @media (width >= 2500px) {
         padding-left: 10vw;
         padding-right: 10vw;
     }
-}
-
-@media (min-width: 3000px) {
-    .page-container {
+    @media (width >= 3000px) {
         padding-left: 15vw;
         padding-right: 15vw;
     }
-}
-@media (min-width: 4000px) {
-    .page-container {
+    @media (width >= 4000px) {
         padding-left: 20vw;
         padding-right: 20vw;
     }
-}
-
-.page-container h1 {
-    font-size: 3.5rem;
-    font-weight: 900;
-}
-
-.page-container h3 {
-    font-size: 1.2rem;
-    font-weight: 500;
+    .limit-width {
+        max-width: 1500px;
+        width: 100%;
+    }
 }
 
 /* Padding for Top Navbar */
 .padding-for-nav {
     padding-top: 3.6rem;
-}
-
-@media (min-width: 700px) {
-    .padding-for-nav {
+    @media (width >= 700px) {
         padding-top: 5.6rem;
     }
 }
 
-.nav-menu-item-active {
-    color: white;
-    text-decoration: underline;
-}
+.home-page {
+    .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 1rem;
+        flex-direction: row;
+        @media (width <= 900px) {
+            min-height: 100%;
+            padding: 0;
+            gap: 1rem;
+        }
+        @media (width <= 650px) {
+            flex-direction: column-reverse;
+            min-height: 100%;
+            padding: 0rem;
+        }
 
-.nav-menu-item {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+        .hero-txt-container {
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            @media (width <= 1200px) {
+                /* width: calc(55vw - 3.7rem); */
+                width: 55vw;
+                max-width: 600px;
+                margin-right: -100px;
+            }
+            @media (width <= 900px) {
+                width: 900px;
+                margin-right: -100px;
+            }
+            @media (width <= 650px) {
+                width: auto;
+                margin-right: 0;
+                margin-top: -100px;
+            }
 
-.nav-menu-item:hover {
-    color: white;
-}
+            & h1 {
+                @media (width >= 900px) {
+                    font-size: clamp(2.4rem, 4vw, 3.5rem);
+                }
+                @media (width <= 900px) {
+                    font-size: clamp(1.8rem, 4vw, 2.2rem);
+                }
+                @media (width <= 510px) {
+                    font-size: clamp(1rem, 6vw, 2rem);
+                }
+            }
+            & h3 {
+                @media (width <= 900px) {
+                    font-size: clamp(1rem, 2.1vw, 1.2rem);
+                }
+                @media (width <= 510px) {
+                    font-size: clamp(0.7rem, 4vw, 1.2rem);
+                }
+            }
+            & h5 {
+                @media (width <= 510px) {
+                    font-size: clamp(0.4rem, 2vw, 0.75rem);
+                }
+            }
 
-/* Home Profile Image CSS */
-
-.img-div {
-    width: 300px;
-}
-
-.profile-img {
-    width: 100%;
-    /* aspect-ratio: 1.05/1; */
-    /*^^ Default Original CSS */
-    transform: scale(1.5) translate(0, 0);
-}
-
-@media (max-width: 900px) {
-    .img-div {
-        width: 100%;
+            .actions {
+                margin-top: 1rem;
+                font-weight: 100;
+                @media (width <= 510px) {
+                    margin-top: 0.5rem;
+                    font-size: clamp(0.5rem, 3vw, 1rem);
+                }
+                & strong {
+                    transition: border 0.5s ease;
+                    cursor: pointer;
+                    border: 2px solid transparent;
+                    &:hover {
+                        border-bottom: 2px solid;
+                    }
+                }
+            }
+        }
+        .hero-img-container {
+            width: 300px;
+            @media (width <= 900px) {
+                width: 100%;
+            }
+            & img {
+                display: block;
+                aspect-ratio: 0.79;
+                width: 100%;
+                transform: scale(1.5) translate(0, 0);
+                filter: grayscale(100%);
+                @media (width <= 900px) {
+                    transform: scale(1) translate(0, 0);
+                    min-width: 290px;
+                }
+                @media (width <= 650px) {
+                    transform: scale(1) translate(0, 0);
+                    min-width: 100%;
+                }
+            }
+        }
     }
 
-    .profile-img {
-        transform: scale(1) translate(0, 0);
-        min-height: 276px;
-        min-width: 290px;
-    }
+    .projects-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
 
-    /* Responsive Font Mid Range */
-    .title h1 {
-        font-size: clamp(1.8rem, 4vw, 2.2rem);
-        /* font-size: 1.8rem; */
-        /* font-size: 4vw; */
-        /* font-size: 2.2rem; */
-    }
+        #featured-proj {
+            max-width: 1500px;
+            width: 100%;
 
-    .title h3 {
-        font-size: clamp(1rem, 2.1vw, 1.2rem);
-    }
-}
+            .featured-proj-container {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                @media (width >= 650px) {
+                    grid-template-columns: 1fr 1fr;
+                }
+                @media (width >= 1300px) {
+                    gap: 4rem;
+                }
+            }
+        }
 
-@media (max-width: 650px) {
-    .profile-img {
-        transform: scale(1) translate(0, 0);
-        height: 100%;
-        width: 100%;
-        min-height: 100%;
-        min-width: 100%;
-    }
-}
+        #projects-list {
+            max-width: 1500px;
 
-/* Responsive Desktop Font */
-@media (min-width: 900px) {
-    .title h1 {
-        font-size: clamp(2.5rem, 4vw, 3.5rem);
-    }
-}
-
-@media (max-width: 900px) {
-}
-
-/* Responsive Mobile Font */
-
-@media (max-width: 510px) {
-    .title h1 {
-        font-size: clamp(1rem, 6vw, 2rem);
-    }
-    .title h5 {
-        font-size: clamp(0.4rem, 2vw, 0.75rem);
-    }
-    .title h3 {
-        font-size: clamp(0.7rem, 4vw, 1.2rem);
-    }
-}
-
-/* Call To Action Responsiveness*/
-
-@media (max-width: 390px) {
-    #call-to-action-h1 {
-        font-size: clamp(2rem, 13vw, 3.5rem);
-    }
-}
-
-/* Responsive Project Card Font */
-.project-cards h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-}
-
-.project-cards p {
-    font-size: clamp(0.75rem, 1.5vw, 1rem);
-}
-
-.project-cards h2 {
-    font-size: clamp(1.3rem, 2.6vw, 2rem);
-}
-
-@media (max-width: 650px) {
-    .project-cards h1 {
-        font-size: clamp(2rem, 8.5vw, 3.5rem);
-    }
-
-    .project-cards p {
-        font-size: clamp(0.75rem, 2.5vw, 1rem);
-    }
-
-    .project-cards h2 {
-        font-size: clamp(1.3rem, 5vw, 2rem);
-    }
-}
-
-/* About Me Graduation Carousel Photos */
-/* square buttons */
-.rec.rec-arrow {
-    border-radius: 0;
-}
-/* round buttons on hover */
-.rec.rec-arrow-left:hover:enabled,
-.rec.rec-arrow-right:hover:enabled {
-    border-radius: 50%;
-    background-color: orange;
-}
-
-.rec.rec-arrow:focus:enabled {
-    background-color: orange;
-}
-/* hide disabled buttons */
-.rec.rec-arrow:disabled {
-    visibility: hidden;
-}
-
-button.rec-dot:hover,
-button.rec-dot_active,
-button.rec-dot:focus {
-    background-color: orange;
-    box-shadow: 0 0 1px 3px rgb(250, 194, 141);
-}
-
-@media (max-width: 550px) {
-    .rec.rec-arrow {
-        border-radius: 0;
-        display: none;
-    }
-}
-
-/* Responsive font for About me Title */
-
-.about-title h1 {
-    font-size: clamp(1.8rem, 4.5vw, 3.5rem);
-    text-align: center;
-    max-width: 1200px;
-}
-
-.about-title h6 {
-    font-size: clamp(1.2rem, 2.4vw, 1.8rem);
-    text-align: center;
-    width: 70vw;
-}
-
-@media (max-width: 600px) {
-    .about-title h1 {
-        text-align: start;
-    }
-
-    .about-title h6 {
-        text-align: start;
-        width: 100%;
+            .projects-list-container {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
     }
 }
 
 /* Responsive Font for Contact Me */
-
-.contact-me-page h1 {
-    font-size: clamp(2.4rem, 5.5vw, 3rem);
+.contact-me-page {
+    .contact-forms {
+        & h1 {
+            font-size: clamp(2.4rem, 5.5vw, 3rem);
+            @media (width <= 700px) {
+                font-size: clamp(2.4rem, 11vw, 3rem);
+            }
+        }
+    }
 }
 
-@media (max-width: 650px) {
-    .contact-me-page h1 {
-        font-size: clamp(2.4rem, 11vw, 3rem);
+.call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        max-width: 1500px;
+        text-align: center;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        @media (width >= 650px) {
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+        }
+
+        .heading {
+            transition: color 0.5s ease;
+            cursor: pointer;
+            &:hover {
+                color: #808080;
+            }
+            @media (width <= 390px) {
+                font-size: clamp(2rem, 13vw, 3.5rem);
+            }
+        }
     }
 }
