@@ -1,6 +1,6 @@
-http://kenyokohama.com/
-http://kenyokohama.com/?/about
-http://kenyokohama.com/?/contact
+https://kenyokohama.com/
+https://kenyokohama.com/?/about
+https://kenyokohama.com/?/contact
 https://kenyokohama.com/?/project/entrego-cash
 https://kenyokohama.com/?/project/entrego-dev
 https://kenyokohama.com/?/project/entrego-bid
