@@ -31,7 +31,7 @@ const HeroSection = () => {
                             className="button"
                             fullWidth
                             variant="outlined"
-                            href="https://pagespeed.web.dev/analysis/https-kenyokohama-com/ikfoebx9kz?form_factor=desktop"
+                            href="https://pagespeed.web.dev/analysis/https-kenyokohama-com/lgmf3i5ccw?form_factor=desktop"
                             target="_blank"
                         >
                             View Performance
